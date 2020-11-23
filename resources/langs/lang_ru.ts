@@ -269,7 +269,7 @@ Limitation of non-registered version.</source>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="38"/>
         <source>Limited</source>
-        <translation>Ограниченная</translation>
+        <translation>Limited</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="38"/>
@@ -277,9 +277,8 @@ Limitation of non-registered version.</source>
         <translation>PRO</translation>
     </message>
     <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
         <source>Tanks count</source>
-        <translation>Кол-во аквариумов</translation>
+        <translation type="vanished">Кол-во аквариумов</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
@@ -287,22 +286,39 @@ Limitation of non-registered version.</source>
         <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
         <source>Full</source>
-        <translation>Без ограничений</translation>
+        <translation>∞</translation>
+    </message>
+    <message>
+        <source>Action list</source>
+        <translation type="vanished">Лист событий</translation>
+    </message>
+    <message>
+        <source>Images count</source>
+        <translation type="vanished">Кол-во картинок</translation>
+    </message>
+    <message>
+        <source>Story view period</source>
+        <translation type="vanished">Период просмотра истории</translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
+        <source>Tanks</source>
+        <translation>Аквариумов</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="40"/>
-        <source>Action list</source>
-        <translation>Лист событий</translation>
+        <source>Reminders</source>
+        <translation>Напоминаний</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
-        <source>Images count</source>
-        <translation>Кол-во картинок</translation>
+        <source>Photos</source>
+        <translation>Фотографий</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
-        <source>Story view period</source>
-        <translation>Период просмотра истории</translation>
+        <source>View period</source>
+        <translation>Период просмотра</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
@@ -808,12 +824,12 @@ Limitation of non-registered version.</source>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>You cannot add more than</source>
-        <translation>Вы не можете добавить больше чем</translation>
+        <translation>Нельзя добавить более </translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>tank.</source>
-        <translation>аквариум.</translation>
+        <translation>аквариума.</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>

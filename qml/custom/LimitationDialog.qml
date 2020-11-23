@@ -35,13 +35,13 @@ Item
     {
         id: limitationsModel
 
-        ListElement   {   option: "";                           limited:    qsTr("Limited");                 pro: qsTr("PRO");  }
-        ListElement   {   option: qsTr("Tanks count");          limited:    AppDefs.TANKS_COUNT_LIMIT;       pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Action list");          limited:    AppDefs.ACTIONS_COUNT_LIMIT;     pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Images count");         limited:    AppDefs.NOTE_IMAGES_COUNT_LIMIT; pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Story view period");    limited:    AppDefs.STORY_VIEW_MONTH_LIMIT;  pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Support");              limited:    qsTr("No");                      pro: qsTr("Yes");  }
-        ListElement   {   option: qsTr("Import\Export");        limited:    qsTr("No");                      pro: qsTr("Yes");  }
+        ListElement   {   option: "";                     limited:    qsTr("Limited");                 pro: qsTr("PRO");  }
+        ListElement   {   option: qsTr("Tanks");          limited:    AppDefs.TANKS_COUNT_LIMIT;       pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Reminders");      limited:    AppDefs.ACTIONS_COUNT_LIMIT;     pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Photos");         limited:    AppDefs.NOTE_IMAGES_COUNT_LIMIT; pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("View period");    limited:    AppDefs.STORY_VIEW_MONTH_LIMIT;  pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Import\Export");  limited:    qsTr("No");                      pro: qsTr("Yes");  }
+        ListElement   {   option: qsTr("Support");        limited:    qsTr("No");                      pro: qsTr("Yes");  }
     }
 
     Rectangle

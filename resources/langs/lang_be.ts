@@ -278,11 +278,6 @@ Limitation of non-registered version.</source>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
-        <source>Tanks count</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="40"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
@@ -290,18 +285,23 @@ Limitation of non-registered version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
+        <source>Tanks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="40"/>
-        <source>Action list</source>
+        <source>Reminders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
-        <source>Images count</source>
+        <source>Photos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
-        <source>Story view period</source>
+        <source>View period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

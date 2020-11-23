@@ -185,7 +185,7 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Application version: ") + getAppVersion(app.global_APP_VERSION)
+                    text: qsTr("Application version:") + " " + getAppVersion(app.global_APP_VERSION)
                 }
 
                 Text
@@ -198,7 +198,7 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Application type: ") + getAppType()
+                    text: qsTr("Application type:") + " " + getAppType()
                 }
             }
 
@@ -220,7 +220,6 @@ Item
                     id: textWarning
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    //anchors.verticalCenterOffset: AppTheme.rowHeight * app.scale
                     width: parent.width
                     height: AppTheme.compHeight / 2 * app.scale
                     verticalAlignment: Text.AlignVCenter
