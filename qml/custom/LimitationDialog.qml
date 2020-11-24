@@ -123,7 +123,7 @@ Item
                             {
                                 verticalAlignment: Text.AlignVCenter
                                 height: AppTheme.compHeight * app.scale
-                                width: 177 * app.scale
+                                width: 185 * app.scale
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: AppTheme.blueFontColor
@@ -135,7 +135,7 @@ Item
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignHCenter
                                 height: AppTheme.compHeight * app.scale
-                                width: 60 * app.scale
+                                width: 40 * app.scale
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: (index === 0) ? AppTheme.blueColor : AppTheme.greyColor
