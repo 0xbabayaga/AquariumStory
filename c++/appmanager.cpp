@@ -673,6 +673,8 @@ void AppManager::onGuiUserCreate(QString uname, QString upass, QString email, QS
 
 void AppManager::onGuiUserEdit(QString uname, QString upass, QString email, QString img)
 {
+    Q_UNUSED(upass)
+
     if (editUser(uname, "", "", email, img) == true)
     {
         getCurrentUser();
@@ -854,6 +856,8 @@ void AppManager::onGuiGetImportFilesList()
 
 void AppManager::onGuiExportData(QString fileName)
 {
+    Q_UNUSED(fileName)
+
     exportFileName = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation) + "/" + generateExportFileName();
 
     db.close();

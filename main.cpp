@@ -41,6 +41,8 @@ int main(int argc, char *argv[])
 
         AppManager *appMan = new AppManager(&engine);
 
+        Q_UNUSED(appMan)
+
         engine.load(url);
 
         return app.exec();

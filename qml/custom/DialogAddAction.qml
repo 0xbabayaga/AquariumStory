@@ -32,6 +32,7 @@ Item
     {
         if (visible === true)
         {
+            textActionName
             showDialogAnimation.start()
             rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5 * app.scale
         }
@@ -103,7 +104,6 @@ Item
         onStopped: rectContainer.visible = false
     }
 
-
     Rectangle
     {
         id: rectContainer
@@ -163,7 +163,7 @@ Item
                 font.family: AppTheme.fontFamily
                 font.pixelSize: AppTheme.fontBigSize * app.scale
                 color: AppTheme.blueFontColor
-                text: (dialogAddAction.isEdit === true) ? qsTr("EDIT ACTION") : qsTr("ADD ACTION")
+                text: (dialogAddAction.isEdit === true) ? qsTr("EDIT REMINDER") : qsTr("ADD REMINDER")
             }
 
             Rectangle
@@ -186,11 +186,11 @@ Item
                 TextInput
                 {
                     id: textActionName
-                    placeholderText: qsTr("Action name")
+                    placeholderText: qsTr("Reminder name")
                     maximumLength: AppDefs.MAX_ACTIONNAME_SIZE
                     width: parent.width
                     focus: true
-                    //KeyNavigation.tab: textUserEmail
+
                 }
 
                 TextInput

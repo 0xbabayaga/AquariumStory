@@ -64,6 +64,8 @@ Item
         {
             if (textArea.contentHeight > AppTheme.compHeight * app.scale)
                 textInput.height = textArea.contentHeight
+            else
+                textInput.height = AppTheme.compHeight * app.scale
         }
 
         onFocusChanged: focus ? rectUnderLine.color = AppTheme.blueColor : rectUnderLine.color = AppTheme.hideColor

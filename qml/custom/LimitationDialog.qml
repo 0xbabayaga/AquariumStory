@@ -35,13 +35,13 @@ Item
     {
         id: limitationsModel
 
-        ListElement   {   option: "";                     limited:    qsTr("Limited");                 pro: qsTr("PRO");  }
-        ListElement   {   option: qsTr("Tanks");          limited:    AppDefs.TANKS_COUNT_LIMIT;       pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Reminders");      limited:    AppDefs.ACTIONS_COUNT_LIMIT;     pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Photos");         limited:    AppDefs.NOTE_IMAGES_COUNT_LIMIT; pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("View period");    limited:    AppDefs.STORY_VIEW_MONTH_LIMIT;  pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Import\Export");  limited:    qsTr("No");                      pro: qsTr("Yes");  }
-        ListElement   {   option: qsTr("Support");        limited:    qsTr("No");                      pro: qsTr("Yes");  }
+        ListElement   {   option: "";                           limited:    qsTr("Limited");                 pro: qsTr("PRO");  }
+        ListElement   {   option: qsTr("Aquariums сount");      limited:    AppDefs.TANKS_COUNT_LIMIT;       pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Reminders count");      limited:    AppDefs.ACTIONS_COUNT_LIMIT;     pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Photos per note");      limited:    AppDefs.NOTE_IMAGES_COUNT_LIMIT; pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("History view period (months)");  limited:    AppDefs.STORY_VIEW_MONTH_LIMIT;  pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Import\\Export");       limited:    qsTr("No");                      pro: qsTr("Yes");  }
+        ListElement   {   option: qsTr("Support");              limited:    qsTr("No");                      pro: qsTr("Yes");  }
     }
 
     Rectangle
@@ -123,9 +123,9 @@ Item
                             {
                                 verticalAlignment: Text.AlignVCenter
                                 height: AppTheme.compHeight * app.scale
-                                width: 160 * app.scale
+                                width: 177 * app.scale
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: AppTheme.blueFontColor
                                 text: option
                             }
@@ -137,7 +137,7 @@ Item
                                 height: AppTheme.compHeight * app.scale
                                 width: 60 * app.scale
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: (index === 0) ? AppTheme.blueColor : AppTheme.greyColor
                                 text: limited
                             }
@@ -149,7 +149,7 @@ Item
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: (index === 0) ? AppTheme.blueColor : AppTheme.greyColor
                                 text: pro
                             }

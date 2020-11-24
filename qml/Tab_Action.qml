@@ -374,7 +374,7 @@ Item
                                 onSigButtonClicked:
                                 {
                                     confirmDialog.setParam(actId)
-                                    confirmDialog.showDialog(true, qsTr("DELETING"), qsTr("Are you sure to delete item?"))
+                                    confirmDialog.showDialog(true, qsTr("DELETING"), qsTr("Are you sure to delete reminder?"))
                                 }
                             }
 
@@ -429,7 +429,7 @@ Item
                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                 wrapMode: Text.WordWrap
                 color: AppTheme.greyColor
-                text: qsTr("No action found for ") + viewPeriodListModel.get(comboViewPeriod.currentIndex).name
+                text: qsTr("No reminders found for ") + viewPeriodListModel.get(comboViewPeriod.currentIndex).name
             }
         }
 

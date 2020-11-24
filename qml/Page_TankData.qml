@@ -16,7 +16,7 @@ Item
         id: modelTabs
         ListElement { tab: qsTr("HISTORY") }
         ListElement { tab: qsTr("GRAPHS") }
-        ListElement { tab: qsTr("CALENDAR") }
+        ListElement { tab: qsTr("REMINDERS") }
     }
 
     function showPage(vis, tankParams)
