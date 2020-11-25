@@ -50,13 +50,13 @@ Item
                     }
                     else
                     {
-                        tip.tipText = qsTr("You can only add ") + AppDefs.ACTIONS_COUNT_FULL_LIMIT + qsTr(" actions.")
+                        tip.tipText = qsTr("You can only add") + " " + AppDefs.ACTIONS_COUNT_FULL_LIMIT + " " + qsTr("reminders.")
                         tip.show(true)
                     }
                 }
                 else
                 {
-                    tip.tipText = tip.tipText = qsTr("You cannot add more than ") + AppDefs.ACTIONS_COUNT_LIMIT + qsTr(" actions.") + qsTr("\nLimitation of non-registered version.")
+                    tip.tipText = tip.tipText = qsTr("You cannot add more than") + " " + AppDefs.ACTIONS_COUNT_LIMIT + " " + qsTr("reminders.") + "\n" + qsTr("Limitation of non-registered version.")
                     tip.show(true)
                 }
 
@@ -127,11 +127,11 @@ Item
             anchors.left: parent.left
             height: AppTheme.compHeight * app.scale
             verticalAlignment: Text.AlignVCenter
-            width: 100 * app.scale
+            width: 170 * app.scale
             font.family: AppTheme.fontFamily
             font.pixelSize: AppTheme.fontNormalSize * app.scale
             color: AppTheme.blueFontColor
-            text: qsTr("View period:")
+            text: qsTr("View period") + ":"
         }
 
         ComboListQuick
@@ -141,7 +141,7 @@ Item
             anchors.left: textViewPeriod.right
             anchors.leftMargin: AppTheme.padding * app.scale
             anchors.right: parent.right
-            propertyName: qsTr("Select a period:");
+            propertyName: qsTr("Select a period") + ":"
             width: parent.width
             model: viewPeriodListModel
 
@@ -429,7 +429,7 @@ Item
                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                 wrapMode: Text.WordWrap
                 color: AppTheme.greyColor
-                text: qsTr("No reminders found for ") + viewPeriodListModel.get(comboViewPeriod.currentIndex).name
+                text: qsTr("No reminders found") /*+ viewPeriodListModel.get(comboViewPeriod.currentIndex).name*/
             }
         }
 

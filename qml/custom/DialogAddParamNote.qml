@@ -347,7 +347,7 @@ Item
                                    tip.tipText = qsTr("You can only add ") + AppDefs.NOTE_IMAGES_COUNT_FULL_LIMIT + qsTr(" images.")
                                 }
                                 else
-                                    tip.tipText = qsTr("You cannot add more than ") + AppDefs.NOTE_IMAGES_COUNT_LIMIT + qsTr(" image.") + qsTr("\nLimitation of non-registered version.")
+                                    tip.tipText = qsTr("You cannot add more than") + " " + AppDefs.NOTE_IMAGES_COUNT_LIMIT + " " + qsTr("image.") + "\n" + qsTr("Limitation of non-registered version.")
 
                                 tip.show(true)
                             }

@@ -218,7 +218,7 @@ Item
                         font.family: AppTheme.fontFamily
                         font.pixelSize: AppTheme.fontNormalSize * app.scale
                         color: AppTheme.greyColor
-                        text: qsTr("Select a time:")
+                        text: qsTr("Select a time") + ":"
                     }
 
                     Rectangle

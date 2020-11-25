@@ -218,7 +218,7 @@ Item
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignRight
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize * app.scale
                 color: AppTheme.blueFontColor
                 text: qsTr("")
             }
@@ -233,7 +233,7 @@ Item
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignRight
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize * app.scale
                 color: AppTheme.greyColor
                 text: qsTr("")
             }

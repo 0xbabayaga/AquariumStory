@@ -39,8 +39,8 @@ Item
         ListElement   {   option: qsTr("Aquariums сount");      limited:    AppDefs.TANKS_COUNT_LIMIT;       pro: qsTr("Full");  }
         ListElement   {   option: qsTr("Reminders count");      limited:    AppDefs.ACTIONS_COUNT_LIMIT;     pro: qsTr("Full");  }
         ListElement   {   option: qsTr("Photos per note");      limited:    AppDefs.NOTE_IMAGES_COUNT_LIMIT; pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("History view period (months)");  limited:    AppDefs.STORY_VIEW_MONTH_LIMIT;  pro: qsTr("Full");  }
-        ListElement   {   option: qsTr("Import\\Export");       limited:    qsTr("No");                      pro: qsTr("Yes");  }
+        ListElement   {   option: qsTr("History view period");  limited:    qsTr("1 month");                 pro: qsTr("Full");  }
+        ListElement   {   option: qsTr("Import/Export");       limited:     qsTr("No");                      pro: qsTr("Yes");  }
         ListElement   {   option: qsTr("Support");              limited:    qsTr("No");                      pro: qsTr("Yes");  }
     }
 
@@ -123,7 +123,7 @@ Item
                             {
                                 verticalAlignment: Text.AlignVCenter
                                 height: AppTheme.compHeight * app.scale
-                                width: 185 * app.scale
+                                width: 165 * app.scale
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: AppTheme.blueFontColor
@@ -135,7 +135,7 @@ Item
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignHCenter
                                 height: AppTheme.compHeight * app.scale
-                                width: 40 * app.scale
+                                width: 60 * app.scale
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontSmallSize * app.scale
                                 color: (index === 0) ? AppTheme.blueColor : AppTheme.greyColor

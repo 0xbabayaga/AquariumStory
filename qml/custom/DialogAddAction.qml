@@ -32,7 +32,6 @@ Item
     {
         if (visible === true)
         {
-            textActionName
             showDialogAnimation.start()
             rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5 * app.scale
         }
@@ -218,7 +217,7 @@ Item
                         font.family: AppTheme.fontFamily
                         font.pixelSize: AppTheme.fontSmallSize * app.scale
                         color: AppTheme.greyColor
-                        text: qsTr("Repeat: ")
+                        text: qsTr("Repeat") + ":"
                     }
 
                     TextInput
@@ -228,7 +227,7 @@ Item
                         anchors.rightMargin: AppTheme.padding * app.scale
                         placeholderText: qsTr("1")
                         validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
-                        width: 60 * app.scale
+                        width: 30 * app.scale
                         focus: true
                         maximumLength: 2
                         //KeyNavigation.tab: textUserEmail
@@ -238,8 +237,8 @@ Item
                     {
                         id: comboPeriod
                         anchors.right: parent.right
-                        propertyName: qsTr("Select a period:");
-                        width: 100 * app.scale
+                        propertyName: qsTr("Select a period") + ":"
+                        width: 110 * app.scale
                         model: periodslistModel
 
                         ListModel
@@ -257,13 +256,13 @@ Item
                             {
                                 textPeriod.enabled = true
                                 textPeriod.visible = true
-                                textRepeat.text = qsTr("Repeat every:")
+                                textRepeat.text = qsTr("Repeat every") + ":"
                             }
                             else
                             {
                                 textPeriod.enabled = false
                                 textPeriod.visible = false
-                                textRepeat.text = qsTr("Repeat:")
+                                textRepeat.text = qsTr("Repeat") + ":"
                             }
                         }
                     }
@@ -282,14 +281,14 @@ Item
                 {
                     id: datePicker
                     width: parent.width
-                    title: qsTr("Select a start date:")
+                    title: qsTr("Select a start date") + ":"
                 }
 
                 TimePicker
                 {
                     id: timePicker
                     width: parent.width
-                    title: qsTr("Select a start time:")
+                    title: qsTr("Select a start time") + ":"
                 }
             }
 

@@ -47,13 +47,13 @@ Item
         {
             animationToPage.from = 0
             animationToPage.to = flickView.height
-            textHeader.text = qsTr("TANKS") + "\n" + qsTr("EDIT")
+            textHeader.text = qsTr("AQUARIUMS") + "\n" + qsTr("EDIT")
         }
         else
         {
             animationToPage.from = flickView.height
             animationToPage.to = 0
-            textHeader.text = qsTr("TANKS")
+            textHeader.text = qsTr("AQUARIUMS")
         }
 
         animationToPage.start()
@@ -82,26 +82,26 @@ Item
                     textTankW.text = ""
                     imgTankAvatar.reset()
 
-                    textHeader.text = qsTr("TANKS") + "\n" + qsTr("ADD NEW")
+                    textHeader.text = qsTr("AQUARIUMS") + "\n" + qsTr("ADD NEW")
                 }
                 else
                 {
                     animationToPage.from = flickView.height
                     animationToPage.to = 0
-                    textHeader.text = qsTr("TANKS")
+                    textHeader.text = qsTr("AQUARIUMS")
                 }
 
                 animationToPage.start()
             }
             else
             {
-                tip.tipText = qsTr("You can only add") + " " + AppDefs.TANKS_COUNT_FULL_LIMIT + " " + qsTr("tanks.")
+                tip.tipText = qsTr("You can only add") + " " + AppDefs.TANKS_COUNT_FULL_LIMIT + " " + qsTr("aquariums.")
                 tip.show(true)
             }
         }
         else
         {
-            tip.tipText = qsTr("You cannot add more than") + " " + AppDefs.TANKS_COUNT_LIMIT + " " + qsTr("tank.") + "\n" + qsTr("Limitation of non-registered version.")
+            tip.tipText = qsTr("You cannot add more than") + " " + AppDefs.TANKS_COUNT_LIMIT + " " + qsTr("aquariums.") + "\n" + qsTr("Limitation of non-registered version.")
             tip.show(true)
         }
     }
@@ -246,7 +246,7 @@ Item
                 font.family: AppTheme.fontFamily
                 font.pixelSize: AppTheme.fontBigSize * app.scale
                 color: AppTheme.blueColor
-                text: qsTr("TANKS")
+                text: qsTr("AQUARIUMS")
             }
 
 
@@ -360,7 +360,7 @@ Item
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                                 color: AppTheme.greyColor
-                                text: qsTr("Aquarium type:") + " "
+                                text: qsTr("Aquarium type") + ":" + " "
                             }
 
                             Text
@@ -390,7 +390,7 @@ Item
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                                 color: AppTheme.greyColor
-                                text: qsTr("Date create:") + " "
+                                text: qsTr("Date create") + ":" + " "
                             }
 
                             Text
@@ -421,7 +421,7 @@ Item
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                                 color: AppTheme.greyColor
-                                text: qsTr("Length:") + " "
+                                text: qsTr("Length") + ":" + " "
                             }
 
                             Text
@@ -451,7 +451,7 @@ Item
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                                 color: AppTheme.greyColor
-                                text: qsTr("Height:") + " "
+                                text: qsTr("Height") + ":" + " "
                             }
 
                             Text
@@ -481,7 +481,7 @@ Item
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                                 color: AppTheme.greyColor
-                                text: qsTr("Width:") + " "
+                                text: qsTr("Width") + ":" + " "
                             }
 
                             Text
@@ -511,7 +511,7 @@ Item
                                 font.family: AppTheme.fontFamily
                                 font.pixelSize: AppTheme.fontNormalSize * app.scale
                                 color: AppTheme.greyColor
-                                text: qsTr("Volume:") + " "
+                                text: qsTr("Volume") + ":" + " "
                             }
 
                             Text
@@ -556,7 +556,7 @@ Item
                                 image: "qrc:/resources/img/icon_cancel.png"
 
                                 onSigButtonClicked: confirmDialog.showDialog(true,
-                                                                             qsTr("Tank profile delete"),
+                                                                             qsTr("Aquarium profile delete"),
                                                                              qsTr("All data assosiated with current aquarium will be deleted!"))
                             }
                         }
@@ -585,7 +585,7 @@ Item
                         TextInput
                         {
                             id: textTankName
-                            placeholderText: qsTr("Tank name")
+                            placeholderText: qsTr("Aquarium name")
                             width: parent.width
                             maximumLength: AppDefs.MAX_TANKNAME_SIZE
                             focus: false
@@ -598,7 +598,7 @@ Item
                         TextInput
                         {
                             id: textTankDesc
-                            placeholderText: qsTr("Tank description")
+                            placeholderText: qsTr("Aquarium description")
                             width: parent.width
                             maximumLength: AppDefs.MAX_TANKDESC_SIZE
                             focus: false
@@ -695,7 +695,7 @@ Item
                         ComboList
                         {
                             id: comboTankType
-                            propertyName: qsTr("Tank type");
+                            propertyName: qsTr("Aquarium type");
                             width: parent.width
                             model: aquariumTypesListModel
                             currentIndex: (tanksListModel.length > 0) ? tanksListModel[tanksList.currentIndex].type : ""
@@ -709,7 +709,7 @@ Item
                             font.family: AppTheme.fontFamily
                             font.pixelSize: AppTheme.fontNormalSize * app.scale
                             color: AppTheme.blueColor
-                            text: qsTr("Tank image")
+                            text: qsTr("Aquarium image")
                         }
 
                         ImageList

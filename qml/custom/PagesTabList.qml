@@ -29,13 +29,11 @@ Item
             currentIndex: 0
             interactive: false
 
-            property int cellWidth: (rectContainer.width - AppTheme.padding * 4 * app.scale) / 3
-
             delegate: Component
             {
                 Rectangle
                 {
-                    width: listTab.cellWidth
+                    width:  txt.contentWidth + AppTheme.padding * app.scale
                     height: AppTheme.compHeight * app.scale
                     color: (listTab.currentIndex === index) ? AppTheme.whiteColor : AppTheme.blueColor
 
@@ -43,6 +41,7 @@ Item
 
                     Text
                     {
+                        id: txt
                         color: (listTab.currentIndex === index) ? AppTheme.blueFontColor : AppTheme.whiteColor
                         font.pixelSize: AppTheme.fontNormalSize * app.scale
                         font.family: AppTheme.fontFamily

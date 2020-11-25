@@ -4,37 +4,37 @@
 <context>
     <name>AppManager</name>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="887"/>
+        <location filename="../../c++/appmanager.cpp" line="891"/>
         <source>Error on data exporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="901"/>
+        <location filename="../../c++/appmanager.cpp" line="905"/>
         <source>Error on data importing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1012"/>
+        <location filename="../../c++/appmanager.cpp" line="1016"/>
         <source>Application is successfully registered!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1019"/>
-        <location filename="../../c++/appmanager.cpp" line="1024"/>
-        <location filename="../../c++/appmanager.cpp" line="1033"/>
-        <location filename="../../c++/appmanager.cpp" line="1038"/>
+        <location filename="../../c++/appmanager.cpp" line="1023"/>
+        <location filename="../../c++/appmanager.cpp" line="1028"/>
+        <location filename="../../c++/appmanager.cpp" line="1037"/>
+        <location filename="../../c++/appmanager.cpp" line="1042"/>
         <source>Application is not registered!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1020"/>
-        <location filename="../../c++/appmanager.cpp" line="1034"/>
+        <location filename="../../c++/appmanager.cpp" line="1024"/>
+        <location filename="../../c++/appmanager.cpp" line="1038"/>
         <source>Error: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1025"/>
-        <location filename="../../c++/appmanager.cpp" line="1039"/>
+        <location filename="../../c++/appmanager.cpp" line="1029"/>
+        <location filename="../../c++/appmanager.cpp" line="1043"/>
         <source>Error: #</source>
         <translation type="unfinished"></translation>
     </message>
@@ -57,90 +57,86 @@
     <name>DatePicker</name>
     <message>
         <location filename="../../qml/custom/DatePicker.qml" line="201"/>
-        <source>Select a date:</source>
+        <source>Select a date</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>DialogAddAction</name>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="166"/>
-        <source>EDIT ACTION</source>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="165"/>
+        <source>EDIT REMINDER</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="166"/>
-        <source>ADD ACTION</source>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="165"/>
+        <source>ADD REMINDER</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="189"/>
-        <source>Action name</source>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="188"/>
+        <source>Reminder name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="199"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="198"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="221"/>
-        <source>Repeat: </source>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="220"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="265"/>
+        <source>Repeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="229"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="228"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="241"/>
-        <source>Select a period:</source>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="240"/>
+        <source>Select a period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="248"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="259"/>
+        <source>Repeat every</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="284"/>
+        <source>Select a start date</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="291"/>
+        <source>Select a start time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="247"/>
         <source>Once</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="249"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="248"/>
         <source>Days</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="250"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="249"/>
         <source>Weeks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="251"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="250"/>
         <source>Months</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="260"/>
-        <source>Repeat every:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="266"/>
-        <source>Repeat:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="278"/>
+        <location filename="../../qml/custom/DialogAddAction.qml" line="277"/>
         <source>Start Date/Time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="285"/>
-        <source>Select a start date:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/DialogAddAction.qml" line="292"/>
-        <source>Select a start time:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -189,18 +185,17 @@
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
-        <source>You cannot add more than </source>
+        <source>Limitation of non-registered version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
-        <source> image.</source>
+        <source>You cannot add more than</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
-        <source>
-Limitation of non-registered version.</source>
+        <source>image.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -271,27 +266,12 @@ Limitation of non-registered version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
-        <source>Tanks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="40"/>
-        <source>Reminders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
-        <source>Photos</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
-        <source>View period</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
+        <source>Import/Export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="44"/>
         <source>Support</source>
         <translation type="unfinished"></translation>
     </message>
@@ -302,14 +282,34 @@ Limitation of non-registered version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
-        <location filename="../../qml/custom/LimitationDialog.qml" line="44"/>
-        <source>Yes</source>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
+        <source>Aquariums сount</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="40"/>
+        <source>Reminders count</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
+        <source>Photos per note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
+        <source>History view period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
+        <source>1 month</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="44"/>
-        <source>ImportExport</source>
+        <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -355,31 +355,31 @@ Limitation of non-registered version.</source>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="188"/>
-        <source>Application version: </source>
+        <source>Application version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="201"/>
-        <source>Application type: </source>
+        <source>Application type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="232"/>
+        <location filename="../../qml/Page_About.qml" line="231"/>
         <source>This is a limited version of application.&lt;br&gt; To get a full version of application please buy &lt;b&gt;Aquarium Story Pro&lt;/b&gt; or register (by pressing button below).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="249"/>
+        <location filename="../../qml/Page_About.qml" line="248"/>
         <source>See limitations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="268"/>
+        <location filename="../../qml/Page_About.qml" line="267"/>
         <source>Communicating with cloud</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="269"/>
+        <location filename="../../qml/Page_About.qml" line="268"/>
         <source>Please wait ... </source>
         <translation type="unfinished"></translation>
     </message>
@@ -623,7 +623,7 @@ You can create a new one.</source>
     </message>
     <message>
         <location filename="../../qml/Page_TankData.qml" line="19"/>
-        <source>CALENDAR</source>
+        <source>REMINDERS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -636,16 +636,16 @@ You can create a new one.</source>
     <name>Page_TankSett</name>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="50"/>
-        <location filename="../../qml/Page_TankSett.qml" line="56"/>
-        <location filename="../../qml/Page_TankSett.qml" line="85"/>
-        <location filename="../../qml/Page_TankSett.qml" line="91"/>
-        <location filename="../../qml/Page_TankSett.qml" line="249"/>
-        <source>TANKS</source>
+        <source>EDIT</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="50"/>
-        <source>EDIT</source>
+        <location filename="../../qml/Page_TankSett.qml" line="56"/>
+        <location filename="../../qml/Page_TankSett.qml" line="85"/>
+        <location filename="../../qml/Page_TankSett.qml" line="91"/>
+        <location filename="../../qml/Page_TankSett.qml" line="249"/>
+        <source>AQUARIUMS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -659,18 +659,14 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_TankSett.qml" line="98"/>
-        <source>tanks.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>You cannot add more than</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../qml/Page_TankSett.qml" line="98"/>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
-        <source>tank.</source>
+        <source>aquariums.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -684,38 +680,29 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_TankSett.qml" line="363"/>
-        <source>Aquarium type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_TankSett.qml" line="393"/>
-        <source>Date create:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_TankSett.qml" line="424"/>
-        <source>Length:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_TankSett.qml" line="454"/>
-        <source>Height:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_TankSett.qml" line="484"/>
-        <source>Width:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_TankSett.qml" line="514"/>
-        <source>Volume:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../qml/Page_TankSett.qml" line="559"/>
-        <source>Tank profile delete</source>
+        <source>Aquarium profile delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="588"/>
+        <source>Aquarium name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="601"/>
+        <source>Aquarium description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="363"/>
+        <location filename="../../qml/Page_TankSett.qml" line="698"/>
+        <source>Aquarium type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="712"/>
+        <source>Aquarium image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -724,13 +711,28 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_TankSett.qml" line="588"/>
-        <source>Tank name</source>
+        <location filename="../../qml/Page_TankSett.qml" line="393"/>
+        <source>Date create</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_TankSett.qml" line="601"/>
-        <source>Tank description</source>
+        <location filename="../../qml/Page_TankSett.qml" line="424"/>
+        <source>Length</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="454"/>
+        <source>Height</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="484"/>
+        <source>Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_TankSett.qml" line="514"/>
+        <source>Volume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -745,19 +747,9 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_TankSett.qml" line="698"/>
-        <source>Tank type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../qml/Page_TankSett.qml" line="760"/>
         <source></source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_TankSett.qml" line="712"/>
-        <source>Tank image</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -952,11 +944,6 @@ You can create a new one.</source>
 <context>
     <name>Tab_Action</name>
     <message>
-        <location filename="../../qml/Tab_Action.qml" line="134"/>
-        <source>View period:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../qml/Tab_Action.qml" line="151"/>
         <source>Today</source>
         <translation type="unfinished"></translation>
@@ -972,30 +959,34 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../qml/Tab_Action.qml" line="53"/>
+        <source>You can only add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Tab_Action.qml" line="53"/>
+        <location filename="../../qml/Tab_Action.qml" line="59"/>
+        <source>reminders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Tab_Action.qml" line="59"/>
+        <source>Limitation of non-registered version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Tab_Action.qml" line="59"/>
+        <source>You cannot add more than</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Tab_Action.qml" line="134"/>
+        <source>View period</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../qml/Tab_Action.qml" line="144"/>
-        <source>Select a period:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Tab_Action.qml" line="53"/>
-        <source>You can only add </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Tab_Action.qml" line="53"/>
-        <location filename="../../qml/Tab_Action.qml" line="59"/>
-        <source> actions.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Tab_Action.qml" line="59"/>
-        <source>You cannot add more than </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Tab_Action.qml" line="59"/>
-        <source>
-Limitation of non-registered version.</source>
+        <source>Select a period</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1005,12 +996,12 @@ Limitation of non-registered version.</source>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="377"/>
-        <source>Are you sure to delete item?</source>
+        <source>Are you sure to delete reminder?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="432"/>
-        <source>No action found for </source>
+        <source>No reminders found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1057,7 +1048,7 @@ Limitation of non-registered version.</source>
     <name>TimePicker</name>
     <message>
         <location filename="../../qml/custom/TimePicker.qml" line="221"/>
-        <source>Select a time:</source>
+        <source>Select a time</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

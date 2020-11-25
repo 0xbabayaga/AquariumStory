@@ -198,7 +198,7 @@ Item
                         font.family: AppTheme.fontFamily
                         font.pixelSize: AppTheme.fontNormalSize * app.scale
                         color: AppTheme.greyColor
-                        text: qsTr("Select a date:")
+                        text: qsTr("Select a date") + ":"
                     }
 
                     ListView
