@@ -28,14 +28,10 @@
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="1024"/>
-        <location filename="../../c++/appmanager.cpp" line="1038"/>
-        <source>Error: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../c++/appmanager.cpp" line="1029"/>
+        <location filename="../../c++/appmanager.cpp" line="1038"/>
         <location filename="../../c++/appmanager.cpp" line="1043"/>
-        <source>Error: #</source>
+        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -355,12 +351,12 @@
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="188"/>
-        <source>Application version:</source>
+        <source>Application version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="201"/>
-        <source>Application type:</source>
+        <source>Application type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -451,6 +447,21 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
+        <source>There is no active aquarium found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
+        <source>Creating aquarium profile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
+        <source>Aquarium name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="13"/>
         <source></source>
         <translation></translation>
@@ -473,23 +484,18 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
-        <source>There is no active tank found</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
-        <source>Creating tank profile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
-        <source>Tank name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="436"/>
         <source>100</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
+        <source>Select a tank type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
+        <source>Aquarium image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -501,16 +507,6 @@ You can create a new one.</source>
         <location filename="../../qml/Page_AccountsWizard.qml" line="459"/>
         <location filename="../../qml/Page_AccountsWizard.qml" line="482"/>
         <source>50</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
-        <source>Select a tank type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
-        <source>Tank image</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

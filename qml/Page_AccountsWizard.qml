@@ -352,7 +352,7 @@ Item
                         font.family: AppTheme.fontFamily
                         font.pixelSize: AppTheme.fontNormalSize * app.scale
                         color: AppTheme.greyColor
-                        text: qsTr("There is no active tank found")
+                        text: qsTr("There is no active aquarium found")
                         wrapMode: Text.WordWrap
                     }
                 }
@@ -402,7 +402,7 @@ Item
                         font.family: AppTheme.fontFamily
                         font.pixelSize: AppTheme.fontBigSize * app.scale
                         color: AppTheme.blueColor
-                        text: qsTr("Creating tank profile")
+                        text: qsTr("Creating aquarium profile")
                         wrapMode: Text.WordWrap
                     }
 
@@ -411,7 +411,7 @@ Item
                     TextInput
                     {
                         id: textTankName
-                        placeholderText: qsTr("Tank name")
+                        placeholderText: qsTr("Aquarium name")
                         width: parent.width
                         maximumLength: AppDefs.MAX_TANKNAME_SIZE
                         focus: false
@@ -504,7 +504,7 @@ Item
                     ComboList
                     {
                         id: comboTankType
-                        propertyName: qsTr("Select a tank type:");
+                        propertyName: qsTr("Select a tank type") + ":"
                         width: parent.width
                         model: aquariumTypesListModel
                         //KeyNavigation.tab: textFileName
@@ -518,7 +518,7 @@ Item
                         font.family: AppTheme.fontFamily
                         font.pixelSize: AppTheme.fontNormalSize * app.scale
                         color: AppTheme.blueFontColor
-                        text: qsTr("Tank image")
+                        text: qsTr("Aquarium image")
                     }
 
                     ImageList

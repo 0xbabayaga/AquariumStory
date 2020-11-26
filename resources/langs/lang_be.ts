@@ -6,17 +6,17 @@
     <message>
         <location filename="../../c++/appmanager.cpp" line="891"/>
         <source>Error on data exporting</source>
-        <translation type="unfinished"></translation>
+        <translation>Памылка экспарту дадзеных</translation>
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="905"/>
         <source>Error on data importing</source>
-        <translation type="unfinished"></translation>
+        <translation>Памылка iмпарту дадзеных</translation>
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="1016"/>
         <source>Application is successfully registered!</source>
-        <translation type="unfinished"></translation>
+        <translation>Праграма паспяхова зарэгiстравана!</translation>
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="1023"/>
@@ -24,19 +24,23 @@
         <location filename="../../c++/appmanager.cpp" line="1037"/>
         <location filename="../../c++/appmanager.cpp" line="1042"/>
         <source>Application is not registered!</source>
-        <translation type="unfinished"></translation>
+        <translation>Праграма не зарэгiстравана!</translation>
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="1024"/>
+        <location filename="../../c++/appmanager.cpp" line="1029"/>
         <location filename="../../c++/appmanager.cpp" line="1038"/>
-        <source>Error: </source>
-        <translation type="unfinished"></translation>
+        <location filename="../../c++/appmanager.cpp" line="1043"/>
+        <source>Error</source>
+        <translation>Памылка</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1029"/>
-        <location filename="../../c++/appmanager.cpp" line="1043"/>
+        <source>Error: </source>
+        <translation type="vanished">Памылка:</translation>
+    </message>
+    <message>
         <source>Error: #</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Памылка: #</translation>
     </message>
 </context>
 <context>
@@ -76,7 +80,7 @@
     <message>
         <location filename="../../qml/custom/DatePicker.qml" line="201"/>
         <source>Select a date</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберыце дату</translation>
     </message>
 </context>
 <context>
@@ -84,78 +88,78 @@
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="165"/>
         <source>EDIT REMINDER</source>
-        <translation type="unfinished"></translation>
+        <translation>РЭДАГАВ.НАПАМIНАК</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="165"/>
         <source>ADD REMINDER</source>
-        <translation type="unfinished"></translation>
+        <translation>ДАДАЦЬ НАПАМIНАК</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="188"/>
         <source>Reminder name</source>
-        <translation type="unfinished"></translation>
+        <translation>Назва напамiнку</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="198"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Апiсанне</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="220"/>
         <location filename="../../qml/custom/DialogAddAction.qml" line="265"/>
         <source>Repeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Паўтор</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="228"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="240"/>
         <source>Select a period</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберыце перыяд</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="259"/>
         <source>Repeat every</source>
-        <translation type="unfinished"></translation>
+        <translation>Паўтор кожны</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="284"/>
         <source>Select a start date</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберыце дату старту</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="291"/>
         <source>Select a start time</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберыце час старту</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="247"/>
         <source>Once</source>
-        <translation type="unfinished"></translation>
+        <translation>Аднойчы</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="248"/>
         <source>Days</source>
-        <translation type="unfinished"></translation>
+        <translation>Дзен</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="249"/>
         <source>Weeks</source>
-        <translation type="unfinished"></translation>
+        <translation>Нядзели</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="250"/>
         <source>Months</source>
-        <translation type="unfinished"></translation>
+        <translation>Месяцы</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddAction.qml" line="277"/>
         <source>Start Date/Time</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата/Час старту</translation>
     </message>
 </context>
 <context>
@@ -164,12 +168,12 @@
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="77"/>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="407"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Увага</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="77"/>
         <source>At least one parameter must be enabled!</source>
-        <translation type="unfinished"></translation>
+        <translation>Як мінімум адзін з параметраў павінен быць выбраны</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="195"/>
@@ -189,37 +193,37 @@
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="333"/>
         <source>Add image</source>
-        <translation>Дадаць карцiнку</translation>
+        <translation>Дадаць фота</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="347"/>
         <source>You can only add </source>
-        <translation type="unfinished"></translation>
+        <translation>Можна дадаць толькi</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="347"/>
         <source> images.</source>
-        <translation type="unfinished"></translation>
+        <translation>фота.</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
         <source>Limitation of non-registered version.</source>
-        <translation type="unfinished"></translation>
+        <translation>(абмежаваная версiя)</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
         <source>You cannot add more than</source>
-        <translation type="unfinished"></translation>
+        <translation>Нельга даадць больш за</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
         <source>image.</source>
-        <translation type="unfinished"></translation>
+        <translation>фота.</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="407"/>
         <source>Please fill in each of the parameters</source>
-        <translation type="unfinished"></translation>
+        <translation>Калі ласка, запоўніце кожны з параметраў</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="418"/>
@@ -242,12 +246,12 @@
     <message>
         <location filename="../../qml/custom/DialogFileSelection.qml" line="118"/>
         <source>SELECT A FILE FOR IMPORT</source>
-        <translation type="unfinished"></translation>
+        <translation>ВЫБЕРЫЦЕ ФАЙЛ ДЛЯ IМПАРТУ</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogFileSelection.qml" line="118"/>
         <source>ENTER A FILE NAME</source>
-        <translation type="unfinished"></translation>
+        <translation>УПIШЫЦЕ НАЗВУ ФАЙЛА</translation>
     </message>
 </context>
 <context>
@@ -255,12 +259,12 @@
     <message>
         <location filename="../../qml/custom/ExportDialog.qml" line="99"/>
         <source>Importing</source>
-        <translation type="unfinished"></translation>
+        <translation>Iмпартаванне</translation>
     </message>
     <message>
         <location filename="../../qml/custom/ExportDialog.qml" line="99"/>
         <source>Exporting</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспартаванне</translation>
     </message>
 </context>
 <context>
@@ -268,12 +272,12 @@
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="38"/>
         <source>Limited</source>
-        <translation type="unfinished"></translation>
+        <translation>Limited</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="38"/>
         <source>PRO</source>
-        <translation type="unfinished"></translation>
+        <translation>PRO</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
@@ -281,59 +285,59 @@
         <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
         <source>Full</source>
-        <translation type="unfinished"></translation>
+        <translation>∞</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
         <source>Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Iмпарт/Экспарт</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="44"/>
         <source>Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Падтрымка</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="44"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Не</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="39"/>
         <source>Aquariums сount</source>
-        <translation type="unfinished"></translation>
+        <translation>Кол-сць акварыўмаў</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="40"/>
         <source>Reminders count</source>
-        <translation type="unfinished"></translation>
+        <translation>Кол-сць напамінкаў</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="41"/>
         <source>Photos per note</source>
-        <translation type="unfinished"></translation>
+        <translation>Фота на адзін запіс</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
         <source>History view period</source>
-        <translation type="unfinished"></translation>
+        <translation>Прагляд гісторыі за</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="42"/>
         <source>1 month</source>
-        <translation type="unfinished"></translation>
+        <translation>1 месяц</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="43"/>
         <location filename="../../qml/custom/LimitationDialog.qml" line="44"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Да</translation>
     </message>
     <message>
         <location filename="../../qml/custom/LimitationDialog.qml" line="96"/>
         <source>LIMITATIONS</source>
-        <translation type="unfinished"></translation>
+        <translation>АБМЕЖАВАНHI</translation>
     </message>
 </context>
 <context>
@@ -348,7 +352,7 @@
     <message>
         <location filename="../../qml/custom/NoteViewDialog.qml" line="229"/>
         <source>NOTE FOUND</source>
-        <translation type="unfinished">ДАДАТКА ЗНОЙДЗЕНА</translation>
+        <translation>ДАДАТКА ЗНОЙДЗЕНА</translation>
     </message>
 </context>
 <context>
@@ -356,57 +360,57 @@
     <message>
         <location filename="../../qml/Page_About.qml" line="32"/>
         <source>Registered</source>
-        <translation type="unfinished"></translation>
+        <translation>Зарэгістраваная</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="34"/>
         <source>Limited</source>
-        <translation type="unfinished"></translation>
+        <translation>Абмежаваная</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="36"/>
         <source>Pro</source>
-        <translation type="unfinished"></translation>
+        <translation>Pro</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="38"/>
         <source>Blocked</source>
-        <translation type="unfinished"></translation>
+        <translation>Заблакаваная</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="132"/>
         <source>ABOUT</source>
-        <translation type="unfinished"></translation>
+        <translation>АБ ПРАГРАМЕ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="188"/>
-        <source>Application version:</source>
-        <translation type="unfinished"></translation>
+        <source>Application version</source>
+        <translation>Версія праграмы</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="201"/>
-        <source>Application type:</source>
-        <translation type="unfinished"></translation>
+        <source>Application type</source>
+        <translation>Тып праграмы</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="231"/>
         <source>This is a limited version of application.&lt;br&gt; To get a full version of application please buy &lt;b&gt;Aquarium Story Pro&lt;/b&gt; or register (by pressing button below).</source>
-        <translation type="unfinished"></translation>
+        <translation>Гэта абмежаваная версія праграмы. &lt;br&gt; Каб атрымаць паўнавартасную версію праграмы, калі ласка, купіце &lt;b&gt; Aquarium Story PRO &lt;/ b&gt; або зарэгіструйцеся (націскам кнопкі унізе).</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="248"/>
         <source>See limitations</source>
-        <translation type="unfinished"></translation>
+        <translation>Глядзець абмежаваннi</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="267"/>
         <source>Communicating with cloud</source>
-        <translation type="unfinished"></translation>
+        <translation>Сувязь з воблакам</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="268"/>
         <source>Please wait ... </source>
-        <translation type="unfinished"></translation>
+        <translation>Кали ласка чакайце ...</translation>
     </message>
 </context>
 <context>
@@ -419,7 +423,7 @@
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="228"/>
         <source>Since</source>
-        <translation type="unfinished"></translation>
+        <translation>З</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="286"/>
@@ -434,7 +438,7 @@
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="301"/>
         <source>Please wait until data is exporting</source>
-        <translation type="unfinished"></translation>
+        <translation>Калі ласка, дачакайцеся пакуль усе дадзеныя будуць экспартаваны</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="327"/>
@@ -449,7 +453,7 @@
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="370"/>
         <source>User photo</source>
-        <translation type="unfinished">Фота карыстальнiка</translation>
+        <translation>Фота карыстальнiка</translation>
     </message>
     <message>
         <source>User password</source>
@@ -479,7 +483,7 @@
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="212"/>
         <source>Creating account</source>
-        <translation>Стварэнне акаунта</translation>
+        <translation>Стварэнне акаўнта</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="221"/>
@@ -490,6 +494,21 @@
         <location filename="../../qml/Page_AccountsWizard.qml" line="233"/>
         <source>User email</source>
         <translation>Email карыстальнiка</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
+        <source>There is no active aquarium found</source>
+        <translation>Актыўных акварыўмаў не знойдзена</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
+        <source>Creating aquarium profile</source>
+        <translation>Стварэнне акварыўмнага профілю</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
+        <source>Aquarium name</source>
+        <translation>Імя акварыума</translation>
     </message>
     <message>
         <source>User password</source>
@@ -504,13 +523,13 @@
         <location filename="../../qml/Page_AccountsWizard.qml" line="146"/>
         <source>There is no active account found.
 You can create a new one or import data from existing account.</source>
-        <translation type="unfinished"></translation>
+        <translation>Актыўных акаўнтаў не знойдзена. &lt;br&gt; Вы можаце стварыць новы акаўнт або імпартаваць дадзеныя ўжо існуючага.</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="146"/>
         <source>There is no active account found.
 You can create a new one.</source>
-        <translation type="unfinished"></translation>
+        <translation>Актыўных акаўнтаў не знойдзена. &lt;br&gt; Вы можаце стварыць новы акаўнт.</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="263"/>
@@ -518,29 +537,36 @@ You can create a new one.</source>
         <translation>Фота карыстальнiка</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
         <source>There is no active tank found</source>
-        <translation>Не знойдзена актыуных акварыумау</translation>
+        <translation type="vanished">Не знойдзена актыўных акварыўмаў</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
         <source>Creating tank profile</source>
-        <translation>Стварэнне профiля акварыума</translation>
+        <translation type="vanished">Стварэнне профiля акварыўма</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
         <source>Tank name</source>
-        <translation>Iмя акварыума</translation>
+        <translation type="vanished">Iмя акварыўма</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="436"/>
         <source>100</source>
-        <translation type="unfinished"></translation>
+        <translation>100</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
+        <source>Select a tank type</source>
+        <translation>Выберыце тып акварыума</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
+        <source>Aquarium image</source>
+        <translation>Фота акварыума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="587"/>
         <source>Please wait until data is importing</source>
-        <translation type="unfinished"></translation>
+        <translation>Калі ласка, дачакайцеся пакуль дадзеныя будуць імпартаваны</translation>
     </message>
     <message>
         <source>cm</source>
@@ -550,17 +576,15 @@ You can create a new one.</source>
         <location filename="../../qml/Page_AccountsWizard.qml" line="459"/>
         <location filename="../../qml/Page_AccountsWizard.qml" line="482"/>
         <source>50</source>
-        <translation type="unfinished"></translation>
+        <translation>50</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
         <source>Select a tank type:</source>
-        <translation>Выберыце тып акварыума:</translation>
+        <translation type="vanished">Выберыце тып акварыума:</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
         <source>Tank image</source>
-        <translation>Фота акварыума</translation>
+        <translation type="vanished">Фота акварыума</translation>
     </message>
 </context>
 <context>
@@ -580,59 +604,59 @@ You can create a new one.</source>
         <location filename="../../qml/Page_AppSett.qml" line="210"/>
         <location filename="../../qml/Page_AppSett.qml" line="217"/>
         <source>Dimension units</source>
-        <translation type="unfinished"></translation>
+        <translation>Адзінкі вымярэння</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="226"/>
         <source>Santimeters</source>
-        <translation type="unfinished"></translation>
+        <translation>Сантыметры</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="227"/>
         <source>Inches</source>
-        <translation type="unfinished"></translation>
+        <translation>Дзюймы</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="242"/>
         <location filename="../../qml/Page_AppSett.qml" line="249"/>
         <source>Volume units</source>
-        <translation type="unfinished"></translation>
+        <translation>Адзінкі вымярэння аб&apos;ёму</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="258"/>
         <source>Liters</source>
-        <translation type="unfinished"></translation>
+        <translation>Лiтры</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="259"/>
         <source>Gallon US</source>
-        <translation type="unfinished"></translation>
+        <translation>Галоны ЗША</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="260"/>
         <source>Gallon UK</source>
-        <translation type="unfinished"></translation>
+        <translation>Галоны Велікабрытанія</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="275"/>
         <location filename="../../qml/Page_AppSett.qml" line="282"/>
         <source>Date format</source>
-        <translation type="unfinished"></translation>
+        <translation>Фармат даты</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="291"/>
         <source>MM/DD/YYYY</source>
-        <translation type="unfinished"></translation>
+        <translation>ММ/ДД/ГГГГ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="292"/>
         <source>DD.MM.YYYY</source>
-        <translation type="unfinished"></translation>
+        <translation>ДД.ММ.ГГГГ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AppSett.qml" line="293"/>
         <source>YYYY-MM-DD</source>
-        <translation type="unfinished"></translation>
+        <translation>ГГГГ-ММ-ДД</translation>
     </message>
     <message>
         <source>Select language:</source>
@@ -660,22 +684,22 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_Main.qml" line="50"/>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Абнаўленне</translation>
     </message>
     <message>
         <location filename="../../qml/Page_Main.qml" line="51"/>
         <source>Updated version of application available (v</source>
-        <translation type="unfinished"></translation>
+        <translation>Даступная абноўленая версія праграмы (v</translation>
     </message>
     <message>
         <location filename="../../qml/Page_Main.qml" line="166"/>
         <source>MY TANKS</source>
-        <translation type="unfinished"></translation>
+        <translation>МАЕ АКВАРЫУМЫ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_Main.qml" line="203"/>
         <source>story</source>
-        <translation type="unfinished"></translation>
+        <translation>гiсторыя</translation>
     </message>
 </context>
 <context>
@@ -693,7 +717,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_TankData.qml" line="19"/>
         <source>REMINDERS</source>
-        <translation type="unfinished"></translation>
+        <translation>НАПАМIНКI</translation>
     </message>
     <message>
         <source>CALENDAR</source>
@@ -758,7 +782,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="50"/>
         <source>EDIT</source>
-        <translation type="unfinished"></translation>
+        <translation>РЭДАГАВАННЕ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="50"/>
@@ -767,89 +791,89 @@ You can create a new one.</source>
         <location filename="../../qml/Page_TankSett.qml" line="91"/>
         <location filename="../../qml/Page_TankSett.qml" line="249"/>
         <source>AQUARIUMS</source>
-        <translation type="unfinished"></translation>
+        <translation>АКВАРЫУМЫ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="85"/>
         <source>ADD NEW</source>
-        <translation type="unfinished"></translation>
+        <translation>ДАДАЦЬ НОВЫ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="98"/>
         <source>You can only add</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можаце дадаць толькі</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>You cannot add more than</source>
-        <translation type="unfinished"></translation>
+        <translation>Нельга дадаць больш за</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="98"/>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>aquariums.</source>
-        <translation type="unfinished"></translation>
+        <translation>акварыумау.</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>Limitation of non-registered version.</source>
-        <translation type="unfinished"></translation>
+        <translation>(абмежаваная версiя)</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="341"/>
         <source>No desciption</source>
-        <translation type="unfinished"></translation>
+        <translation>Няма апiсання</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="559"/>
         <source>Aquarium profile delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Выдаленне акварыума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="588"/>
         <source>Aquarium name</source>
-        <translation type="unfinished"></translation>
+        <translation>Імя акварыума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="601"/>
         <source>Aquarium description</source>
-        <translation type="unfinished"></translation>
+        <translation>Апiсанне акварыума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="363"/>
         <location filename="../../qml/Page_TankSett.qml" line="698"/>
         <source>Aquarium type</source>
-        <translation type="unfinished"></translation>
+        <translation>Тып акварыума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="393"/>
         <source>Date create</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата стварэння</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="424"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Даужыня</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="454"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>Вышыня</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="484"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Шырыня</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="514"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Аб&apos;ем</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="712"/>
         <source>Aquarium image</source>
-        <translation type="unfinished"></translation>
+        <translation>Фота акварыума</translation>
     </message>
     <message>
         <source>Tank profile delete</source>
@@ -871,13 +895,13 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="624"/>
         <source>100</source>
-        <translation type="unfinished"></translation>
+        <translation>100</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="648"/>
         <location filename="../../qml/Page_TankSett.qml" line="672"/>
         <source>50</source>
-        <translation type="unfinished"></translation>
+        <translation>50</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="760"/>
@@ -898,17 +922,17 @@ You can create a new one.</source>
     <message>
         <location filename="../../c++/appmanager.cpp" line="33"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="34"/>
         <source>Русский</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="35"/>
         <source>Беларускi</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="21"/>
@@ -968,17 +992,17 @@ You can create a new one.</source>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="36"/>
         <source>pH</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="37"/>
         <source>kH</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="38"/>
         <source>gH</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="39"/>
@@ -1003,7 +1027,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="43"/>
         <source>Carbon</source>
-        <translation type="unfinished"></translation>
+        <translation>Вуглекiслата</translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="44"/>
@@ -1048,7 +1072,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="52"/>
         <source>ORP</source>
-        <translation type="unfinished"></translation>
+        <translation>АВП</translation>
     </message>
 </context>
 <context>
@@ -1071,7 +1095,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/custom/SideMenu.qml" line="43"/>
         <source>ABOUT</source>
-        <translation type="unfinished"></translation>
+        <translation>АБ ПРАГРАМЕ</translation>
     </message>
 </context>
 <context>
@@ -1087,63 +1111,63 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="151"/>
         <source>Today</source>
-        <translation type="unfinished"></translation>
+        <translation>Сягоння</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="152"/>
         <source>Week</source>
-        <translation type="unfinished"></translation>
+        <translation>Тыдзень</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="153"/>
         <source>Month</source>
-        <translation type="unfinished"></translation>
+        <translation>Месяц</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="53"/>
         <source>You can only add</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы можаце дадаць толькі</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="53"/>
         <location filename="../../qml/Tab_Action.qml" line="59"/>
         <source>reminders.</source>
-        <translation type="unfinished"></translation>
+        <translation>напамiнак.</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="59"/>
         <source>Limitation of non-registered version.</source>
-        <translation type="unfinished"></translation>
+        <translation>(абмежаваная версiя)</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="59"/>
         <source>You cannot add more than</source>
-        <translation type="unfinished"></translation>
+        <translation>Нельга дадаць больш за</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="134"/>
         <source>View period</source>
-        <translation type="unfinished"></translation>
+        <translation>Перыяд прагляду</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="144"/>
         <source>Select a period</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберыце перыяд</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="377"/>
         <source>DELETING</source>
-        <translation type="unfinished"></translation>
+        <translation>ВЫДАЛЕННЕ</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="377"/>
         <source>Are you sure to delete reminder?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы сапраўды жадаеце выдаліць напамін?</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="432"/>
         <source>No reminders found</source>
-        <translation type="unfinished"></translation>
+        <translation>Напамінкаў не знойдзена</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="451"/>
@@ -1174,7 +1198,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Tab_Graph.qml" line="106"/>
         <source>No record found for this aquarium</source>
-        <translation type="unfinished">Ня знойдзена данных для гэтага акварыума</translation>
+        <translation>Ня знойдзена данных для гэтага акварыума</translation>
     </message>
 </context>
 <context>
@@ -1182,7 +1206,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/custom/TankStoryView.qml" line="77"/>
         <source>No record found for this aquarium</source>
-        <translation type="unfinished">Ня знойдзена данных для гэтага акварыума</translation>
+        <translation>Ня знойдзена данных для гэтага акварыума</translation>
     </message>
 </context>
 <context>
@@ -1194,7 +1218,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/custom/TimePicker.qml" line="221"/>
         <source>Select a time</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберыце час</translation>
     </message>
 </context>
 <context>
@@ -1308,39 +1332,39 @@ You can create a new one.</source>
     <message>
         <location filename="../../main.qml" line="144"/>
         <source>cm</source>
-        <translation type="unfinished">см</translation>
+        <translation>см</translation>
     </message>
     <message>
         <location filename="../../main.qml" line="146"/>
         <source>inch</source>
-        <translation type="unfinished"></translation>
+        <translation>дзм</translation>
     </message>
     <message>
         <location filename="../../main.qml" line="152"/>
         <location filename="../../main.qml" line="162"/>
         <source>L</source>
-        <translation type="unfinished">Л</translation>
+        <translation>Л</translation>
     </message>
     <message>
         <location filename="../../main.qml" line="154"/>
         <source>Gal(UK)</source>
-        <translation type="unfinished"></translation>
+        <translation>Гал(АНГ)</translation>
     </message>
     <message>
         <location filename="../../main.qml" line="156"/>
         <source>Gal(US)</source>
-        <translation type="unfinished"></translation>
+        <translation>Гал(США)</translation>
     </message>
     <message>
         <location filename="../../main.qml" line="164"/>
         <location filename="../../main.qml" line="166"/>
         <source>G</source>
-        <translation type="unfinished"></translation>
+        <translation>Г</translation>
     </message>
     <message>
         <location filename="../../main.qml" line="276"/>
         <source>Loading data</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузка дадзеных</translation>
     </message>
 </context>
 </TS>

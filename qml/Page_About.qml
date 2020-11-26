@@ -185,7 +185,7 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Application version:") + " " + getAppVersion(app.global_APP_VERSION)
+                    text: qsTr("Application version") + ":" + " " + getAppVersion(app.global_APP_VERSION)
                 }
 
                 Text
@@ -198,7 +198,7 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Application type:") + " " + getAppType()
+                    text: qsTr("Application type") + ":" + " " + getAppType()
                 }
             }
 

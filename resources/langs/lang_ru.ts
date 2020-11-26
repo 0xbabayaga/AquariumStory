@@ -28,15 +28,19 @@
     </message>
     <message>
         <location filename="../../c++/appmanager.cpp" line="1024"/>
+        <location filename="../../c++/appmanager.cpp" line="1029"/>
         <location filename="../../c++/appmanager.cpp" line="1038"/>
-        <source>Error: </source>
-        <translation>Ошибка:</translation>
+        <location filename="../../c++/appmanager.cpp" line="1043"/>
+        <source>Error</source>
+        <translation>Ошибка</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1029"/>
-        <location filename="../../c++/appmanager.cpp" line="1043"/>
+        <source>Error: </source>
+        <translation type="vanished">Ошибка:</translation>
+    </message>
+    <message>
         <source>Error: #</source>
-        <translation>Ошибка: #</translation>
+        <translation type="vanished">Ошибка: #</translation>
     </message>
 </context>
 <context>
@@ -222,12 +226,12 @@
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="195"/>
         <source>EDIT RECORD</source>
-        <translation>Редактировать запись</translation>
+        <translation>РЕДАКТИРОВАТЬ ЗАПИСЬ</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="195"/>
         <source>ADD RECORD</source>
-        <translation>Добавить запись</translation>
+        <translation>ДОБАВИТЬ ЗАПИСЬ</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="316"/>
@@ -445,7 +449,7 @@ Limitation of non-registered version.</source>
     <message>
         <location filename="../../qml/custom/NoteViewDialog.qml" line="229"/>
         <source>NOTE FOUND</source>
-        <translation>Найдена заметка</translation>
+        <translation>НАЙДЕНА ЗАМЕТКА</translation>
     </message>
 </context>
 <context>
@@ -477,13 +481,21 @@ Limitation of non-registered version.</source>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="188"/>
-        <source>Application version:</source>
-        <translation>Версия приложения:</translation>
+        <source>Application version</source>
+        <translation>Версия приложения</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="201"/>
+        <source>Application type</source>
+        <translation>Тип приложения</translation>
+    </message>
+    <message>
+        <source>Application version:</source>
+        <translation type="vanished">Версия приложения:</translation>
+    </message>
+    <message>
         <source>Application type:</source>
-        <translation>Тип приложения:</translation>
+        <translation type="vanished">Тип приложения:</translation>
     </message>
     <message>
         <source>Application version: </source>
@@ -597,6 +609,21 @@ Limitation of non-registered version.</source>
         <translation>Email пользователя</translation>
     </message>
     <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
+        <source>There is no active aquarium found</source>
+        <translation>Активных аквариумов не найдено</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
+        <source>Creating aquarium profile</source>
+        <translation>Создание аквариумного профиля</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
+        <source>Aquarium name</source>
+        <translation>Имя аквариума</translation>
+    </message>
+    <message>
         <source>User password</source>
         <translation type="vanished">Пароль пользователя</translation>
     </message>
@@ -623,24 +650,31 @@ You can create a new one.</source>
         <translation>Фото пользователя</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
         <source>There is no active tank found</source>
-        <translation>Не найдено ни одного аквариумного профайла</translation>
+        <translation type="vanished">Не найдено ни одного аквариумного профайла</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
         <source>Creating tank profile</source>
-        <translation>Создание профайла аквариума</translation>
+        <translation type="vanished">Создание профайла аквариума</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
         <source>Tank name</source>
-        <translation>Название аквариума</translation>
+        <translation type="vanished">Название аквариума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="436"/>
         <source>100</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
+        <source>Select a tank type</source>
+        <translation>Выберите тип аквариума</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
+        <source>Aquarium image</source>
+        <translation>Фото аквариума</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="587"/>
@@ -658,14 +692,12 @@ You can create a new one.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
         <source>Select a tank type:</source>
-        <translation>Выберите тип аквариума:</translation>
+        <translation type="vanished">Выберите тип аквариума:</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
         <source>Tank image</source>
-        <translation>Фото аквариума</translation>
+        <translation type="vanished">Фото аквариума</translation>
     </message>
 </context>
 <context>
@@ -1092,7 +1124,7 @@ Limitation of non-registered version.</source>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="22"/>
         <source>Soft Coral Reef</source>
-        <translation>Риф с мягкими кораллами</translation>
+        <translation>Мягкий риф</translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="23"/>

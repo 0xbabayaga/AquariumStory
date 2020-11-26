@@ -1021,12 +1021,12 @@ void AppManager::onCloudResponse_Register(int error, QString errorText, QString 
     else if (error == CloudManager::ReponseError::Error_Specific)
     {
         setQmlParam("cloudCommWaitDialog", "header", tr("Application is not registered!"));
-        setQmlParam("cloudCommWaitDialog", "message", tr("Error: ") + errorText);
+        setQmlParam("cloudCommWaitDialog", "message", tr("Error") + ": " + errorText);
     }
     else
     {
         setQmlParam("cloudCommWaitDialog", "message", tr("Application is not registered!"));
-        setQmlParam("cloudCommWaitDialog", "message", tr("Error: #") + QString::number(error));
+        setQmlParam("cloudCommWaitDialog", "message", tr("Error") + ": #" + QString::number(error));
     }
 }
 
@@ -1035,12 +1035,12 @@ void AppManager::onCloudResponse_Error(int error, QString errorText)
     if (error == CloudManager::ReponseError::Error_Specific)
     {
         setQmlParam("cloudCommWaitDialog", "header", tr("Application is not registered!"));
-        setQmlParam("cloudCommWaitDialog", "message", tr("Error: ") + errorText);
+        setQmlParam("cloudCommWaitDialog", "message", tr("Error") + ": " + errorText);
     }
     else
     {
         setQmlParam("cloudCommWaitDialog", "message", tr("Application is not registered!"));
-        setQmlParam("cloudCommWaitDialog", "message", tr("Error: #") + QString::number(error));
+        setQmlParam("cloudCommWaitDialog", "message", tr("Error") + ": #" + QString::number(error));
     }
 }
 
