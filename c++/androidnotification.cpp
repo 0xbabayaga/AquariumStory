@@ -42,7 +42,7 @@ void AndroidNotification::updateAndroidNotification()
     QAndroidJniObject javaDetails = QAndroidJniObject::fromString(_details);
 
     QAndroidJniObject::callStaticMethod<void>(
-        "org/tikava/AquariumNotes/AquariumNotesNotification",
+        "org/tikava/AquariumStory/AquariumStoryNotification",
         "notify",
         "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V",
         QtAndroid::androidContext().object(),

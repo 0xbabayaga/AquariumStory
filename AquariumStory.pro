@@ -19,6 +19,7 @@ TEMPLATE = app
 SOURCES += \
         c++/actionlist.cpp \
         c++/appmanager.cpp \
+        c++/backmanager.cpp \
         c++/cloudmanager.cpp \
         c++/db_importexport.cpp \
         c++/dbmanager.cpp \
@@ -45,9 +46,9 @@ DISTFILES += \
     android/gradlew \
     android/gradlew.bat \
     android/res/values/libs.xml \
-    android/src/org/tikava/AquariumNotes/AquariumStory.java \
-    android/src/org/tikava/AquariumNotes/AquariumStoryNotification.java \
-    android/src/org/tikava/AquariumNotes/Background.java
+    android/src/org/tikava/AquariumStory/AquariumStory.java \
+    android/src/org/tikava/AquariumStory/AquariumStoryNotification.java \
+    android/src/org/tikava/AquariumStory/Background.java
     qml/qmldir \
 
 HEADERS += \
