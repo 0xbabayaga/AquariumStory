@@ -213,7 +213,7 @@
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
         <source>You cannot add more than</source>
-        <translation>Нельга даадць больш за</translation>
+        <translation>Нельга дадаць больш за</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="350"/>
@@ -233,12 +233,12 @@
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="449"/>
         <source>LIST OF PARAMS</source>
-        <translation>СПIC ПАРАМЕТРАУ</translation>
+        <translation>СПIC ПАРАМЕТРАЎ</translation>
     </message>
     <message>
         <location filename="../../qml/custom/DialogAddParamNote.qml" line="471"/>
         <source>Select a set of parameters for monitoring</source>
-        <translation>Выберыце набор параметрау для манiторынгу</translation>
+        <translation>Выберыце набор параметраў для манiторынгу</translation>
     </message>
 </context>
 <context>
@@ -395,7 +395,7 @@
     <message>
         <location filename="../../qml/Page_About.qml" line="231"/>
         <source>This is a limited version of application.&lt;br&gt; To get a full version of application please buy &lt;b&gt;Aquarium Story Pro&lt;/b&gt; or register (by pressing button below).</source>
-        <translation>Гэта абмежаваная версія праграмы. &lt;br&gt; Каб атрымаць паўнавартасную версію праграмы, калі ласка, купіце &lt;b&gt; Aquarium Story PRO &lt;/ b&gt; або зарэгіструйцеся (націскам кнопкі унізе).</translation>
+        <translation>Гэта абмежаваная версія праграмы. &lt;br&gt; Каб атрымаць паўнавартасную версію праграмы, калі ласка, купіце &lt;b&gt; Aquarium Story PRO &lt;/ b&gt; або зарэгіструйцеся (націскам кнопкі ўнізе).</translation>
     </message>
     <message>
         <location filename="../../qml/Page_About.qml" line="248"/>
@@ -418,7 +418,7 @@
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="153"/>
         <source>ACCOUNT</source>
-        <translation>АКАУНТ</translation>
+        <translation>АКАЎНТ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="228"/>
@@ -428,12 +428,12 @@
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="286"/>
         <source>Account delete</source>
-        <translation>Выдалiць акаунт</translation>
+        <translation>Выдалiць акаўнт</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="287"/>
         <source>All data assosiated with current account will be deleted!</source>
-        <translation>Усе дадзеныя, звязаныя с бягучым акаунтам будуць выдалены!</translation>
+        <translation>Усе дадзеныя, звязаныя с бягучым акаўнтам будуць выдалены!</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountSett.qml" line="301"/>
@@ -498,7 +498,7 @@
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
         <source>There is no active aquarium found</source>
-        <translation>Актыўных акварыўмаў не знойдзена</translation>
+        <translation>Актыўных акварыўмаў ня знойдзена</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
@@ -508,7 +508,7 @@
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
         <source>Aquarium name</source>
-        <translation>Імя акварыума</translation>
+        <translation>Імя акварыўма</translation>
     </message>
     <message>
         <source>User password</source>
@@ -561,7 +561,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
         <source>Aquarium image</source>
-        <translation>Фота акварыума</translation>
+        <translation>Фота акварыўма</translation>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="587"/>
@@ -694,7 +694,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_Main.qml" line="166"/>
         <source>MY TANKS</source>
-        <translation>МАЕ АКВАРЫУМЫ</translation>
+        <translation>МАЕ АКВАРЫЎМЫ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_Main.qml" line="203"/>
@@ -791,7 +791,7 @@ You can create a new one.</source>
         <location filename="../../qml/Page_TankSett.qml" line="91"/>
         <location filename="../../qml/Page_TankSett.qml" line="249"/>
         <source>AQUARIUMS</source>
-        <translation>АКВАРЫУМЫ</translation>
+        <translation>АКВАРЫЎМЫ</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="85"/>
@@ -812,7 +812,7 @@ You can create a new one.</source>
         <location filename="../../qml/Page_TankSett.qml" line="98"/>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>aquariums.</source>
-        <translation>акварыумау.</translation>
+        <translation>акварыўм.</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
@@ -827,23 +827,23 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="559"/>
         <source>Aquarium profile delete</source>
-        <translation>Выдаленне акварыума</translation>
+        <translation>Выдаленне акварыўма</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="588"/>
         <source>Aquarium name</source>
-        <translation>Імя акварыума</translation>
+        <translation>Імя акварыўма</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="601"/>
         <source>Aquarium description</source>
-        <translation>Апiсанне акварыума</translation>
+        <translation>Апiсанне акварыўма</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="363"/>
         <location filename="../../qml/Page_TankSett.qml" line="698"/>
         <source>Aquarium type</source>
-        <translation>Тып акварыума</translation>
+        <translation>Тып акварыўма</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="393"/>
@@ -873,7 +873,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="712"/>
         <source>Aquarium image</source>
-        <translation>Фота акварыума</translation>
+        <translation>Фота акварыўма</translation>
     </message>
     <message>
         <source>Tank profile delete</source>
@@ -882,7 +882,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="560"/>
         <source>All data assosiated with current aquarium will be deleted!</source>
-        <translation>Усе дадзеныя, звязаныя с бягучым акварыумам будуць выдалены!</translation>
+        <translation>Усе дадзеныя, звязаныя с бягучым акварыўмам будуць выдалены!</translation>
     </message>
     <message>
         <source>Tank name</source>
@@ -932,7 +932,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../c++/appmanager.cpp" line="35"/>
         <source>Беларускi</source>
-        <translation></translation>
+        <translation>Беларуская</translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="21"/>
@@ -967,7 +967,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="27"/>
         <source>Fresh aquarium</source>
-        <translation>Прэсны акварыум</translation>
+        <translation>Прэсны акварыўм</translation>
     </message>
     <message>
         <location filename="../../c++/dbmanager.cpp" line="28"/>
@@ -1080,12 +1080,12 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/custom/SideMenu.qml" line="40"/>
         <source>ACCOUNT</source>
-        <translation>АКАУНТ</translation>
+        <translation>АКАЎНТ</translation>
     </message>
     <message>
         <location filename="../../qml/custom/SideMenu.qml" line="41"/>
         <source>TANKS</source>
-        <translation>АКВАРЫУМЫ</translation>
+        <translation>АКВАРЫЎМЫ</translation>
     </message>
     <message>
         <location filename="../../qml/custom/SideMenu.qml" line="42"/>
@@ -1132,7 +1132,7 @@ You can create a new one.</source>
         <location filename="../../qml/Tab_Action.qml" line="53"/>
         <location filename="../../qml/Tab_Action.qml" line="59"/>
         <source>reminders.</source>
-        <translation>напамiнак.</translation>
+        <translation>напамiнкаў.</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Action.qml" line="59"/>
@@ -1185,12 +1185,12 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Tab_Current.qml" line="98"/>
         <source>The record for today is exist. Do you want to update existing?</source>
-        <translation>Запiс за сягоння iснуе. Хацiце рэдагаваць запiс?</translation>
+        <translation>Запiс за сягоння ўжо iснуе. Хацiце рэдагаваць запiс?</translation>
     </message>
     <message>
         <location filename="../../qml/Tab_Current.qml" line="184"/>
         <source>No record found for this aquarium</source>
-        <translation>Ня знойдзена данных для гэтага акварыума</translation>
+        <translation>Ня знойдзена данных для гэтага акварыўма</translation>
     </message>
 </context>
 <context>
@@ -1198,7 +1198,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/Tab_Graph.qml" line="106"/>
         <source>No record found for this aquarium</source>
-        <translation>Ня знойдзена данных для гэтага акварыума</translation>
+        <translation>Ня знойдзена данных для гэтага акварыўма</translation>
     </message>
 </context>
 <context>
@@ -1206,7 +1206,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../qml/custom/TankStoryView.qml" line="77"/>
         <source>No record found for this aquarium</source>
-        <translation>Ня знойдзена данных для гэтага акварыума</translation>
+        <translation>Ня знойдзена данных для гэтага акварыўма</translation>
     </message>
 </context>
 <context>
@@ -1304,7 +1304,7 @@ You can create a new one.</source>
     <message>
         <location filename="../../js/datetimeutility.js" line="20"/>
         <source>Tuesday</source>
-        <translation>Ауторак</translation>
+        <translation>Аўторак</translation>
     </message>
     <message>
         <location filename="../../js/datetimeutility.js" line="21"/>

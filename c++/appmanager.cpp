@@ -941,7 +941,7 @@ void AppManager::onGuiCurrentSmpIdChanged(int smpId)
 
 void AppManager::onGuiLanguageChanged(int id)
 {
-    if (id < AppDef::Lang_End && appSett.value(SETT_LANG).toInt() != id)
+    if (id < AppDef::Lang_End && appSett.value(SETT_LANG).toInt() != id || justStarted == true)
     {
         if (loadTranslations(id) == true)
         {
@@ -952,6 +952,8 @@ void AppManager::onGuiLanguageChanged(int id)
 
             appSett.setValue(SETT_LANG, id);
         }
+
+        justStarted = false;
     }
 }
 

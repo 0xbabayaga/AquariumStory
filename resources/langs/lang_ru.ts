@@ -966,7 +966,7 @@ Limitation of non-registered version.</source>
         <location filename="../../qml/Page_TankSett.qml" line="98"/>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>
         <source>aquariums.</source>
-        <translation>аквариумов.</translation>
+        <translation>аквариума.</translation>
     </message>
     <message>
         <location filename="../../qml/Page_TankSett.qml" line="104"/>

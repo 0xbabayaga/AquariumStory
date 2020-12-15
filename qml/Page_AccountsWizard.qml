@@ -396,7 +396,7 @@ Item
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
                         height: AppTheme.compHeight * app.scale
-                        width: parent.width - AppTheme.padding * 2 * app.scale
+                        width: parent.width// - AppTheme.padding * 2 * app.scale
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily

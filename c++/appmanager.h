@@ -111,6 +111,7 @@ private:
     QSettings appSett;
     QTranslator translator;
     QQmlApplicationEngine   *qmlEngine = nullptr;
+    bool justStarted = true;
 
     CloudManager *cloudMan = nullptr;
 

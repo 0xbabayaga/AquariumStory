@@ -11,7 +11,6 @@
 #ifdef Q_OS_ANDROID
 #include <QAndroidService>
 #include "c++/androidnotification.h"
-#include "c++/backmanager.h"
 #endif
 
 int main(int argc, char *argv[])

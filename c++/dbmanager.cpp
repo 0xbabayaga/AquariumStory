@@ -130,10 +130,6 @@ DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
     }
 
     isParamDataChanged = true;
-
-    //db.close();
-    //importFromFile("C:/Users/navi/Downloads/ep.as");
-    //db.open();
 }
 
 DBManager::~DBManager()
