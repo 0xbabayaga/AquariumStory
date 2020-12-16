@@ -9,6 +9,7 @@
 #include "dbobjects.h"
 #include "actionlist.h"
 #include "AppDefs.h"
+#include "security/security.h"
 
 #define DIAGRAMM_DRAW_GAP_TOP       0.50  //Means +50% of full scale
 #define DIAGRAMM_DRAW_GAP_BOTTOM    0.50  //Means +50% of full scale
@@ -90,7 +91,6 @@ public:
     static bool    less(QObject *v1, QObject *v2);
 
     /* Utitlity methods */
-    QString randId();
     TankObj *currentTankSelected();
     UTObj   *currentSelectedObjs()  {   return &curSelectedObjs;    }
     ActionList* currentActionList() {   return actionList;          }
@@ -112,6 +112,7 @@ private:
     static QString         dbFileLink;
 
     QSqlDatabase    db;
+    Security        *security = nullptr;
 
     /* Store params enumeration */
     QList<QObject*> paramsGuiList;

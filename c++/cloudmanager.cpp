@@ -5,11 +5,13 @@
 #include <QJsonArray>
 #include <QJsonParseError>
 #include <QCryptographicHash>
+#include "security/md7.h"
 
 CloudManager::CloudManager(QString id, QObject *parent) : QObject(parent)
 {
-    manId = id;
+    security = new Security(AppDef::MAN_ID_LENGTH, AppDef::APP_KEY_SEED, AppDef::APP_KEY_LENGTH);
 
+    manId = id;
     man = new QNetworkAccessManager();
     tmt = new QTimer();
     tmt->stop();
@@ -24,8 +26,11 @@ CloudManager::CloudManager(QString id, QObject *parent) : QObject(parent)
 
 CloudManager::~CloudManager()
 {
-    if (man != 0)
+    if (man != nullptr)
         delete man;
+
+    if (security != nullptr)
+        delete security;
 }
 
 void CloudManager::request_getAppUpdates()
@@ -37,13 +42,13 @@ void CloudManager::request_getAppUpdates()
 void CloudManager::request_registerApp(UserObj *user)
 {
     QString md5;
-    QString md5Base;
+    QString md7Base;
 
-    md5Base = user->man_id;
-    md5Base = md5Base.remove(0, user->man_id.length() - AppDef::MAN_ID_CUT_MD5);
-    md5Base += QString::number(user->date_create);
+    md7Base = user->man_id;
+    md7Base = md7Base.remove(0, user->man_id.length() - AppDef::MAN_ID_CUT_MD5);
+    md7Base += QString::number(user->date_create);
 
-    md5 = QString(QCryptographicHash::hash(md5Base.toLocal8Bit(),QCryptographicHash::Md5).toHex());
+    md5 = QString(md7(md7Base.toLocal8Bit().data()).c_str());
 
     QString jsonString = "{"
                          "\"method\": \"register\","
@@ -110,7 +115,7 @@ void CloudManager::onReplyReceived(QNetworkReply *reply)
                     if (obj["result"].toInt() == CloudManager::ReponseError::NoError)
                     {
                         if (obj["manid"].toString() == manId &&
-                            isKeyValid(obj["key"].toString()) == true)
+                            security->isKeyValid(obj["key"].toString().toLocal8Bit().data(), manId.toStdString()) == true)
                         {
                             emit response_registerApp(obj["result"].toInt(), obj["errortext"].toString(), manId, obj["key"].toString());
                         }
@@ -151,20 +156,4 @@ void CloudManager::onTimeout()
 {
     tmt->stop();
     emit response_error((int)CloudManager::ReponseError::Error_Timeout, "");
-}
-
-bool CloudManager::isKeyValid(QString key)
-{
-    QString tmp = "";
-    int i = 0;
-    QString id = manId;
-
-    while (tmp.length() < AppDef::APP_KEY_LENGTH)
-    {
-        tmp += QString(QCryptographicHash::hash(id.toLocal8Bit(), QCryptographicHash::Md5).toHex());
-        id += QString::number(i);
-        i += AppDef::APP_KEY_SEED;
-    }
-
-    return (tmp == key);
 }

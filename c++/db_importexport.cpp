@@ -4,12 +4,13 @@
 #include <QThread>
 #include <QDebug>
 #include "dbmanager.h"
+#include "security/md7.h"
 
 QString generateKey(quint64 tm, unsigned int crc)
 {
     QString tmp = QString::number(crc, 16) + QString::number(tm);
 
-    return QString(QCryptographicHash::hash(tmp.toLocal8Bit(), QCryptographicHash::Md5).toHex());
+    return QString(md7(tmp.toLocal8Bit().data()).c_str());
 }
 
 bool exportToFile(QString name)
@@ -210,6 +211,8 @@ bool importFromFile(QString name)
                     }
                 }
 
+                qDebug() << "CRC = " << QString::number(crc, 16);
+
                 if (tmpSize == table->dbFile.size)
                 {
                     while(table->imgFiles[cnt].size != 0)
@@ -274,6 +277,8 @@ bool importFromFile(QString name)
                         qDebug() << "Wrong md5 summ";
                         res = false;
                     }
+                    else
+                        res = true;
                 }
                 else
                     qDebug() << "Import: Wrong DB size";

@@ -15,6 +15,7 @@
 #include <QTranslator>
 #include "AppDefs.h"
 #include "dbobjects.h"
+#include "security/security.h"
 
 const static QString aquariumTypeNames[AquariumType::EndOfList] =
 {
@@ -64,6 +65,8 @@ static const QString backgroundDbConn = "backgroundConn";
 DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
 {
     QString tmp = "";
+
+    security = new Security(AppDef::MAN_ID_LENGTH, AppDef::APP_KEY_SEED, AppDef::APP_KEY_LENGTH);
 
     readOnly = isReadOnly;
 
@@ -134,7 +137,8 @@ DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
 
 DBManager::~DBManager()
 {
-
+    if (security != nullptr)
+        delete security;
 }
 
 bool DBManager::isParamEnabled(char paramId)
@@ -142,8 +146,6 @@ bool DBManager::isParamEnabled(char paramId)
     for (int i = 0; i < paramsGuiList.size(); i++)
     {
         ParamObj *obj = (ParamObj*) paramsGuiList.at(i);
-
-       // qDebug() << i << obj->paramId() << obj->en();
 
         if (obj != 0 && obj->paramId() == paramId && obj->en() == true)
             return true;
@@ -499,7 +501,7 @@ bool DBManager::createUser(QString uname, QString upass, QString phone, QString 
         query.prepare("INSERT INTO USER_TABLE (MAN_ID, UNAME, UPASS, SELECTED, STATUS, PHONE, EMAIL, AVATAR_IMG, DATE_CREATE, DATE_EDIT) "
                       "VALUES (:man_id, :uname, :upass, :selected, :status, :phone, :email, :avatar_img, :date_create, :date_edit)");
 
-        query.bindValue(":man_id", randId());
+        query.bindValue(":man_id", QString(security->getRandomId().c_str()));
         query.bindValue(":uname", uname);
         query.bindValue(":upass", upass);
         query.bindValue(":selected", true);
@@ -675,7 +677,7 @@ bool DBManager::createTank(QString name, QString desc, QString manId, int type, 
     if (name.length() > 0 && name.length() <= 64)
     {
         QSqlQuery query;
-        QString tankId = randId();
+        QString tankId = QString(security->getRandomId().c_str());
 
         if (imgFile != "")
         {
@@ -1097,24 +1099,6 @@ bool DBManager::editPersonalParamState(QString tankId, int paramId, bool en)
     }
 
     return res;
-}
-
-QString DBManager::randId()
-{
-    const QString possibleCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");
-    const int randomStringLength = AppDef::MAN_ID_LENGTH;
-    QString randomString;
-
-    for(int i = 0; i < randomStringLength; ++i)
-    {
-        int index = qrand() * QDateTime::currentDateTime().time().msec();
-
-        index = index % possibleCharacters.length();
-        QChar nextChar = possibleCharacters.at(index);
-        randomString.append(nextChar);
-    }
-
-    return randomString;
 }
 
 bool DBManager::openDB()

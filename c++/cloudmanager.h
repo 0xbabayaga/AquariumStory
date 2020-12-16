@@ -6,6 +6,7 @@
 #include <QNetworkReply>
 #include <QTimer>
 #include "dbobjects.h"
+#include "security/security.h"
 
 #define CLOUDMAN_RESPONSE_TMT   10000
 #define CLOUD_SERVICE_URL       "https://as.tikava.by/reg.php"
@@ -48,9 +49,7 @@ private slots:
     void onTimeout();
 
 protected:
-    bool isKeyValid(QString key);
-
-protected:
+    Security              *security = nullptr;
     QNetworkAccessManager *man = nullptr;
     QUrl                  cloudUrl;
     QTimer                *tmt;

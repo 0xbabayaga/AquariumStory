@@ -19,20 +19,22 @@ TEMPLATE = app
 SOURCES += \
         c++/actionlist.cpp \
         c++/appmanager.cpp \
-        c++/backmanager.cpp \
         c++/cloudmanager.cpp \
         c++/db_importexport.cpp \
         c++/dbmanager.cpp \
         c++/filemanager.cpp \
         c++/position.cpp \
+        c++/security/md7.cpp \
+        c++/security/security.cpp \
         main.cpp
 
 android {
 SOURCES += \
-        c++/androidnotification.cpp
+        c++/androidnotification.cpp \
+        c++/backmanager.cpp
 }
 
-#DEFINES += FULL_FEATURES_ENABLED
+DEFINES += FULL_FEATURES_ENABLED
 
 RESOURCES += qml.qrc
 
@@ -61,6 +63,8 @@ HEADERS += \
     c++/filemanager.h \
     c++/galleryobjects.h \
     c++/position.h \
+    c++/security/md7.h \
+    c++/security/security.h \
     c++/version.h
 
 ANDROID_ABIS = armeabi-v7a

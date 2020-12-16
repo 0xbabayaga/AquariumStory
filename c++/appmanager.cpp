@@ -19,6 +19,7 @@
 #include "dbobjects.h"
 #include "position.h"
 #include "version.h"
+#include "security/md7.h"
 
 const static QString settMagicKey = "ww2SD6^&A8293487";
 
@@ -27,6 +28,7 @@ const static QString SETT_MAGICKEY = "magickey";
 const static QString SETT_DIMENSIONUNITS = "dimunits";
 const static QString SETT_VOLUMEUNITS = "volumeunits";
 const static QString SETT_DATEFORMAT = "dateformat";
+const static QString SETT_AKSDJH = "retro2qq";
 
 const static QMap<QString, QString> langNamesMap =
 {
@@ -270,7 +272,8 @@ void AppManager::checkAppRegistered()
     {
         QString appKey = getAppKey();
 
-        if (cloudMan->isKeyValid(appKey) == true)
+        if (security->isKeyValid(appKey.toLocal8Bit().data(), currentSelectedObjs()->user->man_id.toStdString()) == true &&
+            security->isKeyValid(appSett.value(SETT_AKSDJH).toString().toLocal8Bit().data(), currentSelectedObjs()->user->man_id.toStdString()))
             setQmlParam("app", "global_FULLFEATURES", true);
 
         setQmlParam("app", "global_APP_TYPE", AppDef::UStatus_Enabled);
@@ -941,7 +944,7 @@ void AppManager::onGuiCurrentSmpIdChanged(int smpId)
 
 void AppManager::onGuiLanguageChanged(int id)
 {
-    if (id < AppDef::Lang_End && appSett.value(SETT_LANG).toInt() != id || justStarted == true)
+    if ((id < AppDef::Lang_End && appSett.value(SETT_LANG).toInt() != id) || justStarted == true)
     {
         if (loadTranslations(id) == true)
         {
@@ -1014,6 +1017,7 @@ void AppManager::onCloudResponse_Register(int error, QString errorText, QString 
         if (currentSelectedObjs()->user->man_id == manId)
         {
             setAppKey(key);
+            appSett.setValue(SETT_AKSDJH, key);
 
             setQmlParam("cloudCommWaitDialog", "message", tr("Application is successfully registered!"));
             setQmlParam("app", "global_FULLFEATURES", true);
