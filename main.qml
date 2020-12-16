@@ -22,7 +22,7 @@ Window
     property int curUserDateCreate: 0
 
     property string global_APP_DOMAIN: "Undefined"
-    property string global_APP_NAME: "Undefined"
+    property string global_APP_NAME: "AquariumStory"
     property string global_APP_VERSION: "Undefined"
     property int global_APP_TYPE: AppDefs.UStatus_Blocked
     property int global_DIMUNITS:   AppDefs.Dimensions_CM

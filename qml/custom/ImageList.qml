@@ -19,7 +19,13 @@ Item
 
     signal sigImagesLimitReached(int max)
 
-    onGalleryImageSelectedChanged: if (galleryImageSelected !== "") addImageToList(galleryImageSelected)
+    onGalleryImageSelectedChanged:
+    {
+        console.log("Qml selected = ", galleryImageSelected)
+
+        if (galleryImageSelected.length > 0)
+            addImageToList(galleryImageSelected)
+    }
 
     Component.onCompleted:
     {
@@ -35,6 +41,8 @@ Item
 
     function addImageToList(imgUrl)
     {
+        console.log("Count = ", listOfImages.count, imagesCountMax)
+
         if (listOfImages.count < imagesCountMax)
             listOfImages.append({ "fileLink": imgUrl,   "base64data": ""})
 
@@ -76,10 +84,14 @@ Item
 
     function resize()
     {
+        console.log("inRowItemsCnt = ", inRowItemsCnt)
+
         if (listOfImages.count < inRowItemsCnt)
             imagesListView.width = listOfImages.count * (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
         else
             imagesListView.width = inRowItemsCnt * (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
+
+        console.log("imagesListView.width = ", imagesListView.width)
     }
 
     function calcHeight()

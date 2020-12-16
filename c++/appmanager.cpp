@@ -47,6 +47,19 @@ AppManager::AppManager(QQmlApplicationEngine *engine, QObject *parent) : DBManag
 {
     qmlEngine = engine;
 
+#ifdef Q_OS_ANDROID
+    for (int i = 0; i < permissions.size(); i++)
+    {
+        QtAndroid::PermissionResult r = QtAndroid::checkPermission(permissions.at(i));
+
+        QtAndroid::requestPermissionsSync( QStringList() << permissions.at(i) );
+
+        r = QtAndroid::checkPermission(permissions.at(i));
+
+        qDebug() << "Permission " << permissions.at(i) << ((r == QtAndroid::PermissionResult::Denied) ? " DENIED" : " GRANTED ");
+    }
+#endif
+
     connect(qmlEngine, SIGNAL(objectCreated(QObject*, const QUrl)), this, SLOT(onQmlEngineLoaded(QObject*, const QUrl)));
 
     readAppSett();
@@ -80,7 +93,7 @@ AppManager::AppManager(QQmlApplicationEngine *engine, QObject *parent) : DBManag
 
 #ifdef  Q_OS_ANDROID
     QAndroidIntent serviceIntent(QtAndroid::androidActivity().object(),
-                                        "org/tikava/AquariumNotes/Background");
+                                        "org/tikava/AquariumStory/Background");
     QAndroidJniObject result = QtAndroid::androidActivity().callObjectMethod(
                 "startService",
                 "(Landroid/content/Intent;)Landroid/content/ComponentName;",
@@ -193,19 +206,6 @@ void AppManager::init()
     checkAppRegistered();
 
     cloudMan->request_getAppUpdates();
-
-#ifdef Q_OS_ANDROID
-    for (int i = 0; i < permissions.size(); i++)
-    {
-        QtAndroid::PermissionResult r = QtAndroid::checkPermission(permissions.at(i));
-
-        QtAndroid::requestPermissionsSync( QStringList() << permissions.at(i) );
-
-        r = QtAndroid::checkPermission(permissions.at(i));
-
-        qDebug() << "Permission " << permissions.at(i) << ((r == QtAndroid::PermissionResult::Denied) ? " DENIED" : " GRANTED ");
-    }
-#endif
 }
 
 void AppManager::readAppSett()
@@ -533,6 +533,19 @@ void AppManager::setGalleryImageSelected(QString imgUrl)
     setQmlParam("imageList", "galleryImageSelected", imgUrl);
     setQmlParam("imgUserAvatar", "galleryImageSelected", imgUrl);
     setQmlParam("imgTankAvatar", "galleryImageSelected", imgUrl);
+}
+
+void AppManager::setGalleryImageSelected(QString imgUrl, QString qmlCompName)
+{
+    QObject *obj = nullptr;
+
+    obj = qmlEngine->rootObjects().first()->findChild<QObject*>(qmlCompName);
+
+    if (obj != nullptr)
+        QMetaObject::invokeMethod(obj, "addImageToList",
+                                  Q_ARG(QVariant, imgUrl));
+    else
+        qDebug() << "Component " << qmlCompName << " not Found!";
 }
 
 void AppManager::setCurrentUser(QString uname, QString email, QString imgLink, int dt)
@@ -1057,7 +1070,7 @@ QString selectedFileName;
 extern "C" {
 #endif
 JNIEXPORT void JNICALL
-Java_org_tikava_AquariumNotes_AquariumNotes_fileSelected(JNIEnv *, jobject , jstring results)
+Java_org_tikava_AquariumStory_AquariumStory_fileSelected(JNIEnv *, jobject , jstring results)
 {
     qDebug() << "File selected = " << selectedFileName << "1234567890";
 
@@ -1073,15 +1086,17 @@ void AppManager::onGuiOpenGallery()
 {
     selectedFileName = "#";
 
-    QAndroidJniObject::callStaticMethod<void>("org/tikava/AquariumNotes/AquariumNotes",
+    QAndroidJniObject::callStaticMethod<void>("org/tikava/AquariumStory/AquariumStory",
                                               "openAnImage",
                                               "()V");
     while(selectedFileName == "#")
         qApp->processEvents();
 
-    qDebug() << selectedFileName;
+    qDebug() << "Image selected = " << selectedFileName;
 
-    setGalleryImageSelected(selectedFileName);
+    //setGalleryImageSelected(selectedFileName);
+
+    setGalleryImageSelected(selectedFileName, "imgAccountAvatar");
 }
 #else
 void AppManager::onGuiOpenGallery()

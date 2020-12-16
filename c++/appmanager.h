@@ -43,6 +43,7 @@ private:
     void    setInitialDialogStage(int stage, QString name);
     void    setLastSmpId(int id);
     void    setGalleryImageSelected(QString imgUrl);
+    void    setGalleryImageSelected(QString imgUrl, QString qmlCompName);
     void    setAndroidFlag(bool flag);
     void    setCurrentUser(QString uname, QString email, QString imgLink, int dt);
     void    setExportingState(QString message);

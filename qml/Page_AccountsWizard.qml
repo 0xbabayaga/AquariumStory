@@ -266,6 +266,7 @@ Item
                     ImageList
                     {
                         id: imgAccountAvatar
+                        objectName: "imgAccountAvatar"
                         imagesCountMax: 1
                     }
                 }

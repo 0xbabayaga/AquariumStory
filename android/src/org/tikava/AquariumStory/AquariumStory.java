@@ -84,21 +84,29 @@ public class AquariumStory extends QtActivity
 
         try
         {
+            Log.e("#1", "");
             String filePath = "";
             String wholeID = DocumentsContract.getDocumentId(contentUri);
+            Log.e("#2", wholeID);
             String id = wholeID.split(":")[1];
+            Log.e("#3", id);
             String[] column = { MediaStore.Images.Media.DATA };
+            Log.e("#4", "");
             String sel = MediaStore.Images.Media._ID + "=?";
-
+            Log.e("#5", sel);
             cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                                            column, sel, new String[]{ id }, null);
-
+            Log.e("#6", "");
             int columnIndex = cursor.getColumnIndex(column[0]);
-
+            Log.e("#7", "");
             if (cursor.moveToFirst())
                 filePath = cursor.getString(columnIndex);
 
+            Log.e("#8", filePath);
+
             cursor.close();
+
+            Log.e("#9", "");
 
             return filePath;
         }
