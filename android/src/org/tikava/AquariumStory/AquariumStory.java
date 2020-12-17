@@ -55,6 +55,8 @@ public class AquariumStory extends QtActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
+        super.onActivityResult(requestCode, resultCode, data);
+
         if (resultCode == RESULT_OK)
         {
             if(requestCode == REQUEST_OPEN_IMAGE)
@@ -67,8 +69,6 @@ public class AquariumStory extends QtActivity
         {
             fileSelected("");
         }
-
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void dispatchOpenGallery()
@@ -81,32 +81,33 @@ public class AquariumStory extends QtActivity
     public String getRealPathFromURI(Context context, Uri contentUri)
     {
         Cursor cursor = null;
+        String id = "";
 
         try
         {
-            Log.e("#1", "");
             String filePath = "";
-            String wholeID = DocumentsContract.getDocumentId(contentUri);
-            Log.e("#2", wholeID);
-            String id = wholeID.split(":")[1];
-            Log.e("#3", id);
+
+            if (contentUri.toString().contains("com.android.providers") == true)
+            {
+                String wholeID = DocumentsContract.getDocumentId(contentUri);
+                id = wholeID.split(":")[1];
+            }
+            else
+            {
+                String[] ids = contentUri.toString().split("/");
+                id = ids[ids.length - 1];
+            }
+
             String[] column = { MediaStore.Images.Media.DATA };
-            Log.e("#4", "");
             String sel = MediaStore.Images.Media._ID + "=?";
-            Log.e("#5", sel);
             cursor = context.getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                                            column, sel, new String[]{ id }, null);
-            Log.e("#6", "");
             int columnIndex = cursor.getColumnIndex(column[0]);
-            Log.e("#7", "");
+
             if (cursor.moveToFirst())
                 filePath = cursor.getString(columnIndex);
 
-            Log.e("#8", filePath);
-
             cursor.close();
-
-            Log.e("#9", "");
 
             return filePath;
         }

@@ -123,7 +123,7 @@ AppManager::~AppManager()
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigFullRefreshData()), this, SLOT(onGuiFullRefreshData()));
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigCurrentSmpIdChanged(int)), this, SLOT(onGuiCurrentSmpIdChanged(int)));
     disconnect(qmlEngine, SIGNAL(objectCreated(QObject*, const QUrl)), this, SLOT(onQmlEngineLoaded(QObject*, const QUrl)));
-    disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigOpenGallery()), this, SLOT(onGuiOpenGallery()));
+    disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigOpenGallery(QString)), this, SLOT(onGuiOpenGallery(QString)));
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigLanguageChanged(int)), this, SLOT(onGuiLanguageChanged(int)));
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigDimensionUnitsChanged(int)), this, SLOT(onGuiDimensionUnitsChanged(int)));
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigVolumeUnitsChanged(int)), this, SLOT(onGuiVolumeUnitsChanged(int)));
@@ -170,7 +170,7 @@ void AppManager::init()
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigRefreshData()), this, SLOT(onGuiRefreshData()));
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigFullRefreshData()), this, SLOT(onGuiFullRefreshData()));
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigCurrentSmpIdChanged(int)), this, SLOT(onGuiCurrentSmpIdChanged(int)));
-    connect(qmlEngine->rootObjects().first(), SIGNAL(sigOpenGallery()), this, SLOT(onGuiOpenGallery()));
+    connect(qmlEngine->rootObjects().first(), SIGNAL(sigOpenGallery(QString)), this, SLOT(onGuiOpenGallery(QString)));
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigLanguageChanged(int)), this, SLOT(onGuiLanguageChanged(int)));
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigDimensionUnitsChanged(int)), this, SLOT(onGuiDimensionUnitsChanged(int)));
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigVolumeUnitsChanged(int)), this, SLOT(onGuiVolumeUnitsChanged(int)));
@@ -526,13 +526,6 @@ void AppManager::setLastSmpId(int id)
 void AppManager::setAndroidFlag(bool flag)
 {
     setQmlParam("app", "isAndro", flag);
-}
-
-void AppManager::setGalleryImageSelected(QString imgUrl)
-{
-    setQmlParam("imageList", "galleryImageSelected", imgUrl);
-    setQmlParam("imgUserAvatar", "galleryImageSelected", imgUrl);
-    setQmlParam("imgTankAvatar", "galleryImageSelected", imgUrl);
 }
 
 void AppManager::setGalleryImageSelected(QString imgUrl, QString qmlCompName)
@@ -1082,7 +1075,7 @@ Java_org_tikava_AquariumStory_AquariumStory_fileSelected(JNIEnv *, jobject , jst
 #endif
 
 #ifdef  Q_OS_ANDROID
-void AppManager::onGuiOpenGallery()
+void AppManager::onGuiOpenGallery(QString objName)
 {
     selectedFileName = "#";
 
@@ -1094,9 +1087,7 @@ void AppManager::onGuiOpenGallery()
 
     qDebug() << "Image selected = " << selectedFileName;
 
-    //setGalleryImageSelected(selectedFileName);
-
-    setGalleryImageSelected(selectedFileName, "imgAccountAvatar");
+    setGalleryImageSelected(selectedFileName, objName);
 }
 #else
 void AppManager::onGuiOpenGallery()

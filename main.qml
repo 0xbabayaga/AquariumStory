@@ -83,7 +83,7 @@ Window
     signal sigFullRefreshData()
     signal sigCurrentSmpIdChanged(int smpId)
     signal sigDebug()
-    signal sigOpenGallery()
+    signal sigOpenGallery(string objName)
     signal sigLanguageChanged(int id)
     signal sigDimensionUnitsChanged(int id)
     signal sigVolumeUnitsChanged(int id)

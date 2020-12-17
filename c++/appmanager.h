@@ -42,7 +42,6 @@ private:
     bool    setQmlParam(QString objName, QString name, QVariant value);
     void    setInitialDialogStage(int stage, QString name);
     void    setLastSmpId(int id);
-    void    setGalleryImageSelected(QString imgUrl);
     void    setGalleryImageSelected(QString imgUrl, QString qmlCompName);
     void    setAndroidFlag(bool flag);
     void    setCurrentUser(QString uname, QString email, QString imgLink, int dt);
@@ -85,7 +84,7 @@ public slots:
     void    onGuiRefreshData();
     void    onGuiFullRefreshData();
     void    onGuiCurrentSmpIdChanged(int smpId);
-    void    onGuiOpenGallery();
+    void    onGuiOpenGallery(QString objName);
     void    onGuiLanguageChanged(int id);
     void    onGuiDimensionUnitsChanged(int id);
     void    onGuiVolumeUnitsChanged(int id);

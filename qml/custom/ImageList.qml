@@ -204,7 +204,7 @@ Item
             if (imagesListView.model.count < imageList.imagesCountMax)
             {
                 if (app.isAndro === true)
-                    app.sigOpenGallery()
+                    app.sigOpenGallery(imageList.objectName)
                 else
                     fileDialog.open()
             }

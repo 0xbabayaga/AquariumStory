@@ -525,6 +525,7 @@ Item
                     ImageList
                     {
                         id: imgTankAvatar
+                        objectName: "imgTankAvatar"
                         imagesCountMax: 1
                     }
                 }
