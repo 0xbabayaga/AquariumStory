@@ -282,7 +282,8 @@ Item
                                 width: 100 * app.scale
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (value !== -1) ? value : ""
-                                validator : RegExpValidator { regExp : /[0-9]+\.[0-9]+/ }
+                                //validator : RegExpValidator { regExp : /[0-9]+\.[0-9]+/ }
+                                inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
 
                                 onTextChanged: value = Number.parseFloat(textInputValue.text)
                                 Keys.onReturnPressed:  nextItemInFocusChain().forceActiveFocus()

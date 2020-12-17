@@ -14,6 +14,7 @@ Item
     property string placeholderText: "sometext"
     property alias maximumLength: textArea.maximumLength
     property alias validator: textArea.validator
+    property alias inputMethod: textArea.inputMethodHints
 
     onFocusChanged:
     {

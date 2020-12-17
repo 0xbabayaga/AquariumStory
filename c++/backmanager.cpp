@@ -1,3 +1,4 @@
+#include <QObject>
 #include <QtSql>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -52,12 +53,12 @@ Java_org_tikava_AquariumStory_Background_callbackOnTimer(JNIEnv *env, jobject ob
                             {
                                 if (act->startDT() >= (now - 30) && act->startDT() < (now + 30) )
                                 {
-                                    sendNotification("Hello " + dbMan->currentSelectedObjs()->user->uname + ", it's time to action",
-                                                     "\n"
-                                                     "Aquarium: " + ((TankObj*)(dbMan->currentSelectedObjs()->listOfUserTanks.at(i)))->name() + "\n"
-                                                     "Time: " + QDateTime::fromSecsSinceEpoch(act->startDT()).toString("dd-MMMM-yyyy hh:mm") + "\n"
-                                                     "Action: " + act->name() + "\n"
-                                                     "Description: " + act->desc()
+                                    sendNotification(QObject::tr("Reminder"),
+                                                     "\n" +
+                                                     QObject::tr("Aquarium") + ": " + ((TankObj*)(dbMan->currentSelectedObjs()->listOfUserTanks.at(i)))->name() + "\n" +
+                                                     QObject::tr("Time") + ": " + QDateTime::fromSecsSinceEpoch(act->startDT()).toString("dd-MMMM-yyyy hh:mm") + "\n" +
+                                                     QObject::tr("Action") + ": " + act->name() + "\n" +
+                                                     QObject::tr("Description") + ": " + act->desc()
                                                      );
 
                                 }

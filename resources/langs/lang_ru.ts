@@ -4,33 +4,33 @@
 <context>
     <name>AppManager</name>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="891"/>
+        <location filename="../../c++/appmanager.cpp" line="900"/>
         <source>Error on data exporting</source>
         <translation>Ошибка экспорта данных</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="905"/>
+        <location filename="../../c++/appmanager.cpp" line="914"/>
         <source>Error on data importing</source>
         <translation>Ошибка импорта данных</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1016"/>
+        <location filename="../../c++/appmanager.cpp" line="1028"/>
         <source>Application is successfully registered!</source>
         <translation>Приложение успешно зарегистрировано!</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1023"/>
-        <location filename="../../c++/appmanager.cpp" line="1028"/>
-        <location filename="../../c++/appmanager.cpp" line="1037"/>
-        <location filename="../../c++/appmanager.cpp" line="1042"/>
+        <location filename="../../c++/appmanager.cpp" line="1035"/>
+        <location filename="../../c++/appmanager.cpp" line="1040"/>
+        <location filename="../../c++/appmanager.cpp" line="1049"/>
+        <location filename="../../c++/appmanager.cpp" line="1054"/>
         <source>Application is not registered!</source>
         <translation>Приложение не зарегистрировано!</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1024"/>
-        <location filename="../../c++/appmanager.cpp" line="1029"/>
-        <location filename="../../c++/appmanager.cpp" line="1038"/>
-        <location filename="../../c++/appmanager.cpp" line="1043"/>
+        <location filename="../../c++/appmanager.cpp" line="1036"/>
+        <location filename="../../c++/appmanager.cpp" line="1041"/>
+        <location filename="../../c++/appmanager.cpp" line="1050"/>
+        <location filename="../../c++/appmanager.cpp" line="1055"/>
         <source>Error</source>
         <translation>Ошибка</translation>
     </message>
@@ -585,7 +585,7 @@ Limitation of non-registered version.</source>
     </message>
     <message>
         <location filename="../../qml/Page_AccountsWizard.qml" line="130"/>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="339"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="340"/>
         <source>Hello</source>
         <translation>Добро пожаловать</translation>
     </message>
@@ -609,17 +609,17 @@ Limitation of non-registered version.</source>
         <translation>Email пользователя</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="355"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="356"/>
         <source>There is no active aquarium found</source>
         <translation>Активных аквариумов не найдено</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="405"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="406"/>
         <source>Creating aquarium profile</source>
         <translation>Создание аквариумного профиля</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="414"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="415"/>
         <source>Aquarium name</source>
         <translation>Имя аквариума</translation>
     </message>
@@ -662,22 +662,22 @@ You can create a new one.</source>
         <translation type="vanished">Название аквариума</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="436"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="437"/>
         <source>100</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="507"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="508"/>
         <source>Select a tank type</source>
         <translation>Выберите тип аквариума</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="521"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="522"/>
         <source>Aquarium image</source>
         <translation>Фото аквариума</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="587"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="589"/>
         <source>Please wait until data is importing</source>
         <translation>Пожалуйста, дождитесь пока данные будут импортированы</translation>
     </message>
@@ -686,8 +686,8 @@ You can create a new one.</source>
         <translation type="vanished">см</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="459"/>
-        <location filename="../../qml/Page_AccountsWizard.qml" line="482"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="460"/>
+        <location filename="../../qml/Page_AccountsWizard.qml" line="483"/>
         <source>50</source>
         <translation></translation>
     </message>
@@ -1102,159 +1102,184 @@ Limitation of non-registered version.</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="33"/>
+        <location filename="../../c++/appmanager.cpp" line="35"/>
         <source>English</source>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="34"/>
+        <location filename="../../c++/appmanager.cpp" line="36"/>
         <source>Русский</source>
         <translation>Русский</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="35"/>
+        <location filename="../../c++/appmanager.cpp" line="37"/>
         <source>Беларускi</source>
         <translation>Беларускi</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="21"/>
+        <location filename="../../c++/dbmanager.cpp" line="22"/>
         <source>Fish Reef</source>
         <translation>Рыбный риф</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="22"/>
+        <location filename="../../c++/dbmanager.cpp" line="23"/>
         <source>Soft Coral Reef</source>
         <translation>Мягкий риф</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="23"/>
+        <location filename="../../c++/dbmanager.cpp" line="24"/>
         <source>Mixed Reef</source>
         <translation>Смешанный риф</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="24"/>
+        <location filename="../../c++/dbmanager.cpp" line="25"/>
         <source>SPS Reef</source>
         <translation>СПС риф</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="25"/>
+        <location filename="../../c++/dbmanager.cpp" line="26"/>
         <source>Cyhlids</source>
         <translation>Цихлидник</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="26"/>
+        <location filename="../../c++/dbmanager.cpp" line="27"/>
         <source>Discus aquarium</source>
         <translation>Аквариум с дискусами</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="27"/>
+        <location filename="../../c++/dbmanager.cpp" line="28"/>
         <source>Fresh aquarium</source>
         <translation>Пресный аквариум</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="28"/>
+        <location filename="../../c++/dbmanager.cpp" line="29"/>
         <source>Fresh scape</source>
         <translation>Пресный акваскейп</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="33"/>
+        <location filename="../../c++/dbmanager.cpp" line="34"/>
         <source>Temperature</source>
         <translation>Температура</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="34"/>
+        <location filename="../../c++/dbmanager.cpp" line="35"/>
         <source>Salinity</source>
         <translation>Соленость</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="35"/>
+        <location filename="../../c++/dbmanager.cpp" line="36"/>
         <source>Calcium</source>
         <translation>Кальций</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="36"/>
+        <location filename="../../c++/dbmanager.cpp" line="37"/>
         <source>pH</source>
         <translation>pH</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="37"/>
+        <location filename="../../c++/dbmanager.cpp" line="38"/>
         <source>kH</source>
         <translation>kH</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="38"/>
+        <location filename="../../c++/dbmanager.cpp" line="39"/>
         <source>gH</source>
         <translation>gH</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="39"/>
+        <location filename="../../c++/dbmanager.cpp" line="40"/>
         <source>Phosphates</source>
         <translation>Фосфаты</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="40"/>
+        <location filename="../../c++/dbmanager.cpp" line="41"/>
         <source>Nitrite</source>
         <translation>Нитриты</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="41"/>
+        <location filename="../../c++/dbmanager.cpp" line="42"/>
         <source>Nitrate</source>
         <translation>Нитраты</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="42"/>
+        <location filename="../../c++/dbmanager.cpp" line="43"/>
         <source>Ammonia</source>
         <translation>Аммоний</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="43"/>
+        <location filename="../../c++/dbmanager.cpp" line="44"/>
         <source>Carbon</source>
         <translation>Углекислота</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="44"/>
+        <location filename="../../c++/dbmanager.cpp" line="45"/>
         <source>Magnesium</source>
         <translation>Магний</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="45"/>
+        <location filename="../../c++/dbmanager.cpp" line="46"/>
         <source>Silicates</source>
         <translation>Силикаты</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="46"/>
+        <location filename="../../c++/dbmanager.cpp" line="47"/>
         <source>Potassium</source>
         <translation>Калий</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="47"/>
+        <location filename="../../c++/dbmanager.cpp" line="48"/>
         <source>Iodine</source>
         <translation>Йод</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="48"/>
+        <location filename="../../c++/dbmanager.cpp" line="49"/>
         <source>Strontium</source>
         <translation>Стронций</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="49"/>
+        <location filename="../../c++/dbmanager.cpp" line="50"/>
         <source>Ferrum</source>
         <translation>Железо</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="50"/>
+        <location filename="../../c++/dbmanager.cpp" line="51"/>
         <source>Boron</source>
         <translation>Бор</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="51"/>
+        <location filename="../../c++/dbmanager.cpp" line="52"/>
         <source>Molybdenum</source>
         <translation>Молибден</translation>
     </message>
     <message>
-        <location filename="../../c++/dbmanager.cpp" line="52"/>
+        <location filename="../../c++/dbmanager.cpp" line="53"/>
         <source>ORP</source>
         <translation>ОВП</translation>
+    </message>
+    <message>
+        <location filename="../../c++/backmanager.cpp" line="56"/>
+        <source>Reminder</source>
+        <translation>Напоминание</translation>
+    </message>
+    <message>
+        <location filename="../../c++/backmanager.cpp" line="58"/>
+        <source>Aquarium</source>
+        <translation>Аквариум</translation>
+    </message>
+    <message>
+        <location filename="../../c++/backmanager.cpp" line="59"/>
+        <source>Time</source>
+        <translation>Время</translation>
+    </message>
+    <message>
+        <location filename="../../c++/backmanager.cpp" line="60"/>
+        <source>Action</source>
+        <translation>Действие</translation>
+    </message>
+    <message>
+        <location filename="../../c++/backmanager.cpp" line="61"/>
+        <source>Description</source>
+        <translation>Описание</translation>
     </message>
 </context>
 <context>
