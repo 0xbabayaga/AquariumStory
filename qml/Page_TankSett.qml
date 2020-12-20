@@ -625,7 +625,8 @@ Item
                                 width: (parent.width - rectRow.unitWidth * 3) / 3
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].l) : ""
-                                validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
+                                inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
+                                //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                                 focus: true
                                 KeyNavigation.tab: textTankW
 
@@ -649,7 +650,8 @@ Item
                                 width: (parent.width - rectRow.unitWidth * 3) / 3
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].w) : ""
-                                validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
+                                inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
+                                //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                                 focus: true
                                 KeyNavigation.tab: textTankH
 
@@ -673,7 +675,8 @@ Item
                                 width: (parent.width - rectRow.unitWidth * 3) / 3
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].h) : ""
-                                validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
+                                inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
+                                //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                                 focus: true
                                 KeyNavigation.tab: comboTankType
 

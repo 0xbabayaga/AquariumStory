@@ -17,7 +17,7 @@ public class AquariumStoryNotification
 {
     private static NotificationManager m_notificationManager;
     private static Notification.Builder m_builder;
-    private static String channelId = "AquariumStory";
+    private static String channelId = "Aquarium Story";
     private static String channelName = "Aquarium Story notification";
 
     public AquariumStoryNotification() {}

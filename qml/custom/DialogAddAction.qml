@@ -226,7 +226,8 @@ Item
                         anchors.right: comboPeriod.left
                         anchors.rightMargin: AppTheme.padding * app.scale
                         placeholderText: qsTr("1")
-                        validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
+                        inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
+                        //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                         width: 30 * app.scale
                         focus: true
                         maximumLength: 2

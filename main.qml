@@ -57,7 +57,8 @@ Window
         }
         else
         {
-            page_Main.visible = true
+            //page_Main.showPage(true)
+            hideLoadingScreen.start()
             page_AccountWizard.visible = false
         }
     }
@@ -182,6 +183,25 @@ Window
         return ver
     }
 
+    NumberAnimation
+    {
+        id: hideLoadingScreen
+        target: rectAppLoadingSpinner
+        property: "opacity"
+        from: 1
+        to: 0
+        duration: 200
+        running: false
+        onFinished:
+        {
+            if (rectAppLoadingSpinner.opacity === 0)
+            {
+                rectAppLoadingSpinner.visible = false
+                page_Main.showPage(true)
+            }
+        }
+    }
+
     Rectangle
     {
         id: rectMain
@@ -232,7 +252,7 @@ Window
             id: page_Main
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
-            visible: isAccountCreated === true
+            visible: false
             interactive: page_TankData.visible === false
         }
 
@@ -245,15 +265,18 @@ Window
             width: parent.width
             height: AppTheme.rowHeight * 2 * app.scale
 
+            Behavior on opacity {   NumberAnimation {duration: 400} }
+
             Image
             {
                 id: imgSpinner
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 source: "qrc:/resources/img/icon.png"
-                width: AppTheme.rowHeight * app.scale
-                height: AppTheme.rowHeight * app.scale
+                width: 200 * app.scale
+                height: 200 * app.scale
 
+                /*
                 NumberAnimation on rotation
                 {
                     from: 0
@@ -262,17 +285,18 @@ Window
                     loops: Animation.Infinite
                     duration: 1500
                 }
+                */
             }
 
             Text
             {
                 id: textAccountName
                 anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: imgSpinner.top
-                anchors.topMargin: AppTheme.rowHeight * app.scale
+                anchors.top: imgSpinner.bottom
+                anchors.topMargin: AppTheme.margin * app.scale
                 font.family: AppTheme.fontFamily
                 font.pixelSize: AppTheme.fontNormalSize * app.scale
-                color: AppTheme.greyColor
+                color: AppTheme.blueFontColor
                 text: qsTr("Loading data")
             }
         }

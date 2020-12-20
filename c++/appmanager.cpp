@@ -514,8 +514,7 @@ void AppManager::setInitialDialogStage(int stage, QString name)
 
     setQmlParam("page_AccountWizard", "stage", stage);
     setQmlParam("page_AccountWizard", "currentUName", name);
-
-    setQmlParam("rectAppLoadingSpinner", "visible", false);
+    //setQmlParam("rectAppLoadingSpinner", "opacity", 0);
 }
 
 void AppManager::setLastSmpId(int id)
@@ -1090,7 +1089,7 @@ void AppManager::onGuiOpenGallery(QString objName)
     setGalleryImageSelected(selectedFileName, objName);
 }
 #else
-void AppManager::onGuiOpenGallery()
+void AppManager::onGuiOpenGallery(QString objName)
 {
 
 }
