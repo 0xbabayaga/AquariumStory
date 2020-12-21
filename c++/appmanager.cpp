@@ -205,6 +205,8 @@ void AppManager::init()
 
     checkAppRegistered();
 
+    setAppLoaded();
+
     cloudMan->request_getAppUpdates();
 }
 
@@ -262,8 +264,6 @@ void AppManager::setSettAfterQMLReady()
 
 void AppManager::checkAppRegistered()
 {
-//#define FULL_FEATURES_ENABLED
-
 #ifdef FULL_FEATURES_ENABLED
     setQmlParam("app", "global_FULLFEATURES", true);
     setQmlParam("app", "global_APP_TYPE", AppDef::UStatus_EnabledPro);
@@ -508,9 +508,9 @@ bool AppManager::getHistoryParams()
 
 void AppManager::setInitialDialogStage(int stage, QString name)
 {
-    if (stage != AppDef::AppInit_Completed)
+    //if (stage != AppDef::AppInit_Completed)
         //setQmlParam("app", "isAccountCreated", false);
-        setQmlParam("page_AccountWizard", "visible" , true);
+        //setQmlParam("page_AccountWizard", "visible" , true);
 
     setQmlParam("page_AccountWizard", "stage", stage);
     setQmlParam("page_AccountWizard", "currentUName", name);
@@ -525,6 +525,18 @@ void AppManager::setLastSmpId(int id)
 void AppManager::setAndroidFlag(bool flag)
 {
     setQmlParam("app", "isAndro", flag);
+}
+
+void AppManager::setAppLoaded()
+{
+    QObject *obj = nullptr;
+
+    obj = qmlEngine->rootObjects().first();
+
+    if (obj != nullptr)
+        QMetaObject::invokeMethod(obj, "hideLoadingScreen");
+    else
+        qDebug() << "Component \"app\" not Found!";
 }
 
 void AppManager::setGalleryImageSelected(QString imgUrl, QString qmlCompName)
@@ -701,6 +713,8 @@ void AppManager::onGuiUserDelete()
         getCurrentObjs(true);
 
         setCurrentUser("", "", "", 0);
+
+        setQmlParam("app", "isAccountCreated", false);
     }
 }
 

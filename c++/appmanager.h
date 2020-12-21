@@ -47,6 +47,7 @@ private:
     void    setCurrentUser(QString uname, QString email, QString imgLink, int dt);
     void    setExportingState(QString message);
     void    setImportingState(QString message);
+    void    setAppLoaded();
     void    resetStoryView();
 
     /* Gui diagram drawing */

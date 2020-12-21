@@ -57,8 +57,7 @@ Window
         }
         else
         {
-            //page_Main.showPage(true)
-            hideLoadingScreen.start()
+            page_Main.showPage(true)
             page_AccountWizard.visible = false
         }
     }
@@ -93,6 +92,11 @@ Window
     signal sigExportData(string fileName)
     signal sigImportData(string fileName)
     signal sigGetImportFilesList()
+
+    function hideLoadingScreen()
+    {
+        hideLoadingScreenAnimation.start()
+    }
 
     function getAllParamsListModel() { return allParamsListModel    }
 
@@ -185,7 +189,7 @@ Window
 
     NumberAnimation
     {
-        id: hideLoadingScreen
+        id: hideLoadingScreenAnimation
         target: rectAppLoadingSpinner
         property: "opacity"
         from: 1
@@ -197,7 +201,11 @@ Window
             if (rectAppLoadingSpinner.opacity === 0)
             {
                 rectAppLoadingSpinner.visible = false
-                page_Main.showPage(true)
+
+                if (isAccountCreated === true)
+                    page_Main.showPage(true)
+                else
+                    page_AccountWizard.visible = true
             }
         }
     }
@@ -273,31 +281,20 @@ Window
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 source: "qrc:/resources/img/icon.png"
-                width: 200 * app.scale
-                height: 200 * app.scale
-
-                /*
-                NumberAnimation on rotation
-                {
-                    from: 0
-                    to: 360
-                    running: imgSpinner.visible === true
-                    loops: Animation.Infinite
-                    duration: 1500
-                }
-                */
+                width: 180 * app.scale
+                height: 180 * app.scale
             }
 
             Text
             {
-                id: textAccountName
+                id: textLoading
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: imgSpinner.bottom
-                anchors.topMargin: AppTheme.margin * app.scale
+                anchors.topMargin: AppTheme.margin * 3 * app.scale
                 font.family: AppTheme.fontFamily
                 font.pixelSize: AppTheme.fontNormalSize * app.scale
-                color: AppTheme.blueFontColor
-                text: qsTr("Loading data")
+                color: AppTheme.greyDarkColor
+                text: qsTr("Loading data") + " ..."
             }
         }
 
@@ -324,7 +321,6 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
-            //onSigClosed: page_Main.showPage(true)
             onSigDeleting: page_TankData.showPage(false, 0)
         }
 
@@ -334,7 +330,6 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
-            //onSigClosed: page_Main.showPage(true)
             onSigTankDeleting: page_TankData.showPage(false, 0)
         }
 
@@ -344,8 +339,6 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
-
-            //onSigClosed: page_Main.showPage(true)
         }
 
         Page_About
@@ -354,8 +347,6 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
-
-            //onSigClosed: page_Main.showPage(true)
         }
     }
 
