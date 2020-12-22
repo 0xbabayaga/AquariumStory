@@ -8,6 +8,8 @@ android: QT += androidextras
 
 CONFIG += c++11
 
+DEFINES += QT_NO_DEBUG_OUTPUT
+
 version_p.commands = ..\AquariumStory\version_inc.bat
 version_p.depends = FORCE
 QMAKE_EXTRA_TARGETS += version_p

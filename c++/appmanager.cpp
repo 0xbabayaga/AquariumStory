@@ -906,11 +906,13 @@ void AppManager::onGuiImportData(QString fileName)
 void AppManager::onExportFinished()
 {
     bool exportResult = exportFuture.result();
+    QFileInfo fInfo(exportFileName);
+
 
     disconnect(&exportWatcher, &QFutureWatcher<int>::finished, this, &AppManager::onExportFinished);
 
     if (exportResult == true)
-        setExportingState(tr("Data exported to file") + ": " + exportFileName + "\n\n" +
+        setExportingState(tr("Data exported to file") + ": " + fInfo.fileName() + "\n\n" +
                           tr("Now you can Import this data on another device") + ".");
     else
         setExportingState(tr("Error on data exporting"));
@@ -921,11 +923,12 @@ void AppManager::onExportFinished()
 void AppManager::onImportFinished()
 {
     bool importResult = importFuture.result();
+    QFileInfo fInfo(exportFileName);
 
     disconnect(&importWatcher, &QFutureWatcher<int>::finished, this, &AppManager::onImportFinished);
 
     if (importResult == true)
-        setImportingState(tr("Data imported from file") + ": " + exportFileName + "\n" + tr("successfully") + "!");
+        setImportingState(tr("Data imported from file") + ": " + fInfo.fileName() + "\n" + tr("successfully") + "!");
     else
         setImportingState(tr("Error on data importing"));
 

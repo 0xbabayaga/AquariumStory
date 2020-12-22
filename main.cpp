@@ -15,6 +15,10 @@
 
 int main(int argc, char *argv[])
 {
+#ifdef QT_NO_DEBUG_OUTPUT
+    qputenv("QT_LOGGING_RULES", "qml=false");
+#endif
+
     QGuiApplication app(argc, argv);
     QStringList args = QCoreApplication::arguments();
 
