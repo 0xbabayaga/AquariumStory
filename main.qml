@@ -330,7 +330,7 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
-            onSigTankDeleting: page_TankData.showPage(false, 0)
+            //onSigTankDeleting: page_TankData.showPage(false, 0)
         }
 
         Page_AppSett

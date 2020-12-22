@@ -740,6 +740,9 @@ void AppManager::onGuiTankDelete(QString tankId)
     if (deleteTank(tankId) == true)
     {
         getCurrentObjs(true);
+
+        if (curSelectedObjs.listOfUserTanks.count() == 0)
+            setQmlParam("app", "isAccountCreated", false);
     }
 }
 
@@ -907,8 +910,8 @@ void AppManager::onExportFinished()
     disconnect(&exportWatcher, &QFutureWatcher<int>::finished, this, &AppManager::onExportFinished);
 
     if (exportResult == true)
-        setExportingState("Data exported to file:  " + exportFileName + "\n\n"
-                          "Now you can Import this data on another device.");
+        setExportingState(tr("Data exported to file") + ": " + exportFileName + "\n\n" +
+                          tr("Now you can Import this data on another device") + ".");
     else
         setExportingState(tr("Error on data exporting"));
 
@@ -922,7 +925,7 @@ void AppManager::onImportFinished()
     disconnect(&importWatcher, &QFutureWatcher<int>::finished, this, &AppManager::onImportFinished);
 
     if (importResult == true)
-        setImportingState("Data imported from file:  " + exportFileName + "\nsuccessfully");
+        setImportingState(tr("Data imported from file") + ": " + exportFileName + "\n" + tr("successfully") + "!");
     else
         setImportingState(tr("Error on data importing"));
 

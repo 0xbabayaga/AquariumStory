@@ -71,7 +71,8 @@ DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
     readOnly = isReadOnly;
 
 #ifdef  Q_OS_ANDROID
-    appPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/" + appFolder;
+    //appPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/" + appFolder;
+    appPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);// + "/" + appFolder;
 #else
     appPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
 #endif
@@ -806,8 +807,6 @@ bool DBManager::createTankDefaultParamSet(QString tankId, AquariumType type)
         {
             obj = new ParamObj(&q0, type);
             paramsGuiList.append(obj);
-
-            qDebug() << obj->paramId() << obj->fullName() << obj->min() << obj->max();
         }
 
         for (int i = 0; i < paramsGuiList.size(); i++)
@@ -824,7 +823,8 @@ bool DBManager::createTankDefaultParamSet(QString tankId, AquariumType type)
             if (query.exec() != true)
             {
                 if (res == false)
-        qDebug() << query.lastError();
+                    qDebug() << query.lastError();
+
                 return false;
             }
         }

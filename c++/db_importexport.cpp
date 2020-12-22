@@ -208,6 +208,8 @@ bool importFromFile(QString name)
                         while (sz != 0 && read > 0);
 
                         tmpFile.close();
+
+                        qDebug() << "DB-file is copied (size = " << tmpSize << ")";
                     }
                 }
 
@@ -259,6 +261,8 @@ bool importFromFile(QString name)
                             }
                             else
                                 res = true;
+
+                            qDebug() << "Image file is copied (size = " << tmpSize << ")" << imgTmpDir;
                         }
                         else
                         {

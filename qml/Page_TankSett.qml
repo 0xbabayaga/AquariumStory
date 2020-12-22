@@ -34,7 +34,7 @@ Item
 
     function setCurrentImage(img)
     {
-        imgTankAvatar.addBase64ImageToList(img)
+        imgTankEditAvatar.addBase64ImageToList(img)
     }
 
     function moveToEdit(val)
@@ -80,7 +80,7 @@ Item
                     textTankL.text = ""
                     textTankH.text = ""
                     textTankW.text = ""
-                    imgTankAvatar.reset()
+                    imgTankEditAvatar.reset()
 
                     textHeader.text = qsTr("AQUARIUMS") + "\n" + qsTr("ADD NEW")
                 }
@@ -110,18 +110,19 @@ Item
     {
         var imgLink = ""
 
-        if (imgTankAvatar.selectedImagesList.count > 0)
+        if (imgTankEditAvatar.selectedImagesList.count > 0)
         {
-            if (imgTankAvatar.selectedImagesList.get(0).fileLink !== "")
-                imgLink = imgTankAvatar.selectedImagesList.get(0).fileLink
+            if (imgTankEditAvatar.selectedImagesList.get(0).fileLink !== "")
+                imgLink = imgTankEditAvatar.selectedImagesList.get(0).fileLink
             else
-                imgLink = imgTankAvatar.selectedImagesList.get(0).base64data
+                imgLink = imgTankEditAvatar.selectedImagesList.get(0).base64data
         }
 
         if (textTankName.text.length > 0 &&
             textTankH.text.length > 0 &&
             textTankL.text.length > 0 &&
-            textTankW.text.length > 0)
+            textTankW.text.length > 0 &&
+            imgTankEditAvatar.selectedImagesList.count > 0)
         {
             if (page_TankSett.isEdit === true)
             {
@@ -152,7 +153,7 @@ Item
     onVisibleChanged:
     {
         if (visible === true)
-            imgTankAvatar.addBase64ImageToList(tanksListModel[tanksList.currentIndex].img)
+            imgTankEditAvatar.addBase64ImageToList(tanksListModel[tanksList.currentIndex].img)
     }
 
     NumberAnimation
@@ -261,8 +262,8 @@ Item
 
                 onSigCurrentIndexChanged:
                 {
-                    imgTankAvatar.reset()
-                    imgTankAvatar.addBase64ImageToList(tanksListModel[tanksList.currentIndex].img)
+                    imgTankEditAvatar.reset()
+                    imgTankEditAvatar.addBase64ImageToList(tanksListModel[tanksList.currentIndex].img)
                 }
             }
 
@@ -626,7 +627,6 @@ Item
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].l) : ""
                                 inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
-                                //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                                 focus: true
                                 KeyNavigation.tab: textTankW
 
@@ -651,7 +651,6 @@ Item
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].w) : ""
                                 inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
-                                //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                                 focus: true
                                 KeyNavigation.tab: textTankH
 
@@ -676,7 +675,6 @@ Item
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].h) : ""
                                 inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
-                                //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
                                 focus: true
                                 KeyNavigation.tab: comboTankType
 
@@ -717,8 +715,8 @@ Item
 
                         ImageList
                         {
-                            id: imgTankAvatar
-                            objectName: "imgTankAvatar"
+                            id: imgTankEditAvatar
+                            objectName: "imgTankEditAvatar"
                             imagesCountMax: 1
                         }
                     }
@@ -769,8 +767,13 @@ Item
         id: confirmDialog
         onSigAccept:
         {
+            var id = tanksList.currentIndex
+
+            tanksList.currentIndex = 0
+
             sigTankDeleting()
-            app.sigDeleteTank(tanksList.model[tanksList.currentIndex].tankId)
+            app.sigDeleteTank(tanksList.model[id].tankId)
+
         }
     }
 }
