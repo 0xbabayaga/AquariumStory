@@ -1593,7 +1593,7 @@ Limitation of non-registered version.</source>
     <message>
         <location filename="../../js/datetimeutility.js" line="11"/>
         <source>August</source>
-        <translation>Авугст</translation>
+        <translation>Август</translation>
     </message>
     <message>
         <location filename="../../js/datetimeutility.js" line="12"/>
