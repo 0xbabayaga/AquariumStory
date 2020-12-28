@@ -39,7 +39,7 @@ bool exportToFile(QString name)
         if (exportFile.open(QIODevice::WriteOnly) == true)
         {
             QDir expImgDir(imgFolder);
-            QStringList imgList = expImgDir.entryList(QStringList() << "*.jpg" << "*.JPG" << "*.jpeg" << "*.JPEG", QDir::Files);
+            QStringList imgList = expImgDir.entryList(QStringList() << "*.jpg" << "*.JPG" << "*.jpeg" << "*.JPEG" << "*.png" << "*.PNG", QDir::Files);
 
             exportFile.seek(sizeof(ArchiveTable));
             offset = sizeof(ArchiveTable);

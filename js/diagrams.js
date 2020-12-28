@@ -346,7 +346,7 @@ DiagramView.prototype.printDate = function(tm)
 {
     var date = new Date(tm * 1000)
     var day = "0" + date.getDate()
-    var month = "0" + date.getMonth()
+    var month = "0" + (date.getMonth() + 1)
     var year = "0" + date.getYear()
     var formattedDate = ""
 

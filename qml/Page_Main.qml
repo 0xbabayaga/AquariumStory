@@ -212,6 +212,7 @@ Item
             anchors.fill: parent
             anchors.topMargin: AppTheme.padding * 3 * app.scale
             model: tanksListModel
+            clip: true
 
             onSigCurrentIndexChanged: app.sigTankSelected(currentIndex)
 
