@@ -935,6 +935,9 @@ void AppManager::onImportFinished()
     db.open();
 
     getCurrentObjs(true);
+
+    curSelectedObjs.lastSmpId = getLastSmpId();
+    setLastSmpId(curSelectedObjs.lastSmpId);
 }
 
 void AppManager::onGuiTankSelected(int tankIdx)

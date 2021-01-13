@@ -39,3 +39,12 @@ bool Security::isKeyValid(char *key, string manId)
 
     return (tmp == key);
 }
+
+string Security::getCloudKey(string manId, string tm)
+{
+    string hash = manId.erase(0, manId.length() - MAN_ID_CUT_MD5);
+
+    hash += tm;
+
+    return md7(hash);
+}

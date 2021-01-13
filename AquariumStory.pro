@@ -8,7 +8,7 @@ android: QT += androidextras
 
 CONFIG += c++11
 
-DEFINES += QT_NO_DEBUG_OUTPUT
+#DEFINES += QT_NO_DEBUG_OUTPUT
 
 version_p.commands = ..\AquariumStory\version_inc.bat
 version_p.depends = FORCE
@@ -36,7 +36,7 @@ SOURCES += \
         c++/backmanager.cpp
 }
 
-DEFINES += FULL_FEATURES_ENABLED
+#DEFINES += FULL_FEATURES_ENABLED
 
 RESOURCES += qml.qrc
 

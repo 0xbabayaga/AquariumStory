@@ -42,13 +42,8 @@ void CloudManager::request_getAppUpdates()
 void CloudManager::request_registerApp(UserObj *user)
 {
     QString md5;
-    QString md7Base;
 
-    md7Base = user->man_id;
-    md7Base = md7Base.remove(0, user->man_id.length() - AppDef::MAN_ID_CUT_MD5);
-    md7Base += QString::number(user->date_create);
-
-    md5 = QString(md7(md7Base.toLocal8Bit().data()).c_str());
+    md5 = QString(security->getCloudKey(user->man_id.toStdString(), QString::number(user->date_create).toStdString()).c_str());
 
     QString jsonString = "{"
                          "\"method\": \"register\","

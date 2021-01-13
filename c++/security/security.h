@@ -3,6 +3,8 @@
 
 #include <string>
 
+#define MAN_ID_CUT_MD5  7
+
 using namespace std;
 
 class Security
@@ -20,6 +22,7 @@ public:
 public:
     string getRandomId();
     bool isKeyValid(char *key, string manId);
+    string getCloudKey(string manId, string tm);
 
 private:
     const string possibleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";;
