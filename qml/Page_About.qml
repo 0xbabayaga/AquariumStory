@@ -14,6 +14,24 @@ Item
     signal sigClosing()
     signal sigClosed()
 
+    function handleBackKeyEvent()
+    {
+        if (limitationDialog.visible === true)
+        {
+            limitationDialog.showDialog(false)
+
+            return true
+        }
+        else if (cloudCommWaitDialog.visible === true)
+        {
+            cloudCommWaitDialog.showDialog(false, "", '')
+
+            return true
+        }
+        else
+            return false
+    }
+
     function showPage(vis)
     {
         showPageAnimation.stop()
@@ -277,10 +295,12 @@ Item
     {
         id: cloudCommWaitDialog
         objectName: "cloudCommWaitDialog"
+        visible: false
     }
 
     LimitationDialog
     {
         id: limitationDialog
+        visible: false
     }
 }

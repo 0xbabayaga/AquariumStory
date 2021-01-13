@@ -1,5 +1,5 @@
 import QtQuick 2.12
-import QtQuick.Window 2.12
+import QtQuick.Window 2.2
 import QtQuick.Controls 2.12
 import QtGraphicalEffects 1.12
 import AppDefs 1.0
@@ -330,7 +330,6 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
-            //onSigTankDeleting: page_TankData.showPage(false, 0)
         }
 
         Page_AppSett
@@ -399,6 +398,36 @@ Window
                     page_About.showPage(true)
                 }
             }
+        }
+    }
+
+    onClosing:
+    {
+        close.accepted = false
+
+        if (page_AccountSett.visible === true)
+        {
+            if (page_AccountSett.handleBackKeyEvent() === false)
+                page_AccountSett.showPage(false)
+        }
+        else if (page_TankSett.visible === true)
+        {
+            if (page_TankSett.handleBackKeyEvent() === false)
+                page_TankSett.showPage(false)
+        }
+        else if (page_AppSett.visible === true)
+            page_AppSett.showPage(false)
+        else if (page_About.visible === true)
+        {
+            if (page_About.handleBackKeyEvent() === false)
+                page_About.showPage(false)
+        }
+        else if (page_TankData.visible === true)
+            page_TankData.handleBackKeyEvent()
+        else if (page_Main.handleBackKeyEvent() === false)
+        {
+            close.accepted = true
+            Qt.quit()
         }
     }
 }

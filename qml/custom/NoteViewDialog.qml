@@ -60,6 +60,7 @@ Item
             rectDetailedContainer.visible = true
             textNoteDetailed.text = noteText
             showDetailsAnimation.start()
+            isOpened = true
         }
         else
         {
@@ -69,6 +70,7 @@ Item
                 textNote.text = noteViewDialog.noteText
 
             hideDetailsAnimation.start()
+            isOpened = false
         }
     }
 

@@ -14,9 +14,6 @@
 #define DIAGRAMM_DRAW_GAP_TOP       0.50  //Means +50% of full scale
 #define DIAGRAMM_DRAW_GAP_BOTTOM    0.50  //Means +50% of full scale
 
-#define USER_IMAGE_WIDTH            256
-#define USER_IMAGE_HEIGHT           256
-
 /* Import/Export */
 bool    exportToFile(QString name);
 bool    importFromFile(QString name);
@@ -74,7 +71,7 @@ public:
     int     getLastSmpId();
     bool    getLatestParams();
     bool    getActionCalendar(QString tankId, bool backGround);
-    bool    getCurrentUser();
+    bool    getCurrentUser(bool update);
     bool    getUserTanksList();
     bool    getTankStoryList(int id);
     bool    getParamIdList(QList<int> *idList);

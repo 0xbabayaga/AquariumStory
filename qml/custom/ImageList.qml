@@ -21,8 +21,6 @@ Item
 
     onGalleryImageSelectedChanged:
     {
-        console.log("Qml selected = ", galleryImageSelected)
-
         if (galleryImageSelected.length > 0)
             addImageToList(galleryImageSelected)
     }
@@ -41,8 +39,6 @@ Item
 
     function addImageToList(imgUrl)
     {
-        console.log("Count = ", listOfImages.count, imagesCountMax)
-
         if (listOfImages.count < imagesCountMax)
             listOfImages.append({ "fileLink": imgUrl,   "base64data": ""})
 
@@ -67,8 +63,6 @@ Item
         {
             listOfImages.remove(index, 1)
             resize()
-
-            console.log("img cnt = ", listOfImages.count)
         }
     }
 
@@ -84,14 +78,10 @@ Item
 
     function resize()
     {
-        console.log("inRowItemsCnt = ", inRowItemsCnt)
-
         if (listOfImages.count < inRowItemsCnt)
             imagesListView.width = listOfImages.count * (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
         else
             imagesListView.width = inRowItemsCnt * (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
-
-        console.log("imagesListView.width = ", imagesListView.width)
     }
 
     function calcHeight()

@@ -30,7 +30,7 @@ Java_org_tikava_AquariumStory_Background_callbackOnTimer(JNIEnv *env, jobject ob
 
     if (dbMan->openDB() == true)
     {
-        if (dbMan->getCurrentUser() == true)
+        if (dbMan->getCurrentUser(false) == true)
         {
             if (dbMan->currentSelectedObjs()->user != nullptr)
             {

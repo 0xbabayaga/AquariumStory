@@ -347,7 +347,7 @@ void AppManager::createLangList()
 
 bool AppManager::getCurrentObjs(bool isFullUpdate)
 {
-    getCurrentUser();
+    getCurrentUser(false);
 
     qDebug() << "Current user = " << curSelectedObjs.user;
 
@@ -683,7 +683,7 @@ void AppManager::onGuiUserCreate(QString uname, QString upass, QString email, QS
 
     if (createUser(uname, upass, "", email, img, status) == true)
     {
-        getCurrentUser();
+        getCurrentUser(false);
         setInitialDialogStage(AppDef::AppInit_UserExist, curSelectedObjs.user->uname);
 
         cloudMan->setUserId(curSelectedObjs.user->man_id);
@@ -697,7 +697,7 @@ void AppManager::onGuiUserEdit(QString uname, QString upass, QString email, QStr
 
     if (editUser(uname, "", "", email, img) == true)
     {
-        getCurrentUser();
+        getCurrentUser(true);
 
         setCurrentUser(curSelectedObjs.user->uname,
                        curSelectedObjs.user->email,

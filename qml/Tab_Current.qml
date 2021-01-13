@@ -9,6 +9,34 @@ Item
 {
     id: tab_Current
 
+    function handleBackKeyEvent()
+    {
+        if (paramsTable.noteViewVisible === true)
+        {
+            paramsTable.closeNoteViewDialog()
+
+            return true
+        }
+        else if (dialogAddParamNote.handleBackKeyEvent() === true)
+        {
+            return true
+        }
+        else if (dialogAddParamNote.visible === true)
+        {
+            dialogAddParamNote.show(false)
+
+            return true
+        }
+        else if (confirmDialog.visible === true)
+        {
+            confirmDialog.showDialog(false, "", "")
+
+            return true
+        }
+        else
+            return false
+    }
+
     function addLogRecord(isEdit)
     {
         if (isEdit !== true)
@@ -226,6 +254,7 @@ Item
     ConfirmDialog
     {
         id: confirmDialog
+        visible: false
         onSigAccept: showAddParamDialog(true)
     }
 }

@@ -9,6 +9,12 @@ Item
     id: currentParamsTable
 
     property alias model: curValuesListView.model
+    property alias noteViewVisible: noteViewDialog.isOpened
+
+    function closeNoteViewDialog()
+    {
+        noteViewDialog.showDetails(false)
+    }
 
     function realModelLength()
     {

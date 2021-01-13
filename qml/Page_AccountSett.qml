@@ -15,6 +15,30 @@ Item
     signal sigClosed()
     signal sigDeleting()
 
+    function handleBackKeyEvent()
+    {
+        if (exportDialog.visible === true)
+        {
+            exportDialog.showDialog(false, "")
+
+            return true
+        }
+        else if (animationToPage.from === 0)
+        {
+            moveToEdit(false)
+
+            return true
+        }
+        else if (confirmDialog.visible === true)
+        {
+            confirmDialog.showDialog(false, "", "")
+
+            return true
+        }
+        else
+            return false
+    }
+
     function showPage(vis)
     {
         showAccountSettAnimation.stop()

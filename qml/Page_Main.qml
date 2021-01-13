@@ -10,6 +10,18 @@ Item
     objectName: "page_Main"
     property alias interactive: tanksList.interactive
 
+    function handleBackKeyEvent()
+    {
+        if (tankStory.visible === visible)
+        {
+            openStoryView(false)
+
+            return true
+        }
+        else
+            return false
+    }
+
     function showPage(vis)
     {
         if (vis === true)

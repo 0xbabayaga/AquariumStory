@@ -27,6 +27,7 @@ Item
             textMessage.text = message
             exportDialog.inProgress = true
             rectCont.visible = true
+            exportDialog.visible = true
             rectContOpacityAnimation.from = 0
             rectContOpacityAnimation.to = 1
         }
@@ -61,7 +62,14 @@ Item
             from: 0
             to: 1
 
-            onFinished: if (to === 0) rectCont.visible = false
+            onFinished:
+            {
+                if (to === 0)
+                {
+                    rectCont.visible = false
+                    exportDialog.visible = false
+                }
+            }
         }
 
         Rectangle

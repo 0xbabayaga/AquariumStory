@@ -17,6 +17,24 @@ Item
     signal sigClosed()
     signal sigTankDeleting()
 
+    function handleBackKeyEvent()
+    {
+        if (animationToPage.from === 0)
+        {
+            moveToEdit(false)
+
+            return true
+        }
+        else if (confirmDialog.visible === true)
+        {
+            confirmDialog.showDialog(false, "", "")
+
+            return true
+        }
+        else
+            return false
+    }
+
     function showPage(vis)
     {
         showPageAnimation.stop()

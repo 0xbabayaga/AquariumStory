@@ -88,7 +88,11 @@ Item
         from: 0
         to: 1
         easing.type: Easing.InOutQuad
-        onStarted: rectContainer.visible = true
+        onStarted:
+        {
+            dialogAddAction.visible = true
+            rectContainer.visible = true
+        }
     }
 
     NumberAnimation
@@ -100,7 +104,11 @@ Item
         from: 1
         to: 0
         easing.type: Easing.InOutQuad
-        onStopped: rectContainer.visible = false
+        onStopped:
+        {
+            dialogAddAction.visible = false
+            rectContainer.visible = false
+        }
     }
 
     Rectangle

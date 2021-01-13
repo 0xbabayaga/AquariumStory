@@ -19,6 +19,15 @@ Item
         ListElement { tab: qsTr("REMINDERS") }
     }
 
+    function handleBackKeyEvent()
+    {
+        if (tab_Current.handleBackKeyEvent() === false &&
+            tab_Action.handleBackKeyEvent() === false)
+        {
+            showPage(false, 0)
+        }
+    }
+
     function showPage(vis, tankParams)
     {
         var tankName

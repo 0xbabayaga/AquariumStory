@@ -266,7 +266,7 @@ bool importFromFile(QString name)
                         }
                         else
                         {
-                            qDebug() << "Import: Cannot open file to save";
+                            qDebug() << "Import: Cannot open file to save " << tmpFile.fileName();
                             res = false;
                             break;
                         }

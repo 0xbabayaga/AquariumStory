@@ -372,11 +372,11 @@ int DBManager::getLastSmpId()
     return id;
 }
 
-bool DBManager::getCurrentUser()
+bool DBManager::getCurrentUser(bool update)
 {
     QSqlQuery query("SELECT * FROM USER_TABLE WHERE STATUS != -1", db);
 
-    if (curSelectedObjs.user == nullptr)
+    if (curSelectedObjs.user == nullptr || update == true)
     {
         while (query.next())
         {
@@ -491,7 +491,7 @@ bool DBManager::createUser(QString uname, QString upass, QString phone, QString 
         if (img.length() > 0)
         {
             QImage src(img.replace("file:///", ""));
-            QImage resized = src.scaled(USER_IMAGE_WIDTH, USER_IMAGE_HEIGHT, Qt::KeepAspectRatio);
+            QImage resized = src.scaled(AppDef::MAX_USER_IMAGE_WIDTH, AppDef::MAX_USER_IMAGE_HEIGHT, Qt::KeepAspectRatio);
             QByteArray ba;
             QBuffer buf(&ba);
             resized.save(&buf, "png");
@@ -544,7 +544,7 @@ bool DBManager::editUser(QString uname, QString upass, QString phone, QString em
             if (img.contains(".jpg") == true || img.contains(".png") == true)
             {
                 QImage src(img);
-                QImage resized = src.scaled(USER_IMAGE_WIDTH, USER_IMAGE_HEIGHT, Qt::KeepAspectRatio);
+                QImage resized = src.scaled(AppDef::MAX_USER_IMAGE_WIDTH, AppDef::MAX_USER_IMAGE_HEIGHT, Qt::KeepAspectRatio);
                 QByteArray ba;
                 QBuffer buf(&ba);
                 resized.save(&buf, "png");
@@ -666,7 +666,6 @@ bool DBManager::deleteUser()
 bool DBManager::createTank(QString name, QString desc, QString manId, int type, int l, int w, int h, QString imgFile)
 {
     bool res = false;
-    QFile *file = nullptr;
     QString img = "";
 
 #ifdef FULL_FEATURES_ENABLED
@@ -682,21 +681,15 @@ bool DBManager::createTank(QString name, QString desc, QString manId, int type, 
 
         if (imgFile != "")
         {
-            file = new QFile(imgFile.replace("file:///", ""));
+            imgFile = imgFile.replace("file:///", "");
 
-            if (file->exists() == true && file->open(QFile::OpenModeFlag::ReadOnly) == true)
-            {
-                qDebug() << "Found ";
-
-                QByteArray bin = file->readAll();
-                file->close();
-
-                qDebug() << "Size = " << bin.size();
-
-                img = QString(bin.toBase64());
-            }
-
-            delete file;
+            QImage src(imgFile);
+            QImage resized = src.scaled(AppDef::MAX_IMAGE_WIDTH, AppDef::MAX_IMAGE_HEIGHT, Qt::KeepAspectRatio);
+            QByteArray ba;
+            QBuffer buf(&ba);
+            resized.save(&buf, "jpg");
+            img = QString(ba.toBase64());
+            buf.close();
         }
 
         query.prepare("INSERT INTO TANKS_TABLE (TANK_ID, MAN_ID, TYPE, IMG, NAME, DESC, STATUS, L, W, H, DATE_CREATE, DATE_EDIT) "
@@ -741,10 +734,10 @@ bool DBManager::editTank(QString tankId, QString name, QString desc, int type, i
             if (img.contains(".jpg") == true || img.contains(".png") == true)
             {
                 QImage src(img);
-                QImage resized = src.scaled(USER_IMAGE_WIDTH, USER_IMAGE_HEIGHT, Qt::KeepAspectRatio);
+                QImage resized = src.scaled(AppDef::MAX_IMAGE_WIDTH, AppDef::MAX_IMAGE_HEIGHT, Qt::KeepAspectRatio);
                 QByteArray ba;
                 QBuffer buf(&ba);
-                resized.save(&buf, "png");
+                resized.save(&buf, "jpg");
                 base64ImgString = QString(ba.toBase64());
                 buf.close();
             }

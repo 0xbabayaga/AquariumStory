@@ -16,6 +16,24 @@ Item
     property var months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     property int totalActionsCnt: 0
 
+    function handleBackKeyEvent()
+    {
+        if (dialogAddAction.visible === true)
+        {
+            showActionDialog(false, false, 0)
+
+            return true
+        }
+        else if (confirmDialog.visible === true)
+        {
+            confirmDialog.showDialog(false, "", "")
+
+            return true
+        }
+        else
+            return false
+    }
+
     function showActionDialog(visible, isEdit, id)
     {
         if (visible === true)
@@ -464,6 +482,7 @@ Item
     ConfirmDialog
     {
         id: confirmDialog
+        visible: false
         onSigAccept: dialogAddAction.deleteAction(getParam())
     }
 }

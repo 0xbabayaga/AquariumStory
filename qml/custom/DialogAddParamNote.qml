@@ -19,6 +19,22 @@ Item
     signal sigCancel()
     signal sigOk()
 
+    function handleBackKeyEvent()
+    {
+        if (rectPersonalParamsDialog.visible === true)
+        {
+            savePersonalParams(false)
+
+            return true
+        }
+        else
+        {
+            dialogAddParamNote.show(false)
+
+            return false
+        }
+    }
+
     function show(visible)
     {
         if (visible === true)
@@ -111,7 +127,11 @@ Item
         from: 0
         to: 1
         easing.type: Easing.InOutQuad
-        onStarted: rectContainer.visible = true
+        onStarted:
+        {
+            dialogAddParamNote.visible = true
+            rectContainer.visible = true
+        }
     }
 
     NumberAnimation
@@ -123,7 +143,11 @@ Item
         from: 1
         to: 0
         easing.type: Easing.InOutQuad
-        onStopped: rectContainer.visible = false
+        onStopped:
+        {
+            dialogAddParamNote.visible = false
+            rectContainer.visible = false
+        }
     }
 
 

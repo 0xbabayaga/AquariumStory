@@ -27,6 +27,7 @@ Item
             textHeader.text = header
             textMessage.text = message
             rectCont.visible = true
+            waitDialog.visible = true
             rectContOpacityAnimation.from = 0
             rectContOpacityAnimation.to = 1
         }
@@ -61,7 +62,14 @@ Item
             from: 0
             to: 1
 
-            onFinished: if (to === 0) rectCont.visible = false
+            onFinished:
+            {
+                if (to === 0)
+                {
+                    waitDialog.visible = false
+                    rectCont.visible = false
+                }
+            }
         }
 
         Rectangle

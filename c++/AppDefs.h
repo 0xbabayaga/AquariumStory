@@ -95,6 +95,10 @@ public:
 
         MAX_IMAGE_WIDTH = 1280,
         MAX_IMAGE_HEIGHT = 1280,
+
+        MAX_USER_IMAGE_WIDTH = 512,
+        MAX_USER_IMAGE_HEIGHT = 512,
+
         APP_TIP_SHOW_TIME = 5000
     };
 
