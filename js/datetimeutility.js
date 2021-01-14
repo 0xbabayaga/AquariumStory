@@ -49,7 +49,7 @@ DateTimeUtil.prototype.printDate = function(tm)
 {
     var date = new Date(tm * 1000)
     var day = "0" + date.getDate()
-    var month = "0" + date.getMonth()
+    var month = "0" + date.getMonth() + 1
     var formattedDate = day.substr(-2) + '/' + month.substr(-2)
 
     if (app.global_DATEFORMAT === AppDefs.AppDefs.DateFormat_MM_DD_YYYY || app.global_DATEFORMAT === AppDefs.AppDefs.DateFormat_YYYY_MM_DD)

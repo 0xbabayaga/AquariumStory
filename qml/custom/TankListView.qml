@@ -31,7 +31,6 @@ Item
             anchors.bottomMargin: AppTheme.padding * app.scale
             orientation: ListView.Vertical
             spacing: AppTheme.margin * app.scale
-            //clip: true
             cacheBuffer: 6000
 
 

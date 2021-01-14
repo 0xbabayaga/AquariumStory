@@ -242,7 +242,6 @@ Item
 
             onSigTankStorySelected:
             {
-                //app.sigTankStorySelected(currentIndex)
                 app.sigTankSelected(currentIndex)
                 openStoryView(true)
             }

@@ -86,7 +86,7 @@ Item
         {
             if (val > prevVal)
             {
-                sign = "\u2197"
+                sign = "\u25B2"
 
                 if (val > 0.75 * (max - min) + min)
                     color = AppTheme.negativeChangesColor
@@ -97,7 +97,7 @@ Item
             }
             else if (val < prevVal)
             {
-                sign = "\u2199"
+                sign = "\u25BC"
 
                 if (val > 0.25 * (max - min) + min)
                     color = AppTheme.positiveChangesColor
@@ -237,7 +237,7 @@ Item
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontSmallSize * app.scale
                         font.bold: true
                         color: paramProgressState(paramId, valueNow, valuePrev)[1]
                         text: paramProgressState(paramId, valueNow, valuePrev)[0]
