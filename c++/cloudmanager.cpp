@@ -6,10 +6,11 @@
 #include <QJsonParseError>
 #include <QCryptographicHash>
 #include "security/md7.h"
+#include "security/security.h"
 
 CloudManager::CloudManager(QString id, QObject *parent) : QObject(parent)
 {
-    security = new Security(AppDef::MAN_ID_LENGTH, AppDef::APP_KEY_SEED, AppDef::APP_KEY_LENGTH);
+    security = new Security(AppDef::MAN_ID_LENGTH, APP_KEY_SEED, APP_KEY_LENGTH);
 
     manId = id;
     man = new QNetworkAccessManager();
@@ -44,6 +45,8 @@ void CloudManager::request_registerApp(UserObj *user)
     QString md5;
 
     md5 = QString(security->getCloudKey(user->man_id.toStdString(), QString::number(user->date_create).toStdString()).c_str());
+
+    qDebug() << md5;
 
     QString jsonString = "{"
                          "\"method\": \"register\","
@@ -98,6 +101,9 @@ void CloudManager::onReplyReceived(QNetworkReply *reply)
             qDebug().noquote() << "JSON ERROR = " << error.errorString() << "on char" << error.offset;
         }
 
+        qDebug() << "RESP:";
+        qDebug() << rsp;
+
         if (obj["method"].isNull() == false)
         {
             if (obj["method"].toString() == "register")
@@ -115,13 +121,13 @@ void CloudManager::onReplyReceived(QNetworkReply *reply)
                             emit response_registerApp(obj["result"].toInt(), obj["errortext"].toString(), manId, obj["key"].toString());
                         }
                         else
-                            emit response_registerApp(CloudManager::ReponseError::Error_VerificationFailed, "", "", "");
+                            emit response_registerApp(CloudManager::ReponseError::Error_VerificationFailed, obj["errortext"].toString(), "", "");
                     }
                     else
                         emit response_registerApp(obj["result"].toInt(), obj["errortext"].toString(), "", "");
                 }
                 else
-                    emit response_registerApp(CloudManager::ReponseError::Error_ProtocolError, "", "", "");
+                    emit response_registerApp(CloudManager::ReponseError::Error_ProtocolError, obj["errortext"].toString(), "", "");
             }
             else if (obj["method"].toString() == "version")
             {
