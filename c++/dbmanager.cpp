@@ -66,7 +66,7 @@ DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
 {
     QString tmp = "";
 
-    security = new Security(AppDef::MAN_ID_LENGTH, AppDef::APP_KEY_SEED, AppDef::APP_KEY_LENGTH);
+    security = new Security(AppDef::MAN_ID_LENGTH, APP_KEY_SEED, APP_KEY_LENGTH);
 
     readOnly = isReadOnly;
 

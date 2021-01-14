@@ -4,6 +4,8 @@
 #include <string>
 
 #define MAN_ID_CUT_MD5  7
+#define APP_KEY_SEED    77
+#define APP_KEY_LENGTH  256
 
 using namespace std;
 

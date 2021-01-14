@@ -1060,7 +1060,7 @@ void AppManager::onCloudResponse_Register(int error, QString errorText, QString 
     else
     {
         setQmlParam("cloudCommWaitDialog", "message", tr("Application is not registered!"));
-        setQmlParam("cloudCommWaitDialog", "message", tr("Error") + ": #" + QString::number(error));
+        setQmlParam("cloudCommWaitDialog", "message", tr("Error") + ": " + errorText);
     }
 }
 
