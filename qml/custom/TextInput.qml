@@ -58,7 +58,7 @@ Item
             font.pixelSize: AppTheme.fontNormalSize * app.scale
             color: AppTheme.greyColor
             height: parent.height
-            visible: !textArea.text
+            visible: !(textArea.text.length > 0 || textArea.displayText.length > 0)
         }
 
         onContentHeightChanged:

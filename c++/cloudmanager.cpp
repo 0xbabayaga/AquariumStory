@@ -46,8 +46,6 @@ void CloudManager::request_registerApp(UserObj *user)
 
     md5 = QString(security->getCloudKey(user->man_id.toStdString(), QString::number(user->date_create).toStdString()).c_str());
 
-    qDebug() << md5;
-
     QString jsonString = "{"
                          "\"method\": \"register\","
                          "\"uname\": \"" + user->uname + "\","
@@ -101,8 +99,7 @@ void CloudManager::onReplyReceived(QNetworkReply *reply)
             qDebug().noquote() << "JSON ERROR = " << error.errorString() << "on char" << error.offset;
         }
 
-        qDebug() << "RESP:";
-        qDebug() << rsp;
+        //qDebug() << rsp;
 
         if (obj["method"].isNull() == false)
         {

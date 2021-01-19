@@ -234,8 +234,9 @@ Item
                         width: parent.width
                         maximumLength: AppDefs.MAX_EMAIL_SIZE
                         focus: true
+                        inputMethod: Qt.ImhEmailCharactersOnly
                         //KeyNavigation.tab: textUserPass
-                        validator: RegExpValidator { regExp:/^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$/ }
+                        //validator: RegExpValidator { regExp:/^[0-9a-zA-Z]+([0-9a-zA-Z]*[-._+])*[0-9a-zA-Z]+@[0-9a-zA-Z]+([-.][0-9a-zA-Z]+)*([0-9a-zA-Z]*[.])[a-zA-Z]{2,6}$/ }
                     }
 
                     Item { height: 1; width: 1;}
