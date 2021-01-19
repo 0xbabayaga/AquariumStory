@@ -424,7 +424,7 @@ Window
         }
         else if (page_TankData.visible === true)
             page_TankData.handleBackKeyEvent()
-        else if (page_Main.handleBackKeyEvent() === false)
+        else if (page_Main.handleBackKeyEvent() === false || page_AccountWizard.visible === true)
         {
             close.accepted = true
             Qt.quit()

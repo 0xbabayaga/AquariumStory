@@ -71,8 +71,7 @@ DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
     readOnly = isReadOnly;
 
 #ifdef  Q_OS_ANDROID
-    //appPath = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + "/" + appFolder;
-    appPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);// + "/" + appFolder;
+    appPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
 #else
     appPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
 #endif

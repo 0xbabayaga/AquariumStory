@@ -8,6 +8,7 @@ android: QT += androidextras
 
 CONFIG += c++11
 
+#DEFINES += APP_FILE_LOG_EN
 #DEFINES += QT_NO_DEBUG_OUTPUT
 
 version_p.commands = ..\AquariumStory\version_inc.bat
