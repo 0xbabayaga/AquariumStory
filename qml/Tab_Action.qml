@@ -18,7 +18,11 @@ Item
 
     function handleBackKeyEvent()
     {
-        if (dialogAddAction.visible === true)
+        if (dialogAddAction.handleBackKeyEvent() === true)
+        {
+            return true
+        }
+        else if (dialogAddAction.visible === true)
         {
             showActionDialog(false, false, 0)
 

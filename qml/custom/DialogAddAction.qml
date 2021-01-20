@@ -14,6 +14,23 @@ Item
     property bool isEdit: false
     property int editId: 0
 
+    function handleBackKeyEvent()
+    {
+        if (datePicker.isOpened === true)
+        {
+            datePicker.showList(false)
+
+            return true
+        }
+        else if (timePicker.isOpened === true)
+        {
+            timePicker.showList(false)
+
+            return true
+        }
+        return false
+    }
+
     function setActionParam(id, name, desc, repeatsInterval, period, dateTime)
     {
         editId = id

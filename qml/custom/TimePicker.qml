@@ -14,6 +14,7 @@ Item
     property alias title: textHeader.text
     property int dotSignWidth: 20 * app.scale
     property int yOffset: 200 * app.scale
+    property bool isOpened: (rectTimeContainer.visible === true)
 
     function updateTime()
     {

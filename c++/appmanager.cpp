@@ -248,6 +248,7 @@ void AppManager::setSettAfterQMLReady()
     setQmlParam("app", "global_DIMUNITS", QVariant(appSett.value(SETT_DIMENSIONUNITS).toInt()));
     setQmlParam("app", "global_VOLUNITS", QVariant(appSett.value(SETT_VOLUMEUNITS).toInt()));
     setQmlParam("app", "global_DATEFORMAT", QVariant(appSett.value(SETT_DATEFORMAT).toInt()));
+    setQmlParam("app", "global_APP_LANG", QVariant(appSett.value(SETT_LANG).toInt()));
 
     setQmlParam("app", "global_APP_VERSION", APP_VERSION);
     setQmlParam("app", "global_APP_NAME", APP_NAME);
@@ -982,6 +983,7 @@ void AppManager::onGuiLanguageChanged(int id)
             getCurrentObjs(false);
 
             appSett.setValue(SETT_LANG, id);
+            setQmlParam("app", "global_APP_LANG", QVariant(appSett.value(SETT_LANG).toInt()));
         }
 
         justStarted = false;

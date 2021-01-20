@@ -5,6 +5,7 @@ import QtGraphicalEffects 1.12
 import Qt.labs.calendar 1.0
 import "../../js/datetimeutility.js" as DateTimeUtils
 import "../"
+import AppDefs 1.0
 
 Item
 {
@@ -18,9 +19,18 @@ Item
     property int fontSizePx: AppTheme.fontSmallSize * app.scale
     property var date: new Date(calendar.currentYear, calendar.currentMonth, calendar.currentDay)
     property int yOffset: 200 * app.scale
+    property bool isOpened: (rectCalendar.visible === true)
 
     signal sigOk()
     signal sigCancel()
+
+    function getLocale()
+    {
+        if (app.global_APP_LANG === AppDefs.Lang_English)
+            return Qt.locale("en_US")
+        else
+            return Qt.locale("ru_RU")
+    }
 
     function getLinuxDate()
     {
@@ -269,14 +279,14 @@ Item
                             DayOfWeekRow
                             {
                                 id: weekTitles
-                                locale: monthGrid.locale
                                 anchors.top: monthYearTitle.bottom
                                 height: AppTheme.compHeight * app.scale
                                 width: parent.width
+                                locale: getLocale()
 
                                 delegate: Text
                                 {
-                                    text: model.shortName
+                                    text: getLocale().dayName(model.day, Locale.ShortFormat)
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     font.family: AppTheme.fontFamily
@@ -294,15 +304,14 @@ Item
                                 anchors.top: weekTitles.bottom
                                 width: calendar.width
                                 height: datePicker.cellSize * 6
-                                locale: Qt.locale("en_US")
+                                locale: getLocale()
 
                                 delegate: Rectangle
                                 {
                                     height: datePicker.cellSize
-                                    width: datePicker.cellSize
-                                    //radius: height * 0.5
+                                    width: 30//datePicker.cellSize
 
-                                    property bool highlighted: enabled && model.day === calendar.currentDay && model.month == calendar.currentMonth
+                                    property bool highlighted: enabled && model.day === calendar.currentDay && model.month === calendar.currentMonth
 
                                     enabled: model.month === monthGrid.month
                                     color: enabled && highlighted ? AppTheme.blueColor : AppTheme.whiteColor
