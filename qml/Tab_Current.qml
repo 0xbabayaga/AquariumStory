@@ -39,8 +39,12 @@ Item
 
     function addLogRecord(isEdit)
     {
-        if (isEdit !== true)
-            app.lastSmpId++
+        var smpId = 0
+
+        if (isEdit === false)
+            smpId = app.lastSmpId + 1
+        else
+            smpId = curValuesListModel[0].smpIdNow
 
         for (var i = 0; i < dialogAddParamNote.addParamsListModel.length; i++)
         {
@@ -49,13 +53,13 @@ Item
             {
                 if (isEdit === false)
                 {
-                    app.sigAddRecord(app.lastSmpId,
+                    app.sigAddRecord(smpId,
                                      dialogAddParamNote.addParamsListModel[i].paramId,
                                      dialogAddParamNote.addParamsListModel[i].value)
                 }
                 else
                 {
-                    app.sigEditRecord(app.lastSmpId,
+                    app.sigEditRecord(smpId,
                                       dialogAddParamNote.addParamsListModel[i].paramId,
                                       dialogAddParamNote.addParamsListModel[i].value)
                 }
@@ -76,13 +80,13 @@ Item
 
             if (isEdit === false)
             {
-                sigAddRecordNotes(app.lastSmpId,
+                sigAddRecordNotes(smpId,
                                   dialogAddParamNote.note,
                                   links)
             }
             else
             {
-                sigEditRecordNotes(app.lastSmpId,
+                sigEditRecordNotes(smpId,
                                    dialogAddParamNote.note,
                                    links)
             }
