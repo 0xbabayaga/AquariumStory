@@ -4,53 +4,53 @@
 <context>
     <name>AppManager</name>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="916"/>
+        <location filename="../../c++/appmanager.cpp" line="953"/>
         <source>Data exported to file</source>
         <translation>Дадзеныя экспартаваны ў файл</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="917"/>
+        <location filename="../../c++/appmanager.cpp" line="954"/>
         <source>Now you can Import this data on another device</source>
         <translation>Цяпер вы можаце iмпартаваць гэтыя дадзеныя на iншым устройстве</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="919"/>
+        <location filename="../../c++/appmanager.cpp" line="956"/>
         <source>Error on data exporting</source>
         <translation>Памылка экспарту дадзеных</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="932"/>
+        <location filename="../../c++/appmanager.cpp" line="969"/>
         <source>Data imported from file</source>
         <translation>Дадзеныя iмпартаваныя з файла</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="932"/>
+        <location filename="../../c++/appmanager.cpp" line="969"/>
         <source>successfully</source>
         <translation>паспяхова</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="934"/>
+        <location filename="../../c++/appmanager.cpp" line="971"/>
         <source>Error on data importing</source>
         <translation>Памылка iмпарту дадзеных</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1052"/>
+        <location filename="../../c++/appmanager.cpp" line="1089"/>
         <source>Application is successfully registered!</source>
         <translation>Праграма паспяхова зарэгiстравана!</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1059"/>
-        <location filename="../../c++/appmanager.cpp" line="1064"/>
-        <location filename="../../c++/appmanager.cpp" line="1073"/>
-        <location filename="../../c++/appmanager.cpp" line="1078"/>
+        <location filename="../../c++/appmanager.cpp" line="1096"/>
+        <location filename="../../c++/appmanager.cpp" line="1101"/>
+        <location filename="../../c++/appmanager.cpp" line="1110"/>
+        <location filename="../../c++/appmanager.cpp" line="1115"/>
         <source>Application is not registered!</source>
         <translation>Праграма не зарэгiстравана!</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1060"/>
-        <location filename="../../c++/appmanager.cpp" line="1065"/>
-        <location filename="../../c++/appmanager.cpp" line="1074"/>
-        <location filename="../../c++/appmanager.cpp" line="1079"/>
+        <location filename="../../c++/appmanager.cpp" line="1097"/>
+        <location filename="../../c++/appmanager.cpp" line="1102"/>
+        <location filename="../../c++/appmanager.cpp" line="1111"/>
+        <location filename="../../c++/appmanager.cpp" line="1116"/>
         <source>Error</source>
         <translation>Памылка</translation>
     </message>
@@ -1380,41 +1380,51 @@ You can create a new one.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../main.qml" line="150"/>
+        <location filename="../../main.qml" line="154"/>
         <source>cm</source>
         <translation>см</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="152"/>
+        <location filename="../../main.qml" line="156"/>
         <source>inch</source>
         <translation>дзм</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="158"/>
-        <location filename="../../main.qml" line="168"/>
+        <location filename="../../main.qml" line="162"/>
+        <location filename="../../main.qml" line="172"/>
         <source>L</source>
         <translation>Л</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="160"/>
+        <location filename="../../main.qml" line="164"/>
         <source>Gal(UK)</source>
         <translation>Гал(АНГ)</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="162"/>
+        <location filename="../../main.qml" line="166"/>
         <source>Gal(US)</source>
         <translation>Гал(США)</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="170"/>
-        <location filename="../../main.qml" line="172"/>
+        <location filename="../../main.qml" line="174"/>
+        <location filename="../../main.qml" line="176"/>
         <source>G</source>
         <translation>Г</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="298"/>
+        <location filename="../../main.qml" line="305"/>
         <source>Loading data</source>
         <translation>Загрузка дадзеных</translation>
+    </message>
+    <message>
+        <location filename="../../main.qml" line="393"/>
+        <source>Cannot create or read database!</source>
+        <translation>Немагчыма стварыць альбо прачытаць базу дадзеных!</translation>
+    </message>
+    <message>
+        <location filename="../../main.qml" line="393"/>
+        <source>Please grant &quot;Write external storage&quot; permission to the application.</source>
+        <translation>Калi ласка, дайце дазвол на захаванне дадзеных ў памяцi смартфона</translation>
     </message>
 </context>
 </TS>

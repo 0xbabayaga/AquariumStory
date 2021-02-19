@@ -48,16 +48,7 @@ AppManager::AppManager(QQmlApplicationEngine *engine, QObject *parent) : DBManag
     qmlEngine = engine;
 
 #ifdef Q_OS_ANDROID
-    for (int i = 0; i < permissions.size(); i++)
-    {
-        QtAndroid::PermissionResult r = QtAndroid::checkPermission(permissions.at(i));
-
-        QtAndroid::requestPermissionsSync( QStringList() << permissions.at(i) );
-
-        r = QtAndroid::checkPermission(permissions.at(i));
-
-        qDebug() << "Permission " << permissions.at(i) << ((r == QtAndroid::PermissionResult::Denied) ? " DENIED" : " GRANTED ");
-    }
+    permissionsDenied = checkAppPermissionsDenied();
 #endif
 
     connect(qmlEngine, SIGNAL(objectCreated(QObject*, const QUrl)), this, SLOT(onQmlEngineLoaded(QObject*, const QUrl)));
@@ -135,6 +126,10 @@ AppManager::~AppManager()
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigImportData(QString)), this, SLOT(onGuiImportData(QString)));
     disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigGetImportFilesList()), this, SLOT(onGuiGetImportFilesList()));
 
+#ifdef Q_OS_ANDROID
+    disconnect(qmlEngine->rootObjects().first(), SIGNAL(sigGrantPermission()), this, SLOT(onGuiGrantPermission()));
+#endif
+
     disconnect(cloudMan, SIGNAL(response_error(int)), this, SLOT(onCloudResponse_Error(int)));
     disconnect(cloudMan, SIGNAL(response_registerApp(int, QString, QString, QString)), this, SLOT(onCloudResponse_Register(int, QString, QString, QString)));
     disconnect(cloudMan, SIGNAL(response_appUpdates(int, int)), this, SLOT(onCloudResponse_AppUpdates(int, int)));
@@ -148,6 +143,27 @@ AppManager::~AppManager()
     if (actionList != nullptr)
         delete actionList;
 }
+
+#ifdef  Q_OS_ANDROID
+bool AppManager::checkAppPermissionsDenied()
+{
+    for (int i = 0; i < permissions.size(); i++)
+    {
+        QtAndroid::PermissionResult r = QtAndroid::checkPermission(permissions.at(i));
+
+        QtAndroid::requestPermissionsSync( QStringList() << permissions.at(i) );
+
+        r = QtAndroid::checkPermission(permissions.at(i));
+
+        qDebug() << "Permission " << permissions.at(i) << ((r == QtAndroid::PermissionResult::Denied) ? " DENIED" : " GRANTED ");
+
+        if (r == QtAndroid::PermissionResult::Denied)
+            return true;
+    }
+
+    return false;
+}
+#endif
 
 void AppManager::init()
 {
@@ -181,6 +197,10 @@ void AppManager::init()
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigImportData(QString)), this, SLOT(onGuiImportData(QString)));
     connect(qmlEngine->rootObjects().first(), SIGNAL(sigGetImportFilesList()), this, SLOT(onGuiGetImportFilesList()));
 
+#ifdef Q_OS_ANDROID
+    connect(qmlEngine->rootObjects().first(), SIGNAL(sigGrantPermission()), this, SLOT(onGuiGrantPermission()));
+#endif
+
     setSettAfterQMLReady();
 
     position->get();
@@ -206,6 +226,13 @@ void AppManager::init()
     checkAppRegistered();
 
     setAppLoaded();
+
+#ifdef Q_OS_ANDROID
+    setAppPermissionsDenied(permissionsDenied);
+#else
+    permissionsDenied = false;
+    setAppPermissionsDenied(permissionsDenied);
+#endif
 
     cloudMan->request_getAppUpdates();
 }
@@ -509,13 +536,8 @@ bool AppManager::getHistoryParams()
 
 void AppManager::setInitialDialogStage(int stage, QString name)
 {
-    //if (stage != AppDef::AppInit_Completed)
-        //setQmlParam("app", "isAccountCreated", false);
-        //setQmlParam("page_AccountWizard", "visible" , true);
-
     setQmlParam("page_AccountWizard", "stage", stage);
     setQmlParam("page_AccountWizard", "currentUName", name);
-    //setQmlParam("rectAppLoadingSpinner", "opacity", 0);
 }
 
 void AppManager::setLastSmpId(int id)
@@ -538,6 +560,11 @@ void AppManager::setAppLoaded()
         QMetaObject::invokeMethod(obj, "hideLoadingScreen");
     else
         qDebug() << "Component \"app\" not Found!";
+}
+
+void AppManager::setAppPermissionsDenied(bool isDenied)
+{
+    setQmlParam("app", "global_APP_PERMISSION_DENIED", isDenied);
 }
 
 void AppManager::setGalleryImageSelected(QString imgUrl, QString qmlCompName)
@@ -665,6 +692,16 @@ void AppManager::drawDiagrams(int selectedPoint)
     if (obj != nullptr)
         QMetaObject::invokeMethod(obj, "redraw", Q_ARG(QVariant, selectedPoint));
 }
+
+#ifdef  Q_OS_ANDROID
+void AppManager::onGuiGrantPermission()
+{
+    permissionsDenied = checkAppPermissionsDenied();
+    setAppPermissionsDenied(permissionsDenied);
+
+    qDebug() << "permissionsDenied = " << permissionsDenied;
+}
+#endif
 
 void AppManager::onQmlEngineLoaded(QObject *object, const QUrl &url)
 {
