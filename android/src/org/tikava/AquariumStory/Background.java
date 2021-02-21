@@ -1,5 +1,6 @@
 package org.tikava.AquariumStory;
 
+import android.content.Context;
 import android.app.Service;
 import android.os.IBinder;
 import android.content.Intent;
@@ -16,7 +17,7 @@ public class Background extends QtService
 {
     private static native void callbackOnTimer(int callNum);
     static long TIME_LIMIT = 30000;
-    CountDownTimer Count;
+    static CountDownTimer Count;
     private static int cnt = 0;
 
     public Background() {}
@@ -24,7 +25,7 @@ public class Background extends QtService
     @Override
     public void onCreate()
     {
-        super.onCreate();
+        //super.onCreate();
     }
 
     @Override
