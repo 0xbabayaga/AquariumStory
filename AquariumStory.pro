@@ -9,7 +9,7 @@ android: QT += androidextras
 CONFIG += c++11
 
 #DEFINES += APP_FILE_LOG_EN
-#DEFINES += QT_NO_DEBUG_OUTPUT
+DEFINES += QT_NO_DEBUG_OUTPUT
 DEFINES += FULL_FEATURES_ENABLED
 
 version_p.commands = ..\AquariumStory\version_inc.bat
@@ -42,12 +42,13 @@ RESOURCES += qml.qrc
 
 DISTFILES += \
     android/AndroidManifest.xml \
-    #android/build.gradle \
-    #android/gradle/wrapper/gradle-wrapper.jar \
-    #android/gradle/wrapper/gradle-wrapper.properties \
-    #android/gradlew \
-    #android/gradlew.bat \
-    #android/res/values/libs.xml \
+    android/build.gradle \
+    android/gradle.properties \
+    android/gradle/wrapper/gradle-wrapper.jar \
+    android/gradle/wrapper/gradle-wrapper.properties \
+    android/gradlew \
+    android/gradlew.bat \
+    android/res/values/libs.xml \
     android/src/org/tikava/AquariumStory/AquariumStory.java \
     android/src/org/tikava/AquariumStory/AquariumStoryNotification.java \
     android/src/org/tikava/AquariumStory/Background.java
@@ -87,8 +88,10 @@ equals(ANDROID_ABIS, "armeabi-v7a") {
 
 
     ANDROID_EXTRA_LIBS = \
-        $$PWD/../../../Dev/android_openssl-master/Qt-5.12.4_5.13.0/arm/libcrypto.so \
-        $$PWD/../../../Dev/android_openssl-master/Qt-5.12.4_5.13.0/arm/libssl.so
+        #$$PWD/../../../Dev/android_openssl-master/Qt-5.12.4_5.13.0/arm/libcrypto.so \
+        #$$PWD/../../../Dev/android_openssl-master/Qt-5.12.4_5.13.0/arm/libssl.so
+        $$PWD/../../../Dev/android_openssl-master/latest/arm/libcrypto_1_1.so \
+        $$PWD/../../../Dev/android_openssl-master/latest/arm/libssl_1_1.so
     }
 
 equals(ANDROID_ABIS, "arm64-v8a") {
@@ -97,8 +100,10 @@ equals(ANDROID_ABIS, "arm64-v8a") {
     DESTDIR=../build/release-arm64-v8a
 
     ANDROID_EXTRA_LIBS = \
-        $$PWD/../../../Dev/android_openssl-master/Qt-5.15.2/arm64/libcrypto.so \
-        $$PWD/../../../Dev/android_openssl-master/Qt-5.15.2/arm64/libssl.so
+        #$$PWD/../../../Dev/android_openssl-master/Qt-5.15.2/arm64/libcrypto.so \
+        #$$PWD/../../../Dev/android_openssl-master/Qt-5.15.2/arm64/libssl.so
+        $$PWD/../../../Dev/android_openssl-master/latest/arm64/libcrypto_1_1.so \
+        $$PWD/../../../Dev/android_openssl-master/latest/arm64/libssl_1_1.so
     }
 }
 
