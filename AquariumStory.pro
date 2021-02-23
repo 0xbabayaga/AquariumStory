@@ -69,7 +69,7 @@ HEADERS += \
     c++/version.h
 
 #ANDROID_ABIS = armeabi-v7a
-ANDROID_ABIS = arm64-v8a
+#ANDROID_ABIS = arm64-v8a
 
 android {
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android

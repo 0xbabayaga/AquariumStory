@@ -2,3 +2,8 @@ export PATH="/C/Users/navi/AppData/Local/Android/Sdk/ndk/21.3.6528147/toolchains
 export ANDROID_NDK_ROOT="/C/Users/navi/AppData/Local/Android/Sdk/ndk/21.3.6528147/"
 ./Configure shared android-arm64 -D__ANDROID_API__=29
 make -j$(nproc) SHLIB_VERSION_NUMBER= SHLIB_EXT=_1_1.so build_libs
+
+java -jar "bundletool.jar" build-apks --bundle=AquariumStoryPro_v1001287.aab --output=AquariumStoryPro_v1001287.apks --ks="android\org.tikava.by.keystore" --ks-pass=pass:Tikava1981 --ks-key-alias=org.tikava.by --key-pass=pass:Tikava1981
+
+set ANDROID_HOME "C:\Users\navitski\AppData\Local\Android\Sdk\platform-tools"
+java -jar "bundletool.jar" install-apks --apks=AquariumStoryPro_v1001287.apks --adb="C:\Users\navitski\AppData\Local\Android\Sdk\platform-tools\adb.exe"
