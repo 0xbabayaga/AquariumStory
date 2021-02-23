@@ -24,6 +24,7 @@ Window
     property string global_APP_DOMAIN: "Undefined"
     property string global_APP_NAME: "AquariumStory"
     property string global_APP_VERSION: "Undefined"
+    property bool global_APP_PERMISSION_DENIED: true
     property int global_APP_TYPE: AppDefs.UStatus_Blocked
     property int global_APP_LANG: AppDefs.Lang_English
     property int global_DIMUNITS:   AppDefs.Dimensions_CM
@@ -46,22 +47,8 @@ Window
     width: 360
     height: 720
 
-    onIsAccountCreatedChanged:
-    {
-        if (isAccountCreated === false)
-        {
-            page_TankSett.visible = false
-            page_AccountSett.visible = false
-            page_TankData.visible = false
-            page_Main.visible = false
-            page_AccountWizard.visible = true
-        }
-        else
-        {
-            page_Main.showPage(true)
-            page_AccountWizard.visible = false
-        }
-    }
+    onGlobal_APP_PERMISSION_DENIEDChanged: startGui()
+    onIsAccountCreatedChanged: startGui()
 
     signal sigCreateAccount(string uname, string upass, string umail, string img)
     signal sigEditAccount(string uname, string upass, string umail, string img)
@@ -93,10 +80,41 @@ Window
     signal sigExportData(string fileName)
     signal sigImportData(string fileName)
     signal sigGetImportFilesList()
+    signal sigGrantPermission()
+
+    function startGui()
+    {
+        if (isAccountCreated === false)
+        {
+            page_TankSett.visible = false
+            page_AccountSett.visible = false
+            page_TankData.visible = false
+            page_Main.visible = false
+
+            if (app.global_APP_PERMISSION_DENIED === false)
+            {
+                page_AccountWizard.visible = true
+                rectPermissiondenied.visible = false
+            }
+        }
+        else
+        {
+            if (app.global_APP_PERMISSION_DENIED === false)
+            {
+                page_Main.showPage(true)
+                rectPermissiondenied.visible = false
+            }
+
+            page_AccountWizard.visible = false
+        }
+    }
 
     function hideLoadingScreen()
     {
         hideLoadingScreenAnimation.start()
+
+        if (app.global_APP_PERMISSION_DENIED === true)
+            rectPermissiondenied.visible = true
     }
 
     function getAllParamsListModel() { return allParamsListModel    }
@@ -204,9 +222,13 @@ Window
                 rectAppLoadingSpinner.visible = false
 
                 if (isAccountCreated === true)
-                    page_Main.showPage(true)
+                {
+                    if (app.global_APP_PERMISSION_DENIED === false)
+                        page_Main.showPage(true)
+                }
                 else
-                    page_AccountWizard.visible = true
+                    if (app.global_APP_PERMISSION_DENIED === false)
+                        page_AccountWizard.visible = true
             }
         }
     }
@@ -347,6 +369,57 @@ Window
             anchors.fill: rectBackground
             anchors.topMargin: AppTheme.rowHeightMin * app.scale
             visible: false
+        }
+
+        Rectangle
+        {
+            id: rectPermissiondenied
+            objectName: "rectPermissiondenied"
+            anchors.fill: parent
+            height: AppTheme.rowHeight * 8 * app.scale
+            color: "#00000000"
+            visible: false
+
+            MouseArea
+            {
+                anchors.fill: parent
+                enabled: rectPermissiondenied.visible
+            }
+
+            Rectangle
+            {
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                height: AppTheme.rowHeight * 8 * app.scale
+                color: "#00000000"
+
+                Text
+                {
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    width: parent.width - AppTheme.margin * 2 * app.scale
+                    font.family: AppTheme.fontFamily
+                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    color: AppTheme.greyDarkColor
+                    wrapMode: Text.WordWrap
+                    horizontalAlignment: Text.AlignHCenter
+                    text: qsTr("Cannot create or read database!") +"\n" + qsTr("Please grant \"Write external storage\" permission to the application.")
+                }
+
+                IconSimpleButton
+                {
+                    id: buttonGrant
+                    anchors.bottom: parent.bottom
+                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.horizontalCenter: parent.horizontalCenter
+
+                    onSigButtonClicked:
+                    {
+                        app.sigGrantPermission()
+                    }
+                }
+            }
         }
     }
 

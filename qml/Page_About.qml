@@ -218,6 +218,32 @@ Item
                     wrapMode: Text.WordWrap
                     text: qsTr("Application type") + ":" + " " + getAppType()
                 }
+
+                Rectangle
+                {
+                    width: 1
+                    height: AppTheme.rowSpacing
+                }
+
+                Text
+                {
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignBottom
+                    width: parent.width
+                    height: AppTheme.rowHeightMin/2 * app.scale
+                    font.family: AppTheme.fontFamily
+                    font.pixelSize: AppTheme.fontSmallSize * app.scale
+                    font.underline: true
+                    color: AppTheme.blueFontColor
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Visit our website")
+
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: Qt.openUrlExternally("https://aquariumstory.tikava.by")
+                    }
+                }
             }
 
 

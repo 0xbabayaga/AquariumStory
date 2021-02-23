@@ -1,1 +1,1 @@
-#define APP_VERSION 1000522 
+#define APP_VERSION 1001235 

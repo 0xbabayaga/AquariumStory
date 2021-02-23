@@ -37,6 +37,10 @@ private:
     bool    loadTranslations(int id);
     void    checkAppRegistered();
 
+#ifdef  Q_OS_ANDROID
+    bool    checkAppPermissionsDenied();
+#endif
+
 private:
     /* Gui methods */
     bool    setQmlParam(QString objName, QString name, QVariant value);
@@ -48,6 +52,7 @@ private:
     void    setExportingState(QString message);
     void    setImportingState(QString message);
     void    setAppLoaded();
+    void    setAppPermissionsDenied(bool isDenied);
     void    resetStoryView();
 
     /* Gui diagram drawing */
@@ -95,6 +100,9 @@ public slots:
     void    onGuiExportData(QString fileName);
     void    onGuiImportData(QString fileName);
     void    onGuiGetImportFilesList();
+#ifdef  Q_OS_ANDROID
+    void    onGuiGrantPermission();
+#endif
 
     /* Postioning handlers */
     void    onPositionDetected();
@@ -113,6 +121,8 @@ private:
     QTranslator translator;
     QQmlApplicationEngine   *qmlEngine = nullptr;
     bool justStarted = true;
+
+    bool permissionsDenied = true;
 
     CloudManager *cloudMan = nullptr;
 
