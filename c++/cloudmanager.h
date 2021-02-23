@@ -9,8 +9,8 @@
 #include "security/security.h"
 
 #define CLOUDMAN_RESPONSE_TMT   10000
-#define CLOUD_SERVICE_URL       "https://as.tikava.by/reg.php"
-#define CLOUD_SERVICE_VER_URL   "https://as.tikava.by/ver.php"
+#define CLOUD_SERVICE_URL       "https://aquariumstory.tikava.by/reg.php"
+#define CLOUD_SERVICE_VER_URL   "https://aquariumstory.tikava.by/ver.php"
 
 class CloudManager : public QObject
 {
@@ -52,7 +52,7 @@ protected:
     Security              *security = nullptr;
     QNetworkAccessManager *man = nullptr;
     QUrl                  cloudUrl;
-    QTimer                *tmt;
+    QTimer                *tmt = nullptr;
     QString               manId;
 };
 
