@@ -84,25 +84,25 @@ DBManager::DBManager(bool isReadOnly, QObject *parent) : QObject(parent)
         if (QDir(tmp).exists() == false)
         {
             qDebug() << "Creating folder " << tmp;
-            qDebug() << "res = " << QDir().mkdir(tmp);
+            QDir().mkdir(tmp);
         }
 
         if (QDir(appPath).exists() == false)
         {
             qDebug() << "Creating folder " << appPath;
-            qDebug() << "res = " << QDir().mkdir(appPath);
+            QDir().mkdir(appPath);
         }
 
         if (QDir(appPath + "/" + dbFolder).exists() == false)
         {
             qDebug() << "Creating folder " << appPath + "/" + dbFolder;
-            qDebug() << "res = " << QDir().mkdir(appPath + "/" + dbFolder);
+            QDir().mkdir(appPath + "/" + dbFolder);
         }
 
         if (QDir(appPath + "/" + imgFolder).exists() == false)
         {
             qDebug() << "Creating folder " << appPath + "/" + imgFolder;
-            qDebug() << "res = " << QDir().mkdir(appPath + "/" + imgFolder);
+            QDir().mkdir(appPath + "/" + imgFolder);
         }
     }
 
