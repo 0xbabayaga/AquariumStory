@@ -4,8 +4,8 @@ import "../"
 Item
 {
     id: urlButton
-    width: 100 * app.scale
-    height: AppTheme.compHeight * app.scale
+    width: 100
+    height: AppTheme.compHeight
     property string buttonText: qsTr("Ok")
 
     signal sigButtonClicked()
@@ -26,7 +26,7 @@ Item
             horizontalAlignment: Text.Center
             color: AppTheme.greyColor
             font.underline: true
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             font.family: AppTheme.fontFamily
         }
 

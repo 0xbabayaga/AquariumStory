@@ -7,7 +7,7 @@ import "../"
 Item
 {
     id: pointList
-    height: AppTheme.compHeight * app.scale
+    height: AppTheme.compHeight
     width: app.width
 
     property alias model: view.model
@@ -47,7 +47,7 @@ Item
             maximumFlickVelocity: 10000
             clip: true
 
-            property int cellWidth: 70 * app.scale
+            property int cellWidth: 70
 
             highlightRangeMode: ListView.StrictlyEnforceRange
             preferredHighlightBegin: (width - cellWidth) / 2
@@ -58,14 +58,14 @@ Item
                 Rectangle
                 {
                     width: view.cellWidth
-                    height: AppTheme.rowHeight/2 * app.scale
+                    height: AppTheme.rowHeight/2
                     color: (view.currentIndex === index) ? AppTheme.blueColor : "#00000000"
 
                     Text
                     {
                         anchors.fill: parent
                         color: (view.currentIndex === index) ? AppTheme.whiteColor : AppTheme.blueFontColor
-                        font.pixelSize: (view.currentIndex === index) ? AppTheme.fontNormalSize * app.scale : AppTheme.fontSmallSize * app.scale
+                        font.pixelSize: (view.currentIndex === index) ? AppTheme.fontNormalSize  : AppTheme.fontSmallSize
                         font.family: AppTheme.fontFamily
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter

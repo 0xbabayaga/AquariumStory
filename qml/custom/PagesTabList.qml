@@ -6,7 +6,7 @@ import "../"
 Item
 {
     id: pagesTabList
-    height: AppTheme.compHeight * app.scale
+    height: AppTheme.compHeight
 
     property alias model: listTab.model
     property alias currentIndex: listTab.currentIndex
@@ -33,8 +33,8 @@ Item
             {
                 Rectangle
                 {
-                    width:  txt.contentWidth + AppTheme.padding * app.scale
-                    height: AppTheme.compHeight * app.scale
+                    width:  txt.contentWidth + AppTheme.padding
+                    height: AppTheme.compHeight
                     color: (listTab.currentIndex === index) ? AppTheme.whiteColor : AppTheme.blueColor
 
                     Behavior on color { ColorAnimation {   duration: 100 } }
@@ -43,7 +43,7 @@ Item
                     {
                         id: txt
                         color: (listTab.currentIndex === index) ? AppTheme.blueFontColor : AppTheme.whiteColor
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         font.family: AppTheme.fontFamily
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter

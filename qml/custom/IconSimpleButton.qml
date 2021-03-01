@@ -5,8 +5,8 @@ import "../"
 Item
 {
     id: iconSimpleButton
-    width: AppTheme.rowHeightMin * app.scale
-    height: AppTheme.rowHeightMin * app.scale
+    width: AppTheme.rowHeightMin
+    height: AppTheme.rowHeightMin
 
     property alias image: buttonImage.source
     property bool inverted:  false
@@ -31,7 +31,7 @@ Item
             id: buttonImage
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            width: AppTheme.rowHeight / 2 * app.scale
+            width: AppTheme.rowHeight / 2
             height: width
             source: "qrc:/resources/img/icon_plus.png"
             mipmap: true

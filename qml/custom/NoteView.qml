@@ -8,7 +8,7 @@ Item
 {
     id: noteView
     width: app.width
-    height: imgCurrent.height + textNoteDetailed.contentHeight + AppTheme.rowHeight * 3 * app.scale
+    height: imgCurrent.height + textNoteDetailed.contentHeight + AppTheme.rowHeight * 3
 
     property string imagesList: ""
     property alias noteText: textNoteDetailed.text
@@ -78,12 +78,12 @@ Item
         {
             id: rectLine
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.compHeight * app.scale
+            anchors.topMargin: AppTheme.compHeight
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: parent.right
-            anchors.rightMargin: AppTheme.padding * app.scale
-            height: 1 * app.scale
+            anchors.rightMargin: AppTheme.padding
+            height: 1
             color: AppTheme.blueColor
         }
 
@@ -91,12 +91,12 @@ Item
         {
             id: textNoteDate
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.top: parent.top
-            height: AppTheme.compHeight * app.scale
+            height: AppTheme.compHeight
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.blueFontColor
             text: ""
         }
@@ -105,18 +105,18 @@ Item
         {
             id: valuesListView
             anchors.top: rectLine.bottom
-            anchors.topMargin: AppTheme.padding / 2 * app.scale
+            anchors.topMargin: AppTheme.padding / 2
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding / 2 * app.scale
+            anchors.leftMargin: AppTheme.padding / 2
             anchors.right: parent.right
-            height: AppTheme.compHeight * app.scale
+            height: AppTheme.compHeight
             orientation: ListView.Horizontal
-            spacing: AppTheme.padding / 2 * app.scale
+            spacing: AppTheme.padding / 2
             model: valuesModel
 
             delegate: Rectangle
             {
-                width: (valuesListView.width - AppTheme.padding / 2 * app.scale * ((valuesModel.count > 6) ? 6 : valuesModel.count)) / ((valuesModel.count > 6) ? 6 : valuesModel.count)
+                width: (valuesListView.width - AppTheme.padding / 2  * ((valuesModel.count > 6) ? 6 : valuesModel.count)) / ((valuesModel.count > 6) ? 6 : valuesModel.count)
                 height: valuesListView.height
                 color: AppTheme.whiteColor
 
@@ -128,7 +128,7 @@ Item
                     height: parent.height / 2
                     width: parent.width
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontSuperSmallSize * app.scale
+                    font.pixelSize: AppTheme.fontSuperSmallSize
                     color: AppTheme.greyColor
                     text: name
                 }
@@ -141,7 +141,7 @@ Item
                     height: parent.height / 2
                     width: parent.width
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontSuperSmallSize * app.scale
+                    font.pixelSize: AppTheme.fontSuperSmallSize
                     color: AppTheme.blueFontColor
                     text: value
                 }
@@ -152,7 +152,7 @@ Item
         {
             id: imgCurrent
             anchors.top: valuesListView.bottom
-            anchors.topMargin: AppTheme.padding / 2 * app.scale
+            anchors.topMargin: AppTheme.padding / 2
             width: parent.width
             sourceSize.width: parent.width
             sourceSize.height: 400
@@ -165,7 +165,7 @@ Item
             IconSimpleButton
             {
                 anchors.right: parent.right
-                anchors.rightMargin: AppTheme.padding/2 * app.scale
+                anchors.rightMargin: AppTheme.padding/2
                 anchors.verticalCenter: parent.verticalCenter
                 image: "qrc:/resources/img/icon_arrow_right.png"
                 inverted: true
@@ -186,7 +186,7 @@ Item
             IconSimpleButton
             {
                 anchors.left: parent.left
-                anchors.leftMargin: AppTheme.padding/2 * app.scale
+                anchors.leftMargin: AppTheme.padding/2
                 anchors.verticalCenter: parent.verticalCenter
                 image: "qrc:/resources/img/icon_arrow_left.png"
                 inverted: true
@@ -209,19 +209,19 @@ Item
         {
             id: imagesPreviewList
             anchors.top: imgCurrent.bottom
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             anchors.horizontalCenter: parent.horizontalCenter
-            width: imagesListModel.count * AppTheme.padding * app.scale
-            height: AppTheme.padding * app.scale
+            width: imagesListModel.count * AppTheme.padding
+            height: AppTheme.padding
             orientation: ListView.Horizontal
-            spacing: AppTheme.padding / 2 * app.scale
+            spacing: AppTheme.padding / 2
             model: imagesListModel
             interactive: false
             visible: (imagesListModel.count > 1)
 
             delegate: Rectangle
             {
-                width: AppTheme.padding / 2 * app.scale
+                width: AppTheme.padding / 2
                 height: width
                 radius: width / 2
                 scale: (index === imagesPreviewList.currentIndex) ? 1.5 : 1
@@ -245,14 +245,14 @@ Item
         {
             id: textNoteDetailed
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: parent.right
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.rightMargin: AppTheme.padding
             anchors.top: imagesPreviewList.bottom
-            height: contentHeight + AppTheme.padding * app.scale
+            height: contentHeight + AppTheme.padding
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontSmallSize * app.scale
+            font.pixelSize: AppTheme.fontSmallSize
             color: AppTheme.greyColor
             text: ""
             wrapMode: Text.WordWrap

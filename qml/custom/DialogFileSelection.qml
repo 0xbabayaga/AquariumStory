@@ -22,7 +22,7 @@ Item
         if (visible === true)
         {
             showDialogAnimation.start()
-            rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5 * app.scale
+            rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5
         }
         else
         {
@@ -83,9 +83,9 @@ Item
         {
             anchors.fill: rectFakeDataContainer
             horizontalOffset: 0
-            verticalOffset: -AppTheme.shadowOffset * app.scale
-            radius: AppTheme.shadowSize/2 * app.scale
-            samples: AppTheme.shadowSamples * app.scale
+            verticalOffset: -AppTheme.shadowOffset
+            radius: AppTheme.shadowSize/2
+            samples: AppTheme.shadowSamples
             color: AppTheme.shadowColor
             source: rectFakeDataContainer
         }
@@ -94,9 +94,9 @@ Item
         {
             id: rectAddActionDialog
             anchors.fill: rectFakeDataContainer
-            anchors.topMargin: AppTheme.padding * app.scale
-            anchors.leftMargin: AppTheme.padding * 2 * app.scale
-            anchors.rightMargin: AppTheme.padding * 2 * app.scale
+            anchors.topMargin: AppTheme.padding
+            anchors.leftMargin: AppTheme.padding * 2
+            anchors.rightMargin: AppTheme.padding * 2
             color: "#00000020"
 
             Behavior on opacity
@@ -110,10 +110,10 @@ Item
                 anchors.top: parent.top
                 anchors.left: parent.left
                 verticalAlignment: Text.AlignVCenter
-                height: AppTheme.rowHeightMin * app.scale
-                width: 100 * app.scale
+                height: AppTheme.rowHeightMin
+                width: 100
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueFontColor
                 text: (dialogFileSelection.isSelectFile === true) ? qsTr("SELECT A FILE FOR IMPORT") : qsTr("ENTER A FILE NAME")
             }
@@ -122,7 +122,7 @@ Item
             {
                 anchors.top: textHeader.bottom
                 width: parent.width
-                height: 1 * app.scale
+                height: 1
                 color: AppTheme.backLightBlueColor
             }
 
@@ -130,14 +130,14 @@ Item
             {
                 id: filesListView
                 anchors.fill: parent
-                anchors.topMargin: AppTheme.rowHeight * app.scale
+                anchors.topMargin: AppTheme.rowHeight
                 spacing: 0
                 interactive: true
 
                 delegate: Rectangle
                 {
                     width: parent.width
-                    height: AppTheme.compHeight * app.scale
+                    height: AppTheme.compHeight
                     color: (index === filesListView.currentIndex) ? AppTheme.backLightBlueColor : AppTheme.whiteColor
 
                     Row
@@ -148,10 +148,10 @@ Item
                         Text
                         {
                             verticalAlignment: Text.AlignVCenter
-                            height: AppTheme.compHeight * app.scale
-                            width: 140 * app.scale
+                            height: AppTheme.compHeight
+                            width: 140
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: AppTheme.blueFontColor
                             text: name
                         }
@@ -160,10 +160,10 @@ Item
                         Text
                         {
                             verticalAlignment: Text.AlignVCenter
-                            height: AppTheme.compHeight * app.scale
-                            width: 50 * app.scale
+                            height: AppTheme.compHeight
+                            width: 50
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: AppTheme.greyColor
                             text: fullPath
                         }
@@ -189,7 +189,7 @@ Item
             {
                 id: buttonCancel
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: AppTheme.margin * app.scale
+                anchors.bottomMargin: AppTheme.margin
                 anchors.left: parent.left
                 image: "qrc:/resources/img/icon_cancel.png"
 
@@ -200,7 +200,7 @@ Item
             {
                 id: buttonAdd
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: AppTheme.margin * app.scale
+                anchors.bottomMargin: AppTheme.margin
                 anchors.right: parent.right
                 image: "qrc:/resources/img/icon_ok.png"
 

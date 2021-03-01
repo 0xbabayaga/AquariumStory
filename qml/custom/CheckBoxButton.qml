@@ -5,8 +5,8 @@ import "../"
 Item
 {
     id: checkBoxButton
-    width: 24 * app.scale
-    height: 24 * app.scale
+    width: 24
+    height: 24
 
     property bool checked: false
 
@@ -17,13 +17,13 @@ Item
         radius: width / 2
         color: (checkBoxButton.checked === true) ? AppTheme.blueColor : AppTheme.whiteColor
         border.color: AppTheme.blueColor
-        border.width: 2 * app.scale
+        border.width: 2
 
         Image
         {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            width: 16 * app.scale
+            width: 16
             height: width
             source: "qrc:/resources/img/icon_ok.png"
             mipmap: true

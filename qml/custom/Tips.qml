@@ -8,8 +8,8 @@ import AppDefs 1.0
 Item
 {
     id: tips
-    width: app.width// - AppTheme.margin * 2 * app.scale
-    height: AppTheme.rowHeightMin * app.scale
+    width: app.width// - AppTheme.margin * 2
+    height: AppTheme.rowHeightMin
     opacity: 0
     visible: false
 
@@ -77,7 +77,7 @@ Item
             height: parent.height
             width: parent.width
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontSmallSize * app.scale
+            font.pixelSize: AppTheme.fontSmallSize
             color: AppTheme.whiteColor
             text: "None"
             wrapMode: Text.WordWrap

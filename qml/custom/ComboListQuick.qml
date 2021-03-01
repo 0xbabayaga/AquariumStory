@@ -7,8 +7,8 @@ import "../"
 Item
 {
     id: comboListQuick
-    width: 150 * app.scale
-    height: AppTheme.compHeight * app.scale
+    width: 150
+    height: AppTheme.compHeight
     opacity: enabled ? AppTheme.opacityEnabled : AppTheme.opacityDisabled
 
     signal sigSelectedIndexChanged(int id)
@@ -66,7 +66,7 @@ Item
         width: comboListQuick.width
         height: comboListQuick.height
         font.family: AppTheme.fontFamily
-        font.pixelSize: AppTheme.fontNormalSize * app.scale
+        font.pixelSize: AppTheme.fontNormalSize
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignVCenter
         color: enabled ? AppTheme.blueFontColor : AppTheme.hideColor
@@ -85,7 +85,7 @@ Item
         anchors.top: textArea.bottom
         anchors.left: textArea.left
         anchors.right: textArea.right
-        height: 1 * app.scale
+        height: 1
         color: AppTheme.hideColor
         opacity: comboListQuick.opacity
     }
@@ -95,8 +95,8 @@ Item
         id: img
         anchors.right: parent.right
         anchors.top: parent.top
-        width: 27 * app.scale
-        height: 27 * app.scale
+        width: 27
+        height: 27
         source: "qrc:/resources/img/icon_listdown.png"
         mipmap: true
 
@@ -153,12 +153,12 @@ Item
         {
             id: rectShadow
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: parent.right
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.rightMargin: AppTheme.padding
             anchors.verticalCenter: parent.verticalCenter
-            height: AppTheme.rowHeight * 2 * app.scale + AppTheme.compHeight * app.scale * listView.model.count
-            radius: AppTheme.radius / 2 * app.scale
+            height: AppTheme.rowHeight * 2  + AppTheme.compHeight  * listView.model.count
+            radius: AppTheme.radius / 2
             color: AppTheme.whiteColor
         }
 
@@ -167,8 +167,8 @@ Item
             anchors.fill: rectShadow
             horizontalOffset: 0
             verticalOffset: -3
-            radius: AppTheme.shadowSize * app.scale
-            samples: AppTheme.shadowSamples * app.scale
+            radius: AppTheme.shadowSize
+            samples: AppTheme.shadowSamples
             color: AppTheme.shadowColor
             source: rectShadow
         }
@@ -176,7 +176,7 @@ Item
         Rectangle
         {
             anchors.fill: rectShadow
-            radius: AppTheme.radius / 2 * app.scale
+            radius: AppTheme.radius / 2
             color: AppTheme.whiteColor
             clip: true
 
@@ -185,10 +185,10 @@ Item
                 anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
-                anchors.leftMargin: AppTheme.padding * app.scale
-                anchors.rightMargin: AppTheme.padding * app.scale
-                anchors.topMargin: AppTheme.margin * app.scale
-                height: AppTheme.rowHeight * app.scale * 6
+                anchors.leftMargin: AppTheme.padding
+                anchors.rightMargin: AppTheme.padding
+                anchors.topMargin: AppTheme.margin
+                height: AppTheme.rowHeight  * 6
                 color: "#00000000"
 
                 MouseArea
@@ -202,8 +202,8 @@ Item
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: AppTheme.rowHeight/2 * app.scale
-                    height: 1 * app.scale
+                    anchors.verticalCenterOffset: AppTheme.rowHeight/2
+                    height: 1
                     color: AppTheme.blueColor
                     visible: false
                 }
@@ -213,8 +213,8 @@ Item
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: -AppTheme.rowHeight/2 * app.scale
-                    height: 1 * app.scale
+                    anchors.verticalCenterOffset: -AppTheme.rowHeight/2
+                    height: 1
                     color: AppTheme.blueColor
                     visible: false
                 }
@@ -224,9 +224,9 @@ Item
                     id: textPropertyName
                     text: ""
                     anchors.left: parent.left
-                    anchors.leftMargin: AppTheme.padding * app.scale
+                    anchors.leftMargin: AppTheme.padding
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    font.pixelSize: AppTheme.fontNormalSize
                     color: AppTheme.greyDarkColor
                     verticalAlignment: Text.AlignBottom
                 }
@@ -237,23 +237,23 @@ Item
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.top: parent.top
-                    anchors.topMargin: AppTheme.margin * 2 * app.scale
-                    height: AppTheme.compHeight * app.scale * model.count
+                    anchors.topMargin: AppTheme.margin * 2
+                    height: AppTheme.compHeight  * model.count
                     clip: true
 
                     delegate: Rectangle
                     {
                         color: (index === listView.currentIndex) ? AppTheme.lightBlueColor : "#00000000"
                         width: listView.width
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
 
                         Text
                         {
                             anchors.verticalCenter: parent.verticalCenter
                             anchors.left: parent.left
-                            anchors.leftMargin: AppTheme.padding * app.scale
+                            anchors.leftMargin: AppTheme.padding
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: AppTheme.blueFontColor
                             verticalAlignment: Text.AlignVCenter
                             horizontalAlignment: Text.AlignHCenter

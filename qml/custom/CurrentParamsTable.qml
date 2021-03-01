@@ -127,16 +127,16 @@ Item
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.topMargin: AppTheme.compHeight * app.scale
+            anchors.topMargin: AppTheme.compHeight
             spacing: 0
-            interactive: (realModelLength() * AppTheme.compHeight * app.scale > height)
+            interactive: (realModelLength() * AppTheme.compHeight  > height)
 
             onModelChanged:
             {
-                height = realModelLength() * AppTheme.compHeight * app.scale
+                height = realModelLength() * AppTheme.compHeight
 
-                if (height > AppTheme.compHeight * 8 * app.scale)
-                    height = AppTheme.compHeight * 8 * app.scale
+                if (height > AppTheme.compHeight * 8 )
+                    height = AppTheme.compHeight * 8
 
                 if (curValuesListView.model.length > 0)
                     noteViewDialog.update(curValuesListView.model[0].note,
@@ -148,15 +148,15 @@ Item
             delegate: Rectangle
             {
                 width: parent.width
-                height: en ? AppTheme.compHeight * app.scale : 0
+                height: en ? AppTheme.compHeight  : 0
                 visible: en
                 color: (index%2 === 0) ? AppTheme.backLightBlueColor : "#00000000"
 
                 Rectangle
                 {
                     anchors.fill: parent
-                    anchors.leftMargin: AppTheme.padding * app.scale
-                    anchors.rightMargin: AppTheme.padding * app.scale
+                    anchors.leftMargin: AppTheme.padding
+                    anchors.rightMargin: AppTheme.padding
                     color: "#00000000"
 
                     Text
@@ -164,19 +164,19 @@ Item
                         id: textValueNow
                         anchors.horizontalCenter: parent.horizontalCenter
                         anchors.top: parent.top
-                        height: AppTheme.compHeight * app.scale
-                        width: 70 * app.scale
+                        height: AppTheme.compHeight
+                        width: 70
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: formattedColor(paramId, valueNow)
                         text: formattedValue(valueNow)
 
                         Rectangle
                         {
                             anchors.left: parent.left
-                            width: 1 * app.scale
+                            width: 1
                             height: parent.height
                             color: AppTheme.blueColor
                         }
@@ -184,7 +184,7 @@ Item
                         Rectangle
                         {
                             anchors.right: parent.right
-                            width: 1 * app.scale
+                            width: 1
                             height: parent.height
                             color: AppTheme.blueColor
                         }
@@ -192,7 +192,7 @@ Item
                         Rectangle
                         {
                             anchors.bottom: parent.bottom
-                            height: 1 * app.scale
+                            height: 1
                             width: parent.width
                             color: AppTheme.blueColor
                             visible: (index === currentParamsTable.realModelLength() - 1)
@@ -203,11 +203,11 @@ Item
                     {
                         anchors.top: parent.top
                         anchors.right: textValueNow.left
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                         verticalAlignment: Text.AlignVCenter
-                        width: 120 * app.scale
+                        width: 120
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.blueFontColor
                         text: app.getParamById(paramId).fullName
                     }
@@ -217,12 +217,12 @@ Item
                         id: textDiffValue
                         anchors.top: parent.top
                         anchors.left: textValueNow.right
-                        height: AppTheme.compHeight * app.scale
-                        width: 60 * app.scale
+                        height: AppTheme.compHeight
+                        width: 60
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.greyColor
                         text: formattedDiffValue(valuePrev, valueNow)
                     }
@@ -232,12 +232,12 @@ Item
                         id: textProgressSign
                         anchors.top: parent.top
                         anchors.left: textDiffValue.right
-                        height: AppTheme.compHeight * app.scale
-                        width: 20 * app.scale
+                        height: AppTheme.compHeight
+                        width: 20
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontSmallSize * app.scale
+                        font.pixelSize: AppTheme.fontSmallSize
                         font.bold: true
                         color: paramProgressState(paramId, valueNow, valuePrev)[1]
                         text: paramProgressState(paramId, valueNow, valuePrev)[0]
@@ -247,12 +247,12 @@ Item
                     {
                         anchors.top: parent.top
                         anchors.left: textProgressSign.right
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
-                        width: 46 * app.scale
+                        width: 46
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontSmallSize * app.scale
+                        font.pixelSize: AppTheme.fontSmallSize
                         color: AppTheme.greyColor
                         text: app.getParamById(paramId).unitName
                     }
@@ -264,17 +264,17 @@ Item
                 policy: ScrollBar.AlwaysOn
                 parent: curValuesListView.parent
                 anchors.top: curValuesListView.top
-                anchors.topMargin: AppTheme.padding * app.scale
+                anchors.topMargin: AppTheme.padding
                 anchors.left: curValuesListView.right
-                anchors.leftMargin: AppTheme.padding / 4 * app.scale
+                anchors.leftMargin: AppTheme.padding / 4
                 anchors.bottom: curValuesListView.bottom
-                anchors.bottomMargin: AppTheme.padding * app.scale
-                visible: (realModelLength() * AppTheme.compHeight * app.scale > height)
+                anchors.bottomMargin: AppTheme.padding
+                visible: (realModelLength() * AppTheme.compHeight  > height)
 
                 contentItem: Rectangle
                 {
-                    implicitWidth: 2 * app.scale
-                    implicitHeight: AppTheme.rowHeight * app.scale
+                    implicitWidth: 2
+                    implicitHeight: AppTheme.rowHeight
                     radius: width / 2
                     color: AppTheme.hideColor
                 }
@@ -285,10 +285,10 @@ Item
         {
             id: noteViewDialog
             anchors.top: curValuesListView.bottom
-            anchors.topMargin: AppTheme.margin * app.scale
+            anchors.topMargin: AppTheme.margin
             anchors.left: parent.left
             anchors.right: parent.right
-            height: (AppTheme.rowHeight + AppTheme.compHeight) * app.scale
+            height: (AppTheme.rowHeight + AppTheme.compHeight)
 
             noteDate: (curValuesListView.model.length > 0) ? (new DateTimeUtils.DateTimeUtil()).printShortDate(curValuesListView.model[0].dtNow) : ""
             noteText: (curValuesListView.model.length > 0) ? curValuesListView.model[0].note : ""

@@ -227,7 +227,7 @@ DiagramView.prototype.drawCurve = function(num)
 
     text = this.printVal(maxY)
     this.ctx.fillText(text, this.leftMargin - this.getTextWidth(text) - 4 * appScale,
-                            this.oneDiagHeight * num + 8 * app.scale)
+                            this.oneDiagHeight * num + 8)
 
     text = this.printVal((maxY + minY)/2)
     this.ctx.fillText(text, this.leftMargin - this.getTextWidth(text) - 4 * appScale,

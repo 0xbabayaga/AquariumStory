@@ -14,7 +14,7 @@ Window
     property bool   isAndro: false
     property int    lastSmpId: 0
     property bool   isAccountCreated: false
-    property real   scale: (Screen.orientation  === Qt.PortraitOrientation) ? Screen.desktopAvailableHeight / 720 : Screen.desktopAvailableHeight / 1080
+    //property real   scale: 1//: (Screen.orientation  === Qt.PortraitOrientation) ? Screen.desktopAvailableHeight / 720 : Screen.desktopAvailableHeight / 1080
 
     property string curUserName: ""
     property string curUserEmail: ""
@@ -242,7 +242,7 @@ Window
         {
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.margin * app.scale
+            anchors.topMargin: AppTheme.margin
             width: parent.width
             height: width * 0.75
             source: "qrc:/resources/img/back_waves.png"
@@ -260,18 +260,18 @@ Window
                 anchors.top: parent.top
                 anchors.left: parent.left
                 anchors.right: parent.right
-                height: AppTheme.rowHeightMin * app.scale
+                height: AppTheme.rowHeightMin
                 color: AppTheme.blueColor
 
                 Text
                 {
                     id: textAppName
                     anchors.left: parent.left
-                    anchors.leftMargin: AppTheme.margin/2 * app.scale
+                    anchors.leftMargin: AppTheme.margin/2
                     anchors.verticalCenter: parent.verticalCenter
                     verticalAlignment: Text.AlignVCenter
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    font.pixelSize: AppTheme.fontNormalSize
                     color: AppTheme.whiteColor
                     text: global_APP_NAME.toUpperCase()
                 }
@@ -282,7 +282,7 @@ Window
         {
             id: page_Main
             anchors.fill: rectBackground
-            anchors.topMargin: AppTheme.rowHeightMin * app.scale
+            anchors.topMargin: AppTheme.rowHeightMin
             visible: false
             interactive: page_TankData.visible === false
         }
@@ -294,7 +294,7 @@ Window
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             width: parent.width
-            height: AppTheme.rowHeight * 2 * app.scale
+            height: AppTheme.rowHeight * 2
 
             Behavior on opacity {   NumberAnimation {duration: 400} }
 
@@ -304,8 +304,8 @@ Window
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 source: "qrc:/resources/img/icon.png"
-                width: 180 * app.scale
-                height: 180 * app.scale
+                width: 180
+                height: 180
             }
 
             Text
@@ -313,9 +313,9 @@ Window
                 id: textLoading
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: imgSpinner.bottom
-                anchors.topMargin: AppTheme.margin * 3 * app.scale
+                anchors.topMargin: AppTheme.margin * 3
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontNormalSize
                 color: AppTheme.greyDarkColor
                 text: qsTr("Loading data") + " ..."
             }
@@ -335,14 +335,14 @@ Window
         {
             id: page_TankData
             anchors.fill: rectBackground
-            anchors.topMargin: AppTheme.rowHeightMin * app.scale
+            anchors.topMargin: AppTheme.rowHeightMin
         }
 
         Page_AccountSett
         {
             id: page_AccountSett
             anchors.fill: rectBackground
-            anchors.topMargin: AppTheme.rowHeightMin * app.scale
+            anchors.topMargin: AppTheme.rowHeightMin
             visible: false
             onSigDeleting: page_TankData.showPage(false, 0)
         }
@@ -351,7 +351,7 @@ Window
         {
             id: page_TankSett
             anchors.fill: rectBackground
-            anchors.topMargin: AppTheme.rowHeightMin * app.scale
+            anchors.topMargin: AppTheme.rowHeightMin
             visible: false
         }
 
@@ -359,7 +359,7 @@ Window
         {
             id: page_AppSett
             anchors.fill: rectBackground
-            anchors.topMargin: AppTheme.rowHeightMin * app.scale
+            anchors.topMargin: AppTheme.rowHeightMin
             visible: false
         }
 
@@ -367,7 +367,7 @@ Window
         {
             id: page_About
             anchors.fill: rectBackground
-            anchors.topMargin: AppTheme.rowHeightMin * app.scale
+            anchors.topMargin: AppTheme.rowHeightMin
             visible: false
         }
 
@@ -376,7 +376,7 @@ Window
             id: rectPermissiondenied
             objectName: "rectPermissiondenied"
             anchors.fill: parent
-            height: AppTheme.rowHeight * 8 * app.scale
+            height: AppTheme.rowHeight * 8
             color: "#00000000"
             visible: false
 
@@ -391,16 +391,16 @@ Window
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.bottom: parent.bottom
-                height: AppTheme.rowHeight * 8 * app.scale
+                height: AppTheme.rowHeight * 8
                 color: "#00000000"
 
                 Text
                 {
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.horizontalCenter: parent.horizontalCenter
-                    width: parent.width - AppTheme.margin * 2 * app.scale
+                    width: parent.width - AppTheme.margin * 2
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    font.pixelSize: AppTheme.fontNormalSize
                     color: AppTheme.greyDarkColor
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
@@ -411,7 +411,7 @@ Window
                 {
                     id: buttonGrant
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.horizontalCenter: parent.horizontalCenter
 
                     onSigButtonClicked:

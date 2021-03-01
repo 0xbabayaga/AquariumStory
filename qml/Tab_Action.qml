@@ -132,11 +132,11 @@ Item
     {
         id: rectDataContainer
         anchors.fill: parent
-        anchors.leftMargin: AppTheme.padding * app.scale
-        anchors.rightMargin: AppTheme.padding * app.scale
+        anchors.leftMargin: AppTheme.padding
+        anchors.rightMargin: AppTheme.padding
         color: "#00000000"
 
-        property int dataWidth: 230 * app.scale
+        property int dataWidth: 230
 
         Behavior on opacity
         {
@@ -147,11 +147,11 @@ Item
         {
             id: textViewPeriod
             anchors.left: parent.left
-            height: AppTheme.compHeight * app.scale
+            height: AppTheme.compHeight
             verticalAlignment: Text.AlignVCenter
-            width: 170 * app.scale
+            width: 170
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.blueFontColor
             text: qsTr("View period") + ":"
         }
@@ -161,7 +161,7 @@ Item
             id: comboViewPeriod
             anchors.top: textViewPeriod.top
             anchors.left: textViewPeriod.right
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: parent.right
             propertyName: qsTr("Select a period") + ":"
             width: parent.width
@@ -186,18 +186,18 @@ Item
         {
             id: actionList
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.margin * 2 * app.scale
+            anchors.topMargin: AppTheme.margin * 2
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: AppTheme.margin * 2 * app.scale
-            spacing: AppTheme.padding * app.scale
+            anchors.bottomMargin: AppTheme.margin * 2
+            spacing: AppTheme.padding
             model: actionsListModel
 
             delegate: Rectangle
             {
                 width: parent.width
-                height: (index === actionList.currentIndex) ? AppTheme.rowHeight * app.scale * 2 : AppTheme.rowHeight * app.scale
+                height: (index === actionList.currentIndex) ? AppTheme.rowHeight  * 2 : AppTheme.rowHeight
                 color: AppTheme.whiteColor
 
                 Behavior on height
@@ -216,9 +216,9 @@ Item
                 {
                     anchors.fill: rectHeaderShadow
                     horizontalOffset: 0
-                    verticalOffset: AppTheme.shadowOffset * app.scale
-                    radius: AppTheme.shadowSize * app.scale
-                    samples: AppTheme.shadowSamples * app.scale
+                    verticalOffset: AppTheme.shadowOffset
+                    radius: AppTheme.shadowSize
+                    samples: AppTheme.shadowSamples
                     color: AppTheme.shadowColor
                     source: rectHeaderShadow
                 }
@@ -237,7 +237,7 @@ Item
                     Rectangle
                     {
                         anchors.fill: parent
-                        anchors.leftMargin: AppTheme.padding * app.scale
+                        anchors.leftMargin: AppTheme.padding
                         color: "#00000000"
 
                         Rectangle
@@ -245,18 +245,18 @@ Item
                             id: columnMainInfo
                             anchors.top: parent.top
                             anchors.left: parent.left
-                            height: AppTheme.compHeight * 2 * app.scale
+                            height: AppTheme.compHeight * 2
                             width: rectDataContainer.dataWidth
                             color: (index === actionList.currentIndex) ? AppTheme.lightBlueColor : AppTheme.whiteColor
 
                             Text
                             {
                                 anchors.top: parent.top
-                                anchors.topMargin: AppTheme.padding/4 * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                anchors.topMargin: AppTheme.padding/4
+                                height: AppTheme.compHeight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.blueFontColor
                                 text: name
                             }
@@ -264,11 +264,11 @@ Item
                             Text
                             {
                                 anchors.bottom: parent.bottom
-                                anchors.bottomMargin: AppTheme.padding/4 * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                anchors.bottomMargin: AppTheme.padding/4
+                                height: AppTheme.compHeight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSuperSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSuperSmallSize
                                 color: AppTheme.greyColor
                                 text: printType(type, period)
                             }
@@ -278,7 +278,7 @@ Item
                         {
                             anchors.top: parent.top
                             anchors.right: parent.right
-                            height: (index === actionList.currentIndex) ? AppTheme.compHeight * 4 * app.scale : AppTheme.compHeight * 2 * app.scale
+                            height: (index === actionList.currentIndex) ? AppTheme.compHeight * 4  : AppTheme.compHeight * 2
                             width: parent.width - rectDataContainer.dataWidth
                             color: AppTheme.blueColor
 
@@ -290,15 +290,15 @@ Item
                             Text
                             {
                                 anchors.top: parent.top
-                                anchors.topMargin: AppTheme.compHeight * app.scale
+                                anchors.topMargin: AppTheme.compHeight
                                 anchors.right: parent.right
-                                anchors.rightMargin: AppTheme.padding * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                anchors.rightMargin: AppTheme.padding
+                                height: AppTheme.compHeight
                                 width: parent.width
                                 verticalAlignment: Text.AlignTop
                                 horizontalAlignment: Text.AlignRight
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSuperSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSuperSmallSize
                                 color: AppTheme.whiteColor
                                 text: printDay(startDT)
                             }
@@ -306,15 +306,15 @@ Item
                             Text
                             {
                                 anchors.top: parent.top
-                                anchors.topMargin: AppTheme.padding/4 * app.scale
+                                anchors.topMargin: AppTheme.padding/4
                                 anchors.right: parent.right
-                                anchors.rightMargin: AppTheme.padding * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                anchors.rightMargin: AppTheme.padding
+                                height: AppTheme.compHeight
                                 width: parent.width
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignRight
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.whiteColor
                                 text: "<b>" + printShortDate(startDT) + "</b>"
                             }
@@ -322,15 +322,15 @@ Item
                             Text
                             {
                                 anchors.bottom: parent.bottom
-                                anchors.bottomMargin: (AppTheme.compHeight + AppTheme.padding/4) * app.scale
+                                anchors.bottomMargin: (AppTheme.compHeight + AppTheme.padding/4)
                                 anchors.right: parent.right
-                                anchors.rightMargin: AppTheme.padding * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                anchors.rightMargin: AppTheme.padding
+                                height: AppTheme.compHeight
                                 width: parent.width
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignRight
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.whiteColor
                                 text: printTime(startDT)
                                 opacity: (index === actionList.currentIndex) ? 1 : 0
@@ -347,7 +347,7 @@ Item
                             anchors.left: parent.left
                             anchors.top: parent.verticalCenter
                             width: rectDataContainer.dataWidth
-                            height: 1 * app.scale
+                            height: 1
                             color: (index === actionList.currentIndex) ? AppTheme.lightBlueColor : AppTheme.whiteColor
                             opacity: (index === actionList.currentIndex) ? 1 : 0
 
@@ -359,14 +359,14 @@ Item
                             Text
                             {
                                 anchors.top: parent.top
-                                anchors.topMargin: AppTheme.padding/2 * app.scale
+                                anchors.topMargin: AppTheme.padding/2
                                 anchors.left: parent.left
                                 anchors.right: parent.right
-                                anchors.rightMargin: AppTheme.padding / 2 * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                anchors.rightMargin: AppTheme.padding / 2
+                                height: AppTheme.compHeight
                                 verticalAlignment: Text.AlignTop
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize
                                 color: AppTheme.greyColor
                                 text: trimText(desc)
                                 wrapMode: Text.WordWrap
@@ -377,8 +377,8 @@ Item
                         {
                             anchors.right: parent.right
                             anchors.bottom: parent.bottom
-                            width: AppTheme.compHeight * 2 * app.scale
-                            height: AppTheme.compHeight * app.scale
+                            width: AppTheme.compHeight * 2
+                            height: AppTheme.compHeight
                             color: "#00000000"
                             opacity: (index === actionList.currentIndex) ? 1 : 0
 
@@ -420,13 +420,13 @@ Item
                 parent: actionList.parent
                 anchors.top: actionList.top
                 anchors.left: actionList.right
-                anchors.leftMargin: AppTheme.padding / 4 * app.scale
+                anchors.leftMargin: AppTheme.padding / 4
                 anchors.bottom: actionList.bottom
 
                 contentItem: Rectangle
                 {
-                    implicitWidth: 2 * app.scale
-                    implicitHeight: AppTheme.rowHeight * app.scale
+                    implicitWidth: 2
+                    implicitHeight: AppTheme.rowHeight
                     radius: width / 2
                     color: AppTheme.hideColor
                 }
@@ -443,12 +443,12 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.verticalCenterOffset: -AppTheme.padding * 5 * app.scale
+                anchors.verticalCenterOffset: -AppTheme.padding * 5
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                width: 250 * app.scale
+                width: 250
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontNormalSize
                 wrapMode: Text.WordWrap
                 color: AppTheme.greyColor
                 text: qsTr("No reminders found") /*+ viewPeriodListModel.get(comboViewPeriod.currentIndex).name*/
@@ -460,7 +460,7 @@ Item
             id: addRecordButton
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: AppTheme.margin * app.scale
+            anchors.bottomMargin: AppTheme.margin
 
             onSigButtonClicked: showActionDialog(true, false, 0)
         }

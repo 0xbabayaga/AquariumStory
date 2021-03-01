@@ -208,9 +208,9 @@ Item
     {
         anchors.fill: rectContainerShadow
         horizontalOffset: 0
-        verticalOffset: -AppTheme.shadowOffset * app.scale
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        verticalOffset: -AppTheme.shadowOffset
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectContainerShadow
     }
@@ -225,7 +225,7 @@ Item
         {
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             width: parent.width
             height: width * 0.75
             source: "qrc:/resources/img/back_waves.png"
@@ -236,8 +236,8 @@ Item
         {
             id: rectTankInfo
             anchors.fill: parent
-            anchors.leftMargin: AppTheme.padding * app.scale
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
+            anchors.rightMargin: AppTheme.padding
             color: "#00000000"
 
             IconSimpleButton
@@ -245,7 +245,7 @@ Item
                 id: imgArrowBack
                 anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.padding * app.scale
+                anchors.topMargin: AppTheme.padding
                 image: "qrc:/resources/img/icon_arrow_left.png"
 
                 onSigButtonClicked:
@@ -263,7 +263,7 @@ Item
                 verticalAlignment: Text.AlignBottom
                 horizontalAlignment: Text.AlignHCenter
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueColor
                 text: qsTr("AQUARIUMS")
             }
@@ -273,7 +273,7 @@ Item
             {
                 id: tanksList
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.rowHeightMin * app.scale
+                anchors.topMargin: AppTheme.rowHeightMin
                 anchors.horizontalCenter: parent.horizontalCenter
                 model: tanksListModel
                 visible: isEdit === true
@@ -289,7 +289,7 @@ Item
             {
                 id: flickView
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.margin * 7 * app.scale
+                anchors.topMargin: AppTheme.margin * 7
                 anchors.bottom: parent.bottom
                 anchors.left: parent.left
                 anchors.right: parent.right
@@ -327,7 +327,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -336,7 +336,7 @@ Item
                                 horizontalAlignment: Text.AlignHCenter
                                 width: parent.width
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontBigSize * app.scale
+                                font.pixelSize: AppTheme.fontBigSize
                                 color: AppTheme.blueColor
                                 text: (tanksListModel.length > 0) ? tanksListModel[tanksList.currentIndex].name : ""
                                 visible: isEdit === true
@@ -346,7 +346,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -355,7 +355,7 @@ Item
                                 horizontalAlignment: Text.AlignHCenter
                                 width: parent.width
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? "(" + tanksListModel[tanksList.currentIndex].desc + ")" : "()" + qsTr("No desciption") + ")"
                                 wrapMode: Text.WordWrap
@@ -363,12 +363,12 @@ Item
                             }
                         }
 
-                        Item { height: AppTheme.padding * app.scale; width: 1;}
+                        Item { height: AppTheme.padding ; width: 1;}
 
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -377,7 +377,7 @@ Item
                                 horizontalAlignment: Text.AlignRight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: qsTr("Aquarium type") + ":" + " "
                             }
@@ -389,7 +389,7 @@ Item
                                 horizontalAlignment: Text.AlignLeft
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? tanksListModel[tanksList.currentIndex].typeName : ""
                             }
@@ -398,7 +398,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -407,7 +407,7 @@ Item
                                 horizontalAlignment: Text.AlignRight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: qsTr("Date create") + ":" + " "
                             }
@@ -419,7 +419,7 @@ Item
                                 horizontalAlignment: Text.AlignLeft
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? (new DateTimeUtils.DateTimeUtil()).printFullDate(tanksListModel[tanksList.currentIndex].dtCreate) : ""
                             }
@@ -429,7 +429,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -438,7 +438,7 @@ Item
                                 horizontalAlignment: Text.AlignRight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: qsTr("Length") + ":" + " "
                             }
@@ -450,7 +450,7 @@ Item
                                 horizontalAlignment: Text.AlignLeft
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].l) + " " + app.currentDimensionUnits() : ""
                             }
@@ -459,7 +459,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -468,7 +468,7 @@ Item
                                 horizontalAlignment: Text.AlignRight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: qsTr("Height") + ":" + " "
                             }
@@ -480,7 +480,7 @@ Item
                                 horizontalAlignment: Text.AlignLeft
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].h) + " " + app.currentDimensionUnits() : ""
                             }
@@ -489,7 +489,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -498,7 +498,7 @@ Item
                                 horizontalAlignment: Text.AlignRight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: qsTr("Width") + ":" + " "
                             }
@@ -510,7 +510,7 @@ Item
                                 horizontalAlignment: Text.AlignLeft
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? app.convertDimension(tanksListModel[tanksList.currentIndex].w) + " " + app.currentDimensionUnits() : ""
                             }
@@ -519,7 +519,7 @@ Item
                         Row
                         {
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
 
                             Text
                             {
@@ -528,7 +528,7 @@ Item
                                 horizontalAlignment: Text.AlignRight
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: qsTr("Volume") + ":" + " "
                             }
@@ -540,21 +540,21 @@ Item
                                 horizontalAlignment: Text.AlignLeft
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.greyColor
                                 text: (tanksListModel.length > 0) ? app.convertVolume(tanksListModel[tanksList.currentIndex].volume) + " " + app.currentVolumeUnits() : ""
                             }
                         }
 
-                        Item { width: 1; height: AppTheme.padding * app.scale }
+                        Item { width: 1; height: AppTheme.padding  }
 
                         Row
                         {
                             id: buttonsRow
                             anchors.horizontalCenter: parent.horizontalCenter
-                            width: (AppTheme.compHeight * 3 + AppTheme.margin * 2) * app.scale
-                            height: AppTheme.compHeight * app.scale
-                            spacing: AppTheme.margin * app.scale
+                            width: (AppTheme.compHeight * 3 + AppTheme.margin * 2)
+                            height: AppTheme.compHeight
+                            spacing: AppTheme.margin
 
                             IconSmallSimpleButton
                             {
@@ -587,9 +587,9 @@ Item
                     id: rectAddEditTank
                     anchors.top: rectTankData.bottom
                     anchors.left: parent.left
-                    anchors.leftMargin: AppTheme.padding * app.scale
+                    anchors.leftMargin: AppTheme.padding
                     anchors.right: parent.right
-                    anchors.rightMargin: AppTheme.padding * app.scale
+                    anchors.rightMargin: AppTheme.padding
                     height: flickView.height
                     color: "#00000000"
 
@@ -597,9 +597,9 @@ Item
                     {
                         anchors.top: parent.top
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: 300 * app.scale
+                        height: 300
                         width: parent.width
-                        spacing: AppTheme.padding * app.scale
+                        spacing: AppTheme.padding
 
                         TextInput
                         {
@@ -631,10 +631,10 @@ Item
                         {
                             id: rectRow
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             color: "#00000000"
 
-                            property int unitWidth: 20 * app.scale
+                            property int unitWidth: 20
 
                             TextInput
                             {
@@ -654,7 +654,7 @@ Item
                                     anchors.right: parent.right
                                     verticalAlignment: Text.AlignVCenter
                                     font.family: AppTheme.fontFamily
-                                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                    font.pixelSize: AppTheme.fontNormalSize
                                     color: AppTheme.blueFontColor
                                     text: app.currentDimensionUnits()
                                 }
@@ -678,7 +678,7 @@ Item
                                     anchors.right: parent.right
                                     verticalAlignment: Text.AlignVCenter
                                     font.family: AppTheme.fontFamily
-                                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                    font.pixelSize: AppTheme.fontNormalSize
                                     color: AppTheme.blueFontColor
                                     text: app.currentDimensionUnits()
                                 }
@@ -702,7 +702,7 @@ Item
                                     anchors.right: parent.right
                                     verticalAlignment: Text.AlignVCenter
                                     font.family: AppTheme.fontFamily
-                                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                    font.pixelSize: AppTheme.fontNormalSize
                                     color: AppTheme.blueFontColor
                                     text: app.currentDimensionUnits()
                                 }
@@ -726,7 +726,7 @@ Item
                         {
                             verticalAlignment: Text.AlignVCenter
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: AppTheme.blueColor
                             text: qsTr("Aquarium image")
                         }
@@ -744,7 +744,7 @@ Item
                         id: buttonCancel
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         image: "qrc:/resources/img/icon_cancel.png"
                         KeyNavigation.tab: buttonCreate
 
@@ -760,7 +760,7 @@ Item
                         id: buttonCreate
                         anchors.right: parent.right
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         image: "qrc:/resources/img/icon_ok.png"
 
                         onSigButtonClicked: checkAndCreate()
@@ -773,7 +773,7 @@ Item
         {
             id: tip
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: AppTheme.rowHeight * 2 * app.scale
+            anchors.bottomMargin: AppTheme.rowHeight * 2
             anchors.horizontalCenter: parent.horizontalCenter
             visible: false
             tipText: qsTr("")

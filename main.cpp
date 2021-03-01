@@ -59,6 +59,7 @@ int main(int argc, char *argv[])
     qInstallMessageHandler(myMessageHandler);
 #endif
 
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
     QStringList args = QCoreApplication::arguments();
 

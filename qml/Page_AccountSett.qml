@@ -118,9 +118,9 @@ Item
     {
         anchors.fill: rectContainerShadow
         horizontalOffset: 0
-        verticalOffset: -AppTheme.shadowOffset * app.scale
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        verticalOffset: -AppTheme.shadowOffset
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectContainerShadow
     }
@@ -135,7 +135,7 @@ Item
         {
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             width: parent.width
             height: width * 0.75
             source: "qrc:/resources/img/back_waves.png"
@@ -146,8 +146,8 @@ Item
         {
             id: rectAccountInfo
             anchors.fill: parent
-            anchors.leftMargin: AppTheme.padding * app.scale
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
+            anchors.rightMargin: AppTheme.padding
             color: "#00000000"
 
             IconSimpleButton
@@ -155,7 +155,7 @@ Item
                 id: imgArrowBack
                 anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.padding * app.scale
+                anchors.topMargin: AppTheme.padding
                 image: "qrc:/resources/img/icon_arrow_left.png"
 
                 onSigButtonClicked:
@@ -172,7 +172,7 @@ Item
                 anchors.horizontalCenter: parent.horizontalCenter
                 verticalAlignment: Text.AlignBottom
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueColor
                 text: qsTr("ACCOUNT")
             }
@@ -182,11 +182,11 @@ Item
                 id: rectAccountPhoto
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.padding * 5 * app.scale
-                width: AppTheme.margin * 4 * app.scale
+                anchors.topMargin: AppTheme.padding * 5
+                width: AppTheme.margin * 4
                 height: width
                 radius: width / 2
-                border.width: 2 * app.scale
+                border.width: 2
                 border.color: AppTheme.blueColor
                 color: AppTheme.backLightBlueColor
 
@@ -194,7 +194,7 @@ Item
                 {
                     id: imgAccount
                     anchors.fill: parent
-                    anchors.margins: 1 * app.scale
+                    anchors.margins: 1
                     source: "data:image/png;base64," + app.curUserAvatar
                     mipmap: true
                     layer.enabled: true
@@ -218,8 +218,8 @@ Item
                 anchors.fill: rectAccountPhoto
                 horizontalOffset: 0
                 verticalOffset: 0
-                radius: AppTheme.shadowSize * app.scale
-                samples: AppTheme.shadowSamples * app.scale
+                radius: AppTheme.shadowSize
+                samples: AppTheme.shadowSamples
                 color: AppTheme.shideColor
                 source: rectAccountPhoto
             }
@@ -229,11 +229,11 @@ Item
                 id: textAccountName
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: rectAccountPhoto.bottom
-                anchors.topMargin: AppTheme.padding / 2 * app.scale
-                height: AppTheme.compHeight * app.scale
+                anchors.topMargin: AppTheme.padding / 2
+                height: AppTheme.compHeight
                 verticalAlignment: Text.AlignBottom
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueColor
                 text: app.curUserName
             }
@@ -243,11 +243,11 @@ Item
                 id: textAccountDateCreate
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: textAccountName.bottom
-                anchors.topMargin: AppTheme.padding/2 * app.scale
-                height: AppTheme.compHeight / 2 * app.scale
+                anchors.topMargin: AppTheme.padding/2
+                height: AppTheme.compHeight / 2
                 verticalAlignment: Text.AlignVCenter
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 color: AppTheme.greyColor
                 text: qsTr("Since") + " " + (new DateTimeUtils.DateTimeUtil()).printFullDate(app.curUserDateCreate)
             }
@@ -256,12 +256,12 @@ Item
             {
                 id: flickView
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.margin * 9 * app.scale
+                anchors.topMargin: AppTheme.margin * 9
                 anchors.bottom: parent.bottom
                 anchors.left: parent.left
-                anchors.leftMargin: AppTheme.padding * app.scale
+                anchors.leftMargin: AppTheme.padding
                 anchors.right: parent.right
-                anchors.rightMargin: AppTheme.padding * app.scale
+                anchors.rightMargin: AppTheme.padding
                 contentWidth: width
                 contentHeight: height * 2
                 clip: true
@@ -290,9 +290,9 @@ Item
                     IconSmallSimpleButton
                     {
                         anchors.top: parent.top
-                        anchors.topMargin: AppTheme.margin * app.scale
+                        anchors.topMargin: AppTheme.margin
                         anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.horizontalCenterOffset: -AppTheme.margin * app.scale
+                        anchors.horizontalCenterOffset: -AppTheme.margin
                         image: "qrc:/resources/img/icon_edit.png"
 
                         onSigButtonClicked: moveToEdit(true)
@@ -301,9 +301,9 @@ Item
                     IconSmallSimpleButton
                     {
                         anchors.top: parent.top
-                        anchors.topMargin: AppTheme.margin * app.scale
+                        anchors.topMargin: AppTheme.margin
                         anchors.horizontalCenter: parent.horizontalCenter
-                        anchors.horizontalCenterOffset: AppTheme.margin * app.scale
+                        anchors.horizontalCenterOffset: AppTheme.margin
                         image: "qrc:/resources/img/icon_cancel.png"
 
                         onSigButtonClicked: confirmDialog.showDialog(true,
@@ -315,7 +315,7 @@ Item
                     {
                         id: buttonExport
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         anchors.horizontalCenter: parent.horizontalCenter
                         image: "qrc:/resources/img/icon_export.png"
                         visible: (app.global_FULLFEATURES === true)
@@ -341,9 +341,9 @@ Item
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
                         anchors.top: parent.top
-                        height: 300 * app.scale
+                        height: 300
                         width: parent.width
-                        spacing: AppTheme.padding * app.scale
+                        spacing: AppTheme.padding
 
                         TextInput
                         {
@@ -389,7 +389,7 @@ Item
                         {
                             verticalAlignment: Text.AlignVCenter
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: AppTheme.blueFontColor
                             text: qsTr("User photo")
                         }
@@ -407,7 +407,7 @@ Item
                         id: buttonCancel
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         image: "qrc:/resources/img/icon_cancel.png"
                         KeyNavigation.tab: buttonCreate
 
@@ -422,7 +422,7 @@ Item
                         id: buttonCreate
                         anchors.right: parent.right
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         image: "qrc:/resources/img/icon_ok.png"
                         KeyNavigation.tab: textUserName
 

@@ -5,8 +5,8 @@ import "../"
 Item
 {
     id: textInput
-    width: 150 * app.scale
-    height: AppTheme.compHeight * app.scale
+    width: 150
+    height: AppTheme.compHeight
     opacity: enabled ? AppTheme.opacityEnabled : AppTheme.opacityDisabled
 
     property alias text: textArea.text
@@ -41,7 +41,7 @@ Item
         width: textInput.width
         height: textInput.height
         font.family: AppTheme.fontFamily
-        font.pixelSize: AppTheme.fontNormalSize * app.scale
+        font.pixelSize: AppTheme.fontNormalSize
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignLeft
         color: enabled ? AppTheme.blueFontColor : AppTheme.hideColor
@@ -55,7 +55,7 @@ Item
             text: textInput.placeholderText
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.greyColor
             height: parent.height
             visible: !(textArea.text.length > 0 || textArea.displayText.length > 0)
@@ -63,10 +63,10 @@ Item
 
         onContentHeightChanged:
         {
-            if (textArea.contentHeight > AppTheme.compHeight * app.scale)
+            if (textArea.contentHeight > AppTheme.compHeight )
                 textInput.height = textArea.contentHeight
             else
-                textInput.height = AppTheme.compHeight * app.scale
+                textInput.height = AppTheme.compHeight
         }
 
         onFocusChanged: focus ? rectUnderLine.color = AppTheme.blueColor : rectUnderLine.color = AppTheme.hideColor
@@ -78,7 +78,7 @@ Item
         anchors.top: textInput.bottom
         anchors.left: textArea.left
         anchors.right: textArea.right
-        height: 1 * app.scale
+        height: 1
         color: AppTheme.hideColor
         opacity: textInput.opacity
     }

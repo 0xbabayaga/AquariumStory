@@ -177,8 +177,8 @@ Item
     {
         id: rectDataContainer
         anchors.fill: parent
-        anchors.leftMargin: AppTheme.padding * app.scale
-        anchors.rightMargin: AppTheme.padding * app.scale
+        anchors.leftMargin: AppTheme.padding
+        anchors.rightMargin: AppTheme.padding
         color: "#00002000"
 
         Behavior on opacity
@@ -193,7 +193,7 @@ Item
             anchors.left: parent.left
             anchors.right: parent.right
             model: curValuesListModel
-            height: AppTheme.compHeight * 8 * app.scale
+            height: AppTheme.compHeight * 8
         }
 
         Rectangle
@@ -206,11 +206,11 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.verticalCenterOffset: AppTheme.rowHeight * app.scale
+                anchors.verticalCenterOffset: AppTheme.rowHeight
                 horizontalAlignment: Text.AlignHCenter
-                width: 250 * app.scale
+                width: 250
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontNormalSize
                 wrapMode: Text.WordWrap
                 color: AppTheme.greyColor
                 text: qsTr("No record found for this aquarium")
@@ -222,9 +222,9 @@ Item
             id: ptList
             anchors.top: paramsTable.top
             anchors.left: parent.left
-            anchors.leftMargin: -AppTheme.padding * app.scale
+            anchors.leftMargin: -AppTheme.padding
             anchors.right: parent.right
-            anchors.rightMargin: -AppTheme.padding * app.scale
+            anchors.rightMargin: -AppTheme.padding
             model:  datesList
             visible: (curValuesListModel.length !== 0)
 
@@ -241,7 +241,7 @@ Item
             id: addRecordButton
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: AppTheme.margin * app.scale
+            anchors.bottomMargin: AppTheme.margin
 
             onSigButtonClicked: checkIfTodayRecordExist()
         }

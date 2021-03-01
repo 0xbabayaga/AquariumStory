@@ -7,13 +7,13 @@ import "../"
 Item
 {
     id: timePicker
-    width: 150 * app.scale
-    height: AppTheme.compHeight * app.scale
+    width: 150
+    height: AppTheme.compHeight
     opacity: enabled ? AppTheme.opacityEnabled : AppTheme.opacityDisabled
 
     property alias title: textHeader.text
-    property int dotSignWidth: 20 * app.scale
-    property int yOffset: 200 * app.scale
+    property int dotSignWidth: 20
+    property int yOffset: 200
     property bool isOpened: (rectTimeContainer.visible === true)
 
     function updateTime()
@@ -89,9 +89,9 @@ Item
         id: textTime
         text: "15:30"
         width: datePicker.width
-        height: AppTheme.compHeight * app.scale
+        height: AppTheme.compHeight
         font.family: AppTheme.fontFamily
-        font.pixelSize: AppTheme.fontNormalSize * app.scale
+        font.pixelSize: AppTheme.fontNormalSize
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignVCenter
         color: enabled ? AppTheme.blueFontColor : AppTheme.hideColor
@@ -110,7 +110,7 @@ Item
         anchors.top: textTime.bottom
         anchors.left: textTime.left
         anchors.right: textTime.right
-        height: 1 * app.scale
+        height: 1
         color: AppTheme.hideColor
         opacity: datePicker.opacity
     }
@@ -120,8 +120,8 @@ Item
         id: img
         anchors.right: parent.right
         anchors.top: parent.top
-        width: 27 * app.scale
-        height: 27 * app.scale
+        width: 27
+        height: 27
         source: "qrc:/resources/img/icon_listdown.png"
         mipmap: true
 
@@ -193,9 +193,9 @@ Item
                 {
                     anchors.fill: rectHeaderShadow
                     horizontalOffset: 0
-                    verticalOffset: -AppTheme.shadowOffset * app.scale
-                    radius: AppTheme.shadowSize * app.scale
-                    samples: AppTheme.shadowSamples * app.scale
+                    verticalOffset: -AppTheme.shadowOffset
+                    radius: AppTheme.shadowSize
+                    samples: AppTheme.shadowSamples
                     color: AppTheme.shadowColor
                     source: rectHeaderShadow
                 }
@@ -203,9 +203,9 @@ Item
                 Rectangle
                 {
                     anchors.fill: rectHeaderShadow
-                    anchors.leftMargin: AppTheme.margin * app.scale
-                    anchors.rightMargin: AppTheme.margin * app.scale
-                    anchors.topMargin: AppTheme.margin * app.scale
+                    anchors.leftMargin: AppTheme.margin
+                    anchors.rightMargin: AppTheme.margin
+                    anchors.topMargin: AppTheme.margin
                     color: AppTheme.whiteColor
 
                     Text
@@ -214,10 +214,10 @@ Item
                         anchors.top: parent.top
                         anchors.left: parent.left
                         verticalAlignment: Text.AlignVCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: 100 * app.scale
+                        height: AppTheme.compHeight
+                        width: 100
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.greyColor
                         text: qsTr("Select a time") + ":"
                     }
@@ -227,15 +227,15 @@ Item
                         anchors.left: parent.left
                         anchors.right: parent.right
                         anchors.top: textHeader.bottom
-                        anchors.topMargin: AppTheme.padding * app.scale
-                        height: 200 * app.scale
+                        anchors.topMargin: AppTheme.padding
+                        height: 200
 
                         Tumbler
                         {
                             id: hoursTumbler
                             anchors.right: labelDot.left
                             anchors.top: parent.top
-                            width: 100 * app.scale
+                            width: 100
                             height: parent.height
                             model: 24
                             delegate: Label
@@ -244,7 +244,7 @@ Item
                                 opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount)
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
-                                font.pixelSize: AppTheme.fontSuperBigSize * app.scale
+                                font.pixelSize: AppTheme.fontSuperBigSize
                                 font.family: AppTheme.fontFamily
                                 color: (index === hoursTumbler.currentIndex) ? AppTheme.blueColor : AppTheme.hideColor
                             }
@@ -258,7 +258,7 @@ Item
                             anchors.verticalCenter: parent.verticalCenter
                             horizontalAlignment: Text.AlignHCenter
                             verticalAlignment: Text.AlignVCenter
-                            font.pixelSize: AppTheme.fontSuperBigSize * app.scale
+                            font.pixelSize: AppTheme.fontSuperBigSize
                             font.family: AppTheme.fontFamily
                             color: AppTheme.blueColor
                             text: ":"
@@ -269,7 +269,7 @@ Item
                             id: minutesTumbler
                             anchors.left: labelDot.right
                             anchors.top: parent.top
-                            width: 100 * app.scale
+                            width: 100
                             height: parent.height
                             model: 60
                             delegate: Label
@@ -278,7 +278,7 @@ Item
                                 opacity: 1.0 - Math.abs(Tumbler.displacement) / (Tumbler.tumbler.visibleItemCount)
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
-                                font.pixelSize: AppTheme.fontSuperBigSize * app.scale
+                                font.pixelSize: AppTheme.fontSuperBigSize
                                 font.family: AppTheme.fontFamily
                                 color: (index === minutesTumbler.currentIndex) ? AppTheme.blueColor : AppTheme.hideColor
                             }
@@ -290,7 +290,7 @@ Item
                     {
                         id: buttonCancel
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         anchors.left: parent.left
                         image: "qrc:/resources/img/icon_cancel.png"
 
@@ -304,7 +304,7 @@ Item
                     {
                         id: buttonOk
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         anchors.right: parent.right
                         image: "qrc:/resources/img/icon_ok.png"
 

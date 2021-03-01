@@ -21,7 +21,7 @@ Item
         else
             textTableHeader.text = qsTr("No data found for this aquarium")
 
-        currentParamsTable.height = (currentParamsTable.realModelLength() + 1) * AppTheme.compHeight * app.scale
+        currentParamsTable.height = (currentParamsTable.realModelLength() + 1) * AppTheme.compHeight
     }
 
     Behavior on height
@@ -99,10 +99,10 @@ Item
         {
             id: rectMainTableHeader
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: parent.right
             anchors.top: parent.top
-            height: AppTheme.rowHeightMin * app.scale
+            height: AppTheme.rowHeightMin
             color: "#00000000"
 
             Text
@@ -112,7 +112,7 @@ Item
                 height: parent.height
                 width: parent.width
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontNormalSize
                 color: AppTheme.greyColor
                 text: qsTr("LAST MEASURED")
                 wrapMode: Text.WordWrap
@@ -130,23 +130,23 @@ Item
             delegate: Rectangle
             {
                 width: parent.width
-                height: en ? AppTheme.compHeight * app.scale : 0
+                height: en ? AppTheme.compHeight  : 0
                 visible: en
                 color: (index%2 === 0) ? AppTheme.backLightBlueColor : "#00000000"
 
                 Row
                 {
                     anchors.left: parent.left
-                    anchors.leftMargin: AppTheme.padding * app.scale
+                    anchors.leftMargin: AppTheme.padding
                     anchors.right: parent.right
 
                     Text
                     {
                         verticalAlignment: Text.AlignVCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: 140 * app.scale
+                        height: AppTheme.compHeight
+                        width: 140
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.blueFontColor
                         text: app.getParamById(paramId).fullName
                     }
@@ -154,22 +154,22 @@ Item
                     Text
                     {
                         verticalAlignment: Text.AlignVCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: 50 * app.scale
+                        height: AppTheme.compHeight
+                        width: 50
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.greyColor
                         text: app.getParamById(paramId).unitName
                     }
 
                     Text
                     {
-                        width: 90 * app.scale
-                        height: AppTheme.compHeight * app.scale
+                        width: 90
+                        height: AppTheme.compHeight
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.blueFontColor
                         text: formattedValue(valueNow)
                     }
@@ -177,7 +177,7 @@ Item
                     Rectangle
                     {
                         anchors.verticalCenter: parent.verticalCenter
-                        width: 12 * app.scale
+                        width: 12
                         height: width
                         radius: height/2
                         color: formattedColor(paramId, valueNow)

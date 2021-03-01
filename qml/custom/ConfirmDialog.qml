@@ -89,22 +89,22 @@ Item
             {
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - AppTheme.margin * app.scale
-                height: 240 * app.scale - AppTheme.margin * app.scale
-                radius: AppTheme.radius / 2 * app.scale
+                width: parent.width - AppTheme.margin
+                height: 240  - AppTheme.margin
+                radius: AppTheme.radius / 2
                 color: AppTheme.whiteColor
 
                 Text
                 {
                     id: textHeader
                     anchors.top: parent.top
-                    anchors.topMargin: AppTheme.padding * app.scale
-                    height: AppTheme.compHeight * app.scale
+                    anchors.topMargin: AppTheme.padding
+                    height: AppTheme.compHeight
                     width: parent.width
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    font.pixelSize: AppTheme.fontNormalSize
                     color: AppTheme.blueFontColor
                     text: "TEXT"
                 }
@@ -114,13 +114,13 @@ Item
                     id: textMessage
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: - AppTheme.padding * app.scale
-                    height: AppTheme.compHeight * app.scale
-                    width: parent.width - AppTheme.margin * app.scale * 2
+                    anchors.verticalCenterOffset: - AppTheme.padding
+                    height: AppTheme.compHeight
+                    width: parent.width - AppTheme.margin  * 2
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    font.pixelSize: AppTheme.fontNormalSize
                     color: AppTheme.greyDarkColor
                     text: "TEXT"
                     wrapMode: Text.WordWrap
@@ -130,9 +130,9 @@ Item
                 {
                     id: buttonCancel
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.padding * app.scale
+                    anchors.bottomMargin: AppTheme.padding
                     anchors.left: parent.left
-                    anchors.leftMargin: AppTheme.padding * app.scale
+                    anchors.leftMargin: AppTheme.padding
                     image: "qrc:/resources/img/icon_cancel.png"
 
                     onSigButtonClicked:
@@ -146,9 +146,9 @@ Item
                 {
                     id: buttonAdd
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.padding * app.scale
+                    anchors.bottomMargin: AppTheme.padding
                     anchors.right: parent.right
-                    anchors.rightMargin: AppTheme.padding * app.scale
+                    anchors.rightMargin: AppTheme.padding
                     image: "qrc:/resources/img/icon_ok.png"
 
                     onSigButtonClicked:

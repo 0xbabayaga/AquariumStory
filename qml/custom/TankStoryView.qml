@@ -34,8 +34,8 @@ Item
     {
         id: rectHeaderShadow
         anchors.fill: parent
-        anchors.leftMargin: AppTheme.padding * app.scale
-        anchors.rightMargin: AppTheme.padding * app.scale
+        anchors.leftMargin: AppTheme.padding
+        anchors.rightMargin: AppTheme.padding
         color: AppTheme.whiteColor
     }
 
@@ -43,9 +43,9 @@ Item
     {
         anchors.fill: rectHeaderShadow
         horizontalOffset: 0
-        verticalOffset: -AppTheme.shadowOffset * app.scale
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        verticalOffset: -AppTheme.shadowOffset
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectHeaderShadow
     }
@@ -60,7 +60,7 @@ Item
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             width: parent.width
-            height: 200 * app.scale
+            height: 200
             visible: (storyModel.count === 0)
             color: "#00000000"
 
@@ -69,9 +69,9 @@ Item
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
                 horizontalAlignment: Text.AlignHCenter
-                width: 250 * app.scale
+                width: 250
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontNormalSize
                 wrapMode: Text.WordWrap
                 color: AppTheme.greyColor
                 text: qsTr("No record found for this aquarium")
@@ -82,7 +82,7 @@ Item
         {
             id: view
             anchors.fill: parent
-            anchors.topMargin: AppTheme.padding / 2 * app.scale
+            anchors.topMargin: AppTheme.padding / 2
             orientation: ListView.Vertical
             model: storyModel
             clip: true
@@ -118,16 +118,16 @@ Item
                 policy: ScrollBar.AlwaysOn
                 parent: view.parent
                 anchors.top: view.top
-                anchors.topMargin: AppTheme.compHeight * app.scale
+                anchors.topMargin: AppTheme.compHeight
                 anchors.left: view.right
-                anchors.leftMargin: AppTheme.padding / 4 * app.scale
+                anchors.leftMargin: AppTheme.padding / 4
                 anchors.bottom: view.bottom
-                anchors.bottomMargin: AppTheme.compHeight * app.scale
+                anchors.bottomMargin: AppTheme.compHeight
 
                 contentItem: Rectangle
                 {
-                    implicitWidth: 2 * app.scale
-                    implicitHeight: AppTheme.rowHeight * app.scale
+                    implicitWidth: 2
+                    implicitHeight: AppTheme.rowHeight
                     radius: width / 2
                     color: AppTheme.hideColor
                 }

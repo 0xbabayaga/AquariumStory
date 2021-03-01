@@ -40,7 +40,7 @@ Item
         if (visible === true)
         {
             showDialogAnimation.start()
-            rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5 * app.scale
+            rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5
             imagesList.reset()
         }
         else
@@ -167,7 +167,7 @@ Item
             id: rectFakeDataContainer
             anchors.fill: parent
             anchors.topMargin: rectContainer.height
-            radius: AppTheme.radius * 2 * app.scale
+            radius: AppTheme.radius * 2
 
             Behavior on anchors.topMargin
             {
@@ -180,7 +180,7 @@ Item
             anchors.fill: rectFakeDataContainer
             horizontalOffset: 0
             verticalOffset: -3
-            radius: AppTheme.shadowSize * app.scale
+            radius: AppTheme.shadowSize
             samples: AppTheme.shadowSamples
             color: AppTheme.shadowColor
             source: rectFakeDataContainer
@@ -195,9 +195,9 @@ Item
             {
                 id: rectAddRecordDialog
                 anchors.fill: parent
-                anchors.topMargin: AppTheme.padding * app.scale
-                anchors.leftMargin: AppTheme.margin * app.scale
-                anchors.rightMargin: AppTheme.margin * app.scale
+                anchors.topMargin: AppTheme.padding
+                anchors.leftMargin: AppTheme.margin
+                anchors.rightMargin: AppTheme.margin
                 color: AppTheme.whiteColor
 
                 Behavior on opacity
@@ -211,10 +211,10 @@ Item
                     anchors.top: parent.top
                     anchors.left: parent.left
                     verticalAlignment: Text.AlignVCenter
-                    height: AppTheme.rowHeightMin * app.scale
-                    width: 100 * app.scale
+                    height: AppTheme.rowHeightMin
+                    width: 100
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontBigSize * app.scale
+                    font.pixelSize: AppTheme.fontBigSize
                     color: AppTheme.blueColor
                     text: (dialogAddParamNote.isEdit === true) ? qsTr("EDIT RECORD") : qsTr("ADD RECORD")
                 }
@@ -223,7 +223,7 @@ Item
                 {
                     anchors.top: textHeader.bottom
                     width: parent.width
-                    height: 1 * app.scale
+                    height: 1
                     color: AppTheme.backLightBlueColor
                 }
 
@@ -244,8 +244,8 @@ Item
                 {
                     id: flickableContainer
                     anchors.fill: parent
-                    anchors.topMargin: AppTheme.compHeight * 2 * app.scale
-                    anchors.bottomMargin: AppTheme.margin * 3 * app.scale
+                    anchors.topMargin: AppTheme.compHeight * 2
+                    anchors.bottomMargin: AppTheme.margin * 3
                     contentWidth: width
                     clip:true
 
@@ -260,7 +260,7 @@ Item
                         anchors.top: parent.top
                         anchors.left: parent.left
                         anchors.right: parent.right
-                        height: (model) ? model.length * AppTheme.rowHeightMin * app.scale : 0
+                        height: (model) ? model.length * AppTheme.rowHeightMin  : 0
                         spacing: 0
                         model: app.getAllParamsListModel()
                         clip: true
@@ -268,14 +268,14 @@ Item
 
                         onModelChanged:
                         {
-                            height = getParamListRealCount() * AppTheme.rowHeightMin * app.scale
-                            flickableContainer.contentHeight = addRecordListView.height + AppTheme.rowHeightMin * 8 * app.scale
+                            height = getParamListRealCount() * AppTheme.rowHeightMin
+                            flickableContainer.contentHeight = addRecordListView.height + AppTheme.rowHeightMin * 8
                         }
 
                         delegate: Rectangle
                         {
                             width: parent.width
-                            height: (en === true) ? AppTheme.rowHeightMin * app.scale : 0
+                            height: (en === true) ? AppTheme.rowHeightMin  : 0
                             visible: en
                             color: "#00000000"
 
@@ -289,10 +289,10 @@ Item
                                 anchors.left: parent.left
                                 anchors.verticalCenter: parent.verticalCenter
                                 verticalAlignment: Text.AlignVCenter
-                                width: 100 * app.scale
+                                width: 100
                                 height: parent.height
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.blueFontColor
                                 text: fullName
                             }
@@ -303,7 +303,7 @@ Item
                                 anchors.right: parent.right
                                 anchors.verticalCenter: parent.verticalCenter
                                 placeholderText: "0"
-                                width: 100 * app.scale
+                                width: 100
                                 maximumLength: AppDefs.MAX_TANKDIMENSION_SIZE
                                 text: (value !== -1) ? value : ""
                                 //validator : RegExpValidator { regExp : /[0-9]+\.[0-9]+/ }
@@ -319,7 +319,7 @@ Item
                                     anchors.right: parent.right
                                     verticalAlignment: Text.AlignVCenter
                                     font.family: AppTheme.fontFamily
-                                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                    font.pixelSize: AppTheme.fontNormalSize
                                     color: AppTheme.greyColor
                                     text: unitName
                                 }
@@ -330,17 +330,17 @@ Item
                     Column
                     {
                         anchors.top: addRecordListView.bottom
-                        anchors.topMargin: AppTheme.padding * app.scale
+                        anchors.topMargin: AppTheme.padding
                         width: parent.width
-                        height: 580 * app.scale
-                        spacing: AppTheme.padding * app.scale
+                        height: 580
+                        spacing: AppTheme.padding
 
                         TextInput
                         {
                             id: textNote
                             placeholderText: qsTr("Add note")
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             maximumLength: 256
                             //focus: false
                             //KeyNavigation.tab: textTankL
@@ -351,9 +351,9 @@ Item
                             id: textAddImage
                             verticalAlignment: Text.AlignVCenter
                             width: parent.width
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: AppTheme.blueFontColor
                             text: qsTr("Add image")
                         }
@@ -385,13 +385,13 @@ Item
                         parent: flickableContainer.parent
                         anchors.top: flickableContainer.top
                         anchors.left: flickableContainer.right
-                        anchors.leftMargin: AppTheme.padding * app.scale
+                        anchors.leftMargin: AppTheme.padding
                         anchors.bottom: flickableContainer.bottom
 
                         contentItem: Rectangle
                         {
-                            implicitWidth: 2 * app.scale
-                            implicitHeight: 100 * app.scale
+                            implicitWidth: 2
+                            implicitHeight: 100
                             radius: width / 2
                             color: AppTheme.hideColor
                         }
@@ -402,7 +402,7 @@ Item
                 {
                     id: buttonCancel
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.left: parent.left
                     image: "qrc:/resources/img/icon_cancel.png"
 
@@ -417,7 +417,7 @@ Item
                 {
                     id: buttonAdd
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.right: parent.right
                     image: "qrc:/resources/img/icon_ok.png"
 
@@ -438,7 +438,7 @@ Item
             {
                 id: tip
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: AppTheme.rowHeight * 2 * app.scale
+                anchors.bottomMargin: AppTheme.rowHeight * 2
                 visible: false
                 tipText: qsTr("")
             }
@@ -448,9 +448,9 @@ Item
             {
                 id: rectPersonalParamsDialog
                 anchors.fill: parent
-                anchors.topMargin: AppTheme.padding * app.scale
-                anchors.leftMargin: AppTheme.margin * app.scale
-                anchors.rightMargin: AppTheme.margin * app.scale
+                anchors.topMargin: AppTheme.padding
+                anchors.leftMargin: AppTheme.margin
+                anchors.rightMargin: AppTheme.margin
                 color: AppTheme.whiteColor
                 opacity: 0
                 visible: (opacity === 0) ? false : true
@@ -466,10 +466,10 @@ Item
                     anchors.top: parent.top
                     anchors.left: parent.left
                     verticalAlignment: Text.AlignVCenter
-                    height: AppTheme.rowHeightMin * app.scale
-                    width: 100 * app.scale
+                    height: AppTheme.rowHeightMin
+                    width: 100
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontBigSize * app.scale
+                    font.pixelSize: AppTheme.fontBigSize
                     color: AppTheme.blueColor
                     text: qsTr("LIST OF PARAMS")
                 }
@@ -478,19 +478,19 @@ Item
                 {
                     anchors.top: textListOfParamsHeader.bottom
                     width: parent.width
-                    height: 1 * app.scale
+                    height: 1
                     color: AppTheme.backLightBlueColor
                 }
 
                 Text
                 {
                     anchors.top: textListOfParamsHeader.bottom
-                    anchors.topMargin: AppTheme.padding * app.scale
+                    anchors.topMargin: AppTheme.padding
                     anchors.left: parent.left
                     verticalAlignment: Text.AlignVCenter
                     width: parent.width
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontSmallSize * app.scale
+                    font.pixelSize: AppTheme.fontSmallSize
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
                     text: qsTr("Select a set of parameters for monitoring")
@@ -500,8 +500,8 @@ Item
                 {
                     id: personalParamsListView
                     anchors.fill: parent
-                    anchors.topMargin: AppTheme.compHeight * 3 * app.scale
-                    anchors.bottomMargin: AppTheme.rowHeight * 2 * app.scale
+                    anchors.topMargin: AppTheme.compHeight * 3
+                    anchors.bottomMargin: AppTheme.rowHeight * 2
                     spacing: 0
                     clip: true
                     model: app.getAllParamsListModel()
@@ -509,7 +509,7 @@ Item
                     delegate: Rectangle
                     {
                         width: parent.width
-                        height: AppTheme.rowHeightMin * app.scale
+                        height: AppTheme.rowHeightMin
                         color: "#00000000"
 
                         Text
@@ -518,9 +518,9 @@ Item
                             anchors.verticalCenter: parent.verticalCenter
                             anchors.left: parent.left
                             verticalAlignment: Text.AlignVCenter
-                            width: 100 * app.scale
+                            width: 100
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontNormalSize * app.scale
+                            font.pixelSize: AppTheme.fontNormalSize
                             color: en ? AppTheme.blueFontColor : AppTheme.greyColor
                             text: fullName
                         }
@@ -544,7 +544,7 @@ Item
                         parent: personalParamsListView.parent
                         anchors.top: personalParamsListView.top
                         anchors.left: personalParamsListView.right
-                        anchors.leftMargin: AppTheme.padding * app.scale
+                        anchors.leftMargin: AppTheme.padding
                         anchors.bottom: personalParamsListView.bottom
 
                         contentItem: Rectangle
@@ -561,7 +561,7 @@ Item
                 {
                     id: buttonBack
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.left: parent.left
                     image: "qrc:/resources/img/icon_cancel.png"
 
@@ -572,7 +572,7 @@ Item
                 {
                     id: buttonSave
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.right: parent.right
                     image: "qrc:/resources/img/icon_ok.png"
 

@@ -7,7 +7,7 @@ import ".."
 Item
 {
     id: diagramView
-    width: app.width - AppTheme.margin * 4 * app.scale
+    width: app.width - AppTheme.margin * 4
     height: 128
 
     property var ctx: null
@@ -20,7 +20,7 @@ Item
         diagramView.height = height * currentCnt
 
         if (ctx === null)
-            ctx = new Diagrams.DiagramView(app.scale, height)
+            ctx = new Diagrams.DiagramView(1, height)
 
         ctx.addCurve(app.getParamById(id).shortName,
                      app.getParamById(id).unitName,

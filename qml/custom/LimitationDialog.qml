@@ -86,20 +86,20 @@ Item
             {
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: parent.width - AppTheme.margin * app.scale
-                height: 400 * app.scale - AppTheme.margin * app.scale
-                radius: AppTheme.radius / 2 * app.scale
+                width: parent.width - AppTheme.margin
+                height: 400  - AppTheme.margin
+                radius: AppTheme.radius / 2
                 color: AppTheme.whiteColor
 
                 Text
                 {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.top: parent.top
-                    anchors.topMargin: AppTheme.padding * app.scale
+                    anchors.topMargin: AppTheme.padding
                     verticalAlignment: Text.AlignVCenter
-                    height: AppTheme.compHeight * app.scale
+                    height: AppTheme.compHeight
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                    font.pixelSize: AppTheme.fontNormalSize
                     color: AppTheme.blueFontColor
                     text: qsTr("LIMITATIONS")
                 }
@@ -108,9 +108,9 @@ Item
                 {
                     id: curParamsListView
                     anchors.fill: parent
-                    anchors.leftMargin: AppTheme.padding * app.scale
-                    anchors.rightMargin: AppTheme.padding * app.scale
-                    anchors.topMargin: AppTheme.rowHeight * app.scale
+                    anchors.leftMargin: AppTheme.padding
+                    anchors.rightMargin: AppTheme.padding
+                    anchors.topMargin: AppTheme.rowHeight
                     spacing: 0
                     interactive: false
                     model: limitationsModel
@@ -118,22 +118,22 @@ Item
                     delegate: Rectangle
                     {
                         width: parent.width
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                         color: (index%2 === 1) ? AppTheme.backLightBlueColor : "#00000000"
 
                         Row
                         {
                             anchors.left: parent.left
-                            anchors.leftMargin: AppTheme.padding * app.scale
+                            anchors.leftMargin: AppTheme.padding
                             anchors.right: parent.right
 
                             Text
                             {
                                 verticalAlignment: Text.AlignVCenter
-                                height: AppTheme.compHeight * app.scale
-                                width: 165 * app.scale
+                                height: AppTheme.compHeight
+                                width: 165
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize
                                 color: AppTheme.blueFontColor
                                 text: option
                             }
@@ -142,22 +142,22 @@ Item
                             {
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignHCenter
-                                height: AppTheme.compHeight * app.scale
-                                width: 60 * app.scale
+                                height: AppTheme.compHeight
+                                width: 60
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize
                                 color: (index === 0) ? AppTheme.blueColor : AppTheme.greyColor
                                 text: limited
                             }
 
                             Text
                             {
-                                width: 60 * app.scale
-                                height: AppTheme.compHeight * app.scale
+                                width: 60
+                                height: AppTheme.compHeight
                                 horizontalAlignment: Text.AlignHCenter
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                                font.pixelSize: AppTheme.fontSmallSize
                                 color: (index === 0) ? AppTheme.blueColor : AppTheme.greyColor
                                 text: pro
                             }
@@ -169,7 +169,7 @@ Item
                 {
                     id: buttonOk
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.padding * app.scale
+                    anchors.bottomMargin: AppTheme.padding
                     anchors.horizontalCenter: parent.horizontalCenter
                     image: "qrc:/resources/img/icon_ok.png"
 

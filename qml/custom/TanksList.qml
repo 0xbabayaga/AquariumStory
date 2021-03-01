@@ -6,8 +6,8 @@ import "../"
 Item
 {
     id: tanksList
-    height: 96 * app.scale
-    width: (model) ? ((model.length > 2) ? app.width + AppTheme.margin * app.scale * 4 : 360 * app.scale) : app.width
+    height: 96
+    width: (model) ? ((model.length > 2) ? app.width + AppTheme.margin  * 4 : 360 ) : app.width
 
     property alias model: view.model
     property alias currentIndex: view.currentIndex
@@ -27,8 +27,8 @@ Item
             Item
             {
                 id: itemContainer
-                width: 128 * app.scale
-                height: 96 * app.scale
+                width: 128
+                height: 96
                 scale: PathView.iconScale
                 z: PathView.z
 
@@ -55,7 +55,7 @@ Item
                 Rectangle
                 {
                     anchors.fill: rect
-                    radius: AppTheme.radius/2 * app.scale
+                    radius: AppTheme.radius/2
                     color: (view.currentIndex === index) ? AppTheme.whiteColor : ((type === 0) ? AppTheme.lightBlueColor : AppTheme.lightGreenColor)
                     clip: true
 
@@ -84,17 +84,17 @@ Item
                     Text
                     {
                         anchors.right: parent.right
-                        anchors.rightMargin: AppTheme.padding/2 * app.scale
+                        anchors.rightMargin: AppTheme.padding/2
                         anchors.left: parent.left
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.padding/2 * app.scale
+                        anchors.bottomMargin: AppTheme.padding/2
                         text: app.convertVolume(volume) + app.currentVolumeUnitsShort()
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.whiteColor
                         horizontalAlignment: Text.AlignRight
                         verticalAlignment: Text.AlignBottom
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                     }
 
                     MouseArea

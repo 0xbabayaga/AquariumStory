@@ -50,7 +50,7 @@ Item
         if (visible === true)
         {
             showDialogAnimation.start()
-            rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5 * app.scale
+            rectFakeDataContainer.anchors.topMargin = AppTheme.padding * 5
         }
         else
         {
@@ -155,9 +155,9 @@ Item
         {
             anchors.fill: rectFakeDataContainer
             horizontalOffset: 0
-            verticalOffset: -AppTheme.shadowOffset * app.scale
-            radius: AppTheme.shadowSize/2 * app.scale
-            samples: AppTheme.shadowSamples * app.scale
+            verticalOffset: -AppTheme.shadowOffset
+            radius: AppTheme.shadowSize/2
+            samples: AppTheme.shadowSamples
             color: AppTheme.shadowColor
             source: rectFakeDataContainer
         }
@@ -166,9 +166,9 @@ Item
         {
             id: rectAddActionDialog
             anchors.fill: rectFakeDataContainer
-            anchors.topMargin: AppTheme.padding * app.scale
-            anchors.leftMargin: AppTheme.padding * 2 * app.scale
-            anchors.rightMargin: AppTheme.padding * 2 * app.scale
+            anchors.topMargin: AppTheme.padding
+            anchors.leftMargin: AppTheme.padding * 2
+            anchors.rightMargin: AppTheme.padding * 2
             color: "#00000020"
 
             Behavior on opacity
@@ -182,10 +182,10 @@ Item
                 anchors.top: parent.top
                 anchors.left: parent.left
                 verticalAlignment: Text.AlignVCenter
-                height: AppTheme.rowHeightMin * app.scale
-                width: 100 * app.scale
+                height: AppTheme.rowHeightMin
+                width: 100
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueFontColor
                 text: (dialogAddAction.isEdit === true) ? qsTr("EDIT REMINDER") : qsTr("ADD REMINDER")
             }
@@ -194,7 +194,7 @@ Item
             {
                 anchors.top: textHeader.bottom
                 width: parent.width
-                height: 1 * app.scale
+                height: 1
                 color: AppTheme.backLightBlueColor
             }
 
@@ -202,10 +202,10 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: textHeader.bottom
-                anchors.topMargin: AppTheme.margin * app.scale
-                height: 400 * app.scale
+                anchors.topMargin: AppTheme.margin
+                height: 400
                 width: parent.width
-                spacing: AppTheme.padding * app.scale
+                spacing: AppTheme.padding
 
                 TextInput
                 {
@@ -230,7 +230,7 @@ Item
                 Rectangle
                 {
                     width: parent.width
-                    height: AppTheme.compHeight * app.scale
+                    height: AppTheme.compHeight
                     color: "#00000000"
 
                     Text
@@ -240,7 +240,7 @@ Item
                         height: parent.height
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontSmallSize * app.scale
+                        font.pixelSize: AppTheme.fontSmallSize
                         color: AppTheme.greyColor
                         text: qsTr("Repeat") + ":"
                     }
@@ -249,11 +249,11 @@ Item
                     {
                         id: textPeriod
                         anchors.right: comboPeriod.left
-                        anchors.rightMargin: AppTheme.padding * app.scale
+                        anchors.rightMargin: AppTheme.padding
                         placeholderText: qsTr("1")
                         inputMethod: Qt.ImhFormattedNumbersOnly | Qt.ImhNoPredictiveText
                         //validator : RegExpValidator { regExp : /[0-9]+[0-9]+/ }
-                        width: 30 * app.scale
+                        width: 30
                         focus: true
                         maximumLength: 2
                         //KeyNavigation.tab: textUserEmail
@@ -264,7 +264,7 @@ Item
                         id: comboPeriod
                         anchors.right: parent.right
                         propertyName: qsTr("Select a period") + ":"
-                        width: 110 * app.scale
+                        width: 110
                         model: periodslistModel
 
                         ListModel
@@ -298,7 +298,7 @@ Item
                 {
                     verticalAlignment: Text.AlignVCenter
                     font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontSmallSize * app.scale
+                    font.pixelSize: AppTheme.fontSmallSize
                     color: AppTheme.greyColor
                     text: qsTr("Start Date/Time")
                 }
@@ -322,7 +322,7 @@ Item
             {
                 id: buttonCancel
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: AppTheme.margin * app.scale
+                anchors.bottomMargin: AppTheme.margin
                 anchors.left: parent.left
                 image: "qrc:/resources/img/icon_cancel.png"
 
@@ -333,7 +333,7 @@ Item
             {
                 id: buttonAdd
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: AppTheme.margin * app.scale
+                anchors.bottomMargin: AppTheme.margin
                 anchors.right: parent.right
                 image: "qrc:/resources/img/icon_ok.png"
 

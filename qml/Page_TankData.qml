@@ -93,7 +93,7 @@ Item
         anchors.bottom: parent.bottom
         width: parent.width
         x: parent.width
-        radius: AppTheme.radius * 2 * app.scale
+        radius: AppTheme.radius * 2
         color: AppTheme.whiteColor
     }
 
@@ -101,9 +101,9 @@ Item
     {
         anchors.fill: rectContainer
         horizontalOffset: 0
-        verticalOffset: -AppTheme.shadowOffset * app.scale
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        verticalOffset: -AppTheme.shadowOffset
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectContainer
     }
@@ -112,7 +112,7 @@ Item
     {
         id: rectRealContainer
         anchors.fill: rectContainer
-        radius: AppTheme.radius * 2 * app.scale
+        radius: AppTheme.radius * 2
         color: AppTheme.whiteColor
 
         MouseArea   {   anchors.fill: parent    }
@@ -123,7 +123,7 @@ Item
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.top: parent.top
-            height: AppTheme.compHeight * app.scale
+            height: AppTheme.compHeight
             color: AppTheme.blueColor
 
             PagesTabList
@@ -142,7 +142,7 @@ Item
         {
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             width: parent.width
             height: width * 0.75
             source: "qrc:/resources/img/back_waves.png"
@@ -153,12 +153,12 @@ Item
         {
             id: rectHeaderContainer
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: parent.right
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.rightMargin: AppTheme.padding
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * 2 * app.scale
-            height: AppTheme.rowHeight * app.scale
+            anchors.topMargin: AppTheme.padding * 2
+            height: AppTheme.rowHeight
             color: "#00000000"
 
             IconSimpleButton
@@ -176,8 +176,8 @@ Item
                 id: imgTank
                 anchors.right: parent.right
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.padding * app.scale
-                height: AppTheme.rowHeight * app.scale
+                anchors.topMargin: AppTheme.padding
+                height: AppTheme.rowHeight
                 width: height
                 mipmap: true
                 source: ""
@@ -195,8 +195,8 @@ Item
                 id: imgTankMask
                 anchors.right: parent.right
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.padding * app.scale
-                height: AppTheme.rowHeight * app.scale
+                anchors.topMargin: AppTheme.padding
+                height: AppTheme.rowHeight
                 width: height
                 radius: height/2
                 visible: false
@@ -206,13 +206,13 @@ Item
             {
                 id: textTankName
                 anchors.right: imgTank.left
-                anchors.rightMargin: AppTheme.padding * app.scale
+                anchors.rightMargin: AppTheme.padding
                 anchors.verticalCenter: parent.verticalCenter
-                height: AppTheme.compHeight * app.scale
+                height: AppTheme.compHeight
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignRight
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueColor
                 text: qsTr("")
             }
@@ -222,12 +222,12 @@ Item
                 id: textTankVol
                 anchors.top: textTankName.bottom
                 anchors.right: imgTank.left
-                anchors.rightMargin: AppTheme.padding * app.scale
-                height: AppTheme.rowHeight * app.scale
+                anchors.rightMargin: AppTheme.padding
+                height: AppTheme.rowHeight
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignRight
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 color: AppTheme.blueFontColor
                 text: qsTr("")
             }
@@ -237,12 +237,12 @@ Item
                 id: textTankType
                 anchors.top: textTankName.bottom
                 anchors.right: textTankVol.left
-                anchors.rightMargin: AppTheme.padding * app.scale
-                height: AppTheme.rowHeight * app.scale
+                anchors.rightMargin: AppTheme.padding
+                height: AppTheme.rowHeight
                 verticalAlignment: Text.AlignTop
                 horizontalAlignment: Text.AlignRight
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 color: AppTheme.greyColor
                 text: qsTr("")
             }
@@ -252,7 +252,7 @@ Item
         {
             id: swipeView
             anchors.fill: parent
-            anchors.topMargin: AppTheme.rowHeight * 2 * app.scale
+            anchors.topMargin: AppTheme.rowHeight * 2
             orientation: Qt.Horizontal
             clip: true
             interactive: false

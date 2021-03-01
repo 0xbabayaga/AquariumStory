@@ -48,9 +48,9 @@ Item
         if (imgs.length === 0)
             imagesListView.width = 0
         else if (imgs.length === 1)
-            imagesListView.width = AppTheme.rowHeightMin * app.scale
+            imagesListView.width = AppTheme.rowHeightMin
         else
-            imagesListView.width = AppTheme.rowHeightMin * app.scale + (imgs.length - 1) * AppTheme.rowHeightMin / 4  * app.scale
+            imagesListView.width = AppTheme.rowHeightMin  + (imgs.length - 1) * AppTheme.rowHeightMin / 4
     }
 
     function showDetails(vis)
@@ -104,7 +104,7 @@ Item
             property: "anchors.topMargin"
             duration: 200
             from: rectDetailedContainer.height
-            to: AppTheme.padding * 5 * app.scale
+            to: AppTheme.padding * 5
             easing.type: Easing.OutCubic
         }
     }
@@ -118,7 +118,7 @@ Item
             target: rectShadowNoteDetails
             property: "anchors.topMargin"
             duration: 200
-            from: AppTheme.padding * 5 * app.scale
+            from: AppTheme.padding * 5
             to: rectDetailedContainer.height
             easing.type: Easing.InCubic
         }
@@ -205,7 +205,7 @@ Item
         anchors.left: parent.left
         anchors.top: parent.top
         width: parent.width
-        height: (textNote.contentHeight + AppTheme.padding * 4) * app.scale
+        height: (textNote.contentHeight + AppTheme.padding * 4)
         color: AppTheme.whiteColor
 
         Behavior on height {    NumberAnimation {   duration:  200 } }
@@ -222,11 +222,11 @@ Item
             id: textNoteFound
             anchors.top: parent.top
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding / 2 * app.scale
-            height: AppTheme.compHeight * app.scale
+            anchors.leftMargin: AppTheme.padding / 2
+            height: AppTheme.compHeight
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.blueFontColor
             text: qsTr("NOTE FOUND")
         }
@@ -235,10 +235,10 @@ Item
         {
             anchors.top: textNoteFound.bottom
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             anchors.right: imagesListView.left
-            anchors.rightMargin: AppTheme.padding * app.scale
-            height: 1 * app.scale
+            anchors.rightMargin: AppTheme.padding
+            height: 1
             color: AppTheme.backLightBlueColor
         }
 
@@ -246,12 +246,12 @@ Item
         {
             id: imagesListView
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.compHeight * app.scale
+            anchors.topMargin: AppTheme.compHeight
             anchors.right: parent.right
             width: 0
-            height: (AppTheme.rowHeightMin + 2) * app.scale
+            height: (AppTheme.rowHeightMin + 2)
             orientation: ListView.Horizontal
-            spacing: -AppTheme.rowHeightMin * 3 / 4 * app.scale
+            spacing: -AppTheme.rowHeightMin * 3 / 4
             clip: true
             model: listOfImages
             interactive: false
@@ -263,7 +263,7 @@ Item
 
             delegate: Rectangle
             {
-                width: AppTheme.rowHeightMin * app.scale
+                width: AppTheme.rowHeightMin
                 height: width
                 radius: height / 2
                 color: AppTheme.lightBlueColor
@@ -272,10 +272,10 @@ Item
                 Image
                 {
                     anchors.fill: parent
-                    anchors.leftMargin: 2 * app.scale
-                    anchors.rightMargin: 2 * app.scale
-                    anchors.topMargin: 2 * app.scale
-                    anchors.bottomMargin: 2 * app.scale
+                    anchors.leftMargin: 2
+                    anchors.rightMargin: 2
+                    anchors.topMargin: 2
+                    anchors.bottomMargin: 2
 
                     source: (fileLink.length > 0) ? "file:///" + fileLink : ""
                     mipmap: true
@@ -301,8 +301,8 @@ Item
             id: imgNotePhotoMask
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.compHeight * app.scale
-            height: AppTheme.rowHeight * app.scale
+            anchors.topMargin: AppTheme.compHeight
+            height: AppTheme.rowHeight
             width: height
             radius: height / 2
             visible: false
@@ -312,14 +312,14 @@ Item
         {
             id: textNote
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding / 2 * app.scale
+            anchors.leftMargin: AppTheme.padding / 2
             anchors.right: imagesListView.left
-            anchors.rightMargin: AppTheme.padding / 2 * app.scale
+            anchors.rightMargin: AppTheme.padding / 2
             anchors.top: textNoteFound.bottom
-            height: contentHeight + AppTheme.padding * app.scale
+            height: contentHeight + AppTheme.padding
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontSmallSize * app.scale
+            font.pixelSize: AppTheme.fontSmallSize
             color: AppTheme.greyColor
             text: ""
             wrapMode: Text.WordWrap
@@ -341,7 +341,7 @@ Item
         {
             id: rectShadowNoteDetails
             width: parent.width
-            height: imgCurrent.height + AppTheme.rowHeight * 3 * app.scale
+            height: imgCurrent.height + AppTheme.rowHeight * 3
             anchors.top: parent.top
             anchors.topMargin: rectDetailedContainer.height
             anchors.bottom: parent.bottom
@@ -354,7 +354,7 @@ Item
             anchors.fill: rectShadowNoteDetails
             horizontalOffset: 0
             verticalOffset: 3
-            radius: AppTheme.shadowSize * app.scale
+            radius: AppTheme.shadowSize
             samples: AppTheme.shadowSamples
             color: AppTheme.shadowColor
             source: rectShadowNoteDetails
@@ -468,12 +468,12 @@ Item
             {
                 id: detailedImagesListView
                 anchors.top: photoFrame.bottom
-                anchors.topMargin: AppTheme.padding * app.scale + (photoFrame.scale - 1) * photoFrame.height / 2
+                anchors.topMargin: AppTheme.padding  + (photoFrame.scale - 1) * photoFrame.height / 2
                 anchors.horizontalCenter: parent.horizontalCenter
-                width: listOfImages.count * (AppTheme.compHeight + AppTheme.padding / 2) * app.scale
-                height: AppTheme.compHeight * app.scale
+                width: listOfImages.count * (AppTheme.compHeight + AppTheme.padding / 2)
+                height: AppTheme.compHeight
                 orientation: ListView.Horizontal
-                spacing: AppTheme.padding / 2 * app.scale
+                spacing: AppTheme.padding / 2
                 clip: true
                 model: listOfImages
                 interactive: false
@@ -522,15 +522,15 @@ Item
             {
                 id: textNoteDetailed
                 anchors.left: parent.left
-                anchors.leftMargin: AppTheme.padding * 3 / 2 * app.scale
+                anchors.leftMargin: AppTheme.padding * 3 / 2
                 anchors.right: parent.right
-                anchors.rightMargin: AppTheme.padding * 3 / 2 * app.scale
+                anchors.rightMargin: AppTheme.padding * 3 / 2
                 anchors.top: detailedImagesListView.bottom
-                anchors.topMargin: AppTheme.padding / 2 * app.scale
-                height: contentHeight + AppTheme.padding * app.scale
+                anchors.topMargin: AppTheme.padding / 2
+                height: contentHeight + AppTheme.padding
                 verticalAlignment: Text.AlignVCenter
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 color: AppTheme.greyColor
                 text: ""
                 wrapMode: Text.WordWrap
@@ -540,13 +540,13 @@ Item
             {
                 id: textNoteDate
                 anchors.right: parent.right
-                anchors.rightMargin: AppTheme.padding * 3 / 2 * app.scale
+                anchors.rightMargin: AppTheme.padding * 3 / 2
                 anchors.top: textNoteDetailed.bottom
-                anchors.topMargin: AppTheme.padding / 2 * app.scale
-                height: AppTheme.compHeight * app.scale
+                anchors.topMargin: AppTheme.padding / 2
+                height: AppTheme.compHeight
                 verticalAlignment: Text.AlignVCenter
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 color: AppTheme.blueFontColor
                 text: ""
             }
@@ -554,7 +554,7 @@ Item
             IconSimpleButton
             {
                 anchors.bottom: parent.bottom
-                anchors.bottomMargin: AppTheme.margin * app.scale
+                anchors.bottomMargin: AppTheme.margin
                 anchors.horizontalCenter: parent.horizontalCenter
                 image: "qrc:/resources/img/icon_arrow_down.png"
 

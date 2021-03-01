@@ -142,9 +142,9 @@ Item
     {
         anchors.fill: rectHeaderShadow
         horizontalOffset: 0
-        verticalOffset: -AppTheme.shadowOffset * app.scale
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        verticalOffset: -AppTheme.shadowOffset
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectHeaderShadow
     }
@@ -158,7 +158,7 @@ Item
         {
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             width: parent.width
             height: width * 0.75
             source: "qrc:/resources/img/back_waves.png"
@@ -168,12 +168,12 @@ Item
         {
             id: textUserTanks
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             anchors.left: parent.left
-            anchors.leftMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.greyColor
             text: qsTr("MY TANKS")
 
@@ -188,12 +188,12 @@ Item
         {
             id: textUserTankName
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             anchors.right: textStory.left
-            anchors.rightMargin: AppTheme.padding/2 * app.scale
+            anchors.rightMargin: AppTheme.padding/2
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.blueFontColor
             text: ""
 
@@ -205,12 +205,12 @@ Item
         {
             id: textStory
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             anchors.right: parent.right
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.rightMargin: AppTheme.padding
             verticalAlignment: Text.AlignVCenter
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: AppTheme.greyColor
             text: qsTr("story")
 
@@ -222,7 +222,7 @@ Item
         {
             id: tanksList
             anchors.fill: parent
-            anchors.topMargin: AppTheme.padding * 3 * app.scale
+            anchors.topMargin: AppTheme.padding * 3
             model: tanksListModel
             clip: true
 
@@ -252,8 +252,8 @@ Item
             id: tankStory
             objectName: "tankStory"
             anchors.fill: parent
-            anchors.topMargin: AppTheme.padding * 3 * app.scale
-            anchors.bottomMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding * 3
+            anchors.bottomMargin: AppTheme.padding
             visible: false
             opacity: 0
 

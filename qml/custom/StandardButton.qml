@@ -5,8 +5,8 @@ import "../"
 Item
 {
     id: standardButton
-    width: 100 * app.scale
-    height: AppTheme.compHeight * app.scale
+    width: 100
+    height: AppTheme.compHeight
     property alias bText: buttonText.text
 
     signal sigButtonClicked()
@@ -54,7 +54,7 @@ Item
                 anchors.horizontalCenter: parent.horizontalCenter
                 horizontalAlignment: Text.Center
                 color: AppTheme.whiteColor
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 font.family: AppTheme.fontFamily
             }
 

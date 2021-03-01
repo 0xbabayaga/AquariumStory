@@ -5,8 +5,8 @@ import "../"
 Item
 {
     id: switchButton
-    width: 50 * app.scale
-    height: 22 * app.scale
+    width: 50
+    height: 22
     property alias checked: control.checked
     property string turnOnText: "Turn On"
     property string turnOffText: "Turn Off"
@@ -26,7 +26,7 @@ Item
             id: rectIndi
             y: switchButton.height / 2
             implicitWidth: parent.width
-            implicitHeight: 4 * app.scale
+            implicitHeight: 4
             radius: height / 2
             color: enabled ? (control.checked ? AppTheme.blueColor : AppTheme.hideColor) : (control.checked ? AppTheme.hideColor : AppTheme.hideColor)
 
@@ -53,7 +53,7 @@ Item
             height: parent.height
             text: checked ? switchButton.turnOnText : switchButton.turnOffText
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             color: enabled ? AppTheme.whiteColor : AppTheme.hideColor
             verticalAlignment: Text.AlignVCenter
             leftPadding: control.indicator.width + control.spacing + 10

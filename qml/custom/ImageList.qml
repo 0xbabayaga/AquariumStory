@@ -27,7 +27,7 @@ Item
 
     Component.onCompleted:
     {
-        inRowItemsCnt = (imageList.width - (AppTheme.rowHeightMin + 2 * AppTheme.padding) * app.scale) / ((AppTheme.rowHeightMin + AppTheme.padding) * app.scale)
+        inRowItemsCnt = (imageList.width - (AppTheme.rowHeightMin + 2 * AppTheme.padding) ) / ((AppTheme.rowHeightMin + AppTheme.padding) )
         inRowItemsCnt = parseInt(inRowItemsCnt)
     }
 
@@ -79,9 +79,9 @@ Item
     function resize()
     {
         if (listOfImages.count < inRowItemsCnt)
-            imagesListView.width = listOfImages.count * (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
+            imagesListView.width = listOfImages.count * (AppTheme.rowHeightMin + AppTheme.padding)
         else
-            imagesListView.width = inRowItemsCnt * (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
+            imagesListView.width = inRowItemsCnt * (AppTheme.rowHeightMin + AppTheme.padding)
     }
 
     function calcHeight()
@@ -92,10 +92,10 @@ Item
         {
             cnt = parseInt(listOfImages.count / (inRowItemsCnt + 1)) + 1
 
-            return (AppTheme.rowHeightMin + AppTheme.padding) * cnt * app.scale
+            return (AppTheme.rowHeightMin + AppTheme.padding) * cnt
         }
         else
-            return (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
+            return (AppTheme.rowHeightMin + AppTheme.padding)
     }
 
     ListModel
@@ -111,7 +111,7 @@ Item
         width: 0
         height: calcHeight()
         contentHeight: height
-        cellHeight: (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
+        cellHeight: (AppTheme.rowHeightMin + AppTheme.padding)
         cellWidth: cellHeight
         clip: true
         model: listOfImages
@@ -123,14 +123,14 @@ Item
 
         delegate: Item
         {
-            width: (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
-            height: (AppTheme.rowHeightMin + AppTheme.padding) * app.scale
+            width: (AppTheme.rowHeightMin + AppTheme.padding)
+            height: (AppTheme.rowHeightMin + AppTheme.padding)
 
             Rectangle
             {
                 anchors.fill: parent
-                anchors.rightMargin: AppTheme.padding * app.scale
-                anchors.bottomMargin: AppTheme.padding * app.scale
+                anchors.rightMargin: AppTheme.padding
+                anchors.bottomMargin: AppTheme.padding
                 radius: height / 2
                 color: AppTheme.greyColor
 
@@ -158,7 +158,7 @@ Item
                 {
                     anchors.right: parent.right
                     anchors.top: parent.top
-                    width: 24 * app.scale
+                    width: 24
                     height: width
                     radius: width / 2
                     color: AppTheme.blueColor
@@ -167,7 +167,7 @@ Item
                     {
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
-                        width: AppTheme.compHeight / 2 * app.scale
+                        width: AppTheme.compHeight / 2
                         height: width
                         source: "qrc:/resources/img/icon_cancel.png"
                         mipmap: true

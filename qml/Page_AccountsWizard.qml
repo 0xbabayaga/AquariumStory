@@ -112,20 +112,20 @@ Item
                 {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: 100 * app.scale
-                    height: 300 * app.scale
+                    anchors.verticalCenterOffset: 100
+                    height: 300
                     width: parent.width
-                    spacing: AppTheme.padding * app.scale
+                    spacing: AppTheme.padding
 
                     Text
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: parent.width - AppTheme.padding * 2 * app.scale
+                        height: AppTheme.compHeight
+                        width: parent.width - AppTheme.padding * 2
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontBigSize * app.scale
+                        font.pixelSize: AppTheme.fontBigSize
                         color: AppTheme.blueColor
                         text: qsTr("Hello") + ((currentUName.length > 0) ? ", " + currentUName : "")
                         wrapMode: Text.WordWrap
@@ -136,12 +136,12 @@ Item
                     Text
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: parent.width - AppTheme.padding * 2 * app.scale
+                        height: AppTheme.compHeight
+                        width: parent.width - AppTheme.padding * 2
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.greyColor
                         text: (app.global_FULLFEATURES === true)  ? qsTr("There is no active account found.\nYou can create a new one or import data from existing account.") : qsTr("There is no active account found.\nYou can create a new one.")
                         wrapMode: Text.WordWrap
@@ -154,9 +154,9 @@ Item
                 {
                     id: buttonGoToAccount
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.left: parent.left
-                    anchors.leftMargin: (app.global_FULLFEATURES === true) ? (AppTheme.margin * app.scale) : (parent.width - AppTheme.rowHeightMin * app.scale) / 2
+                    anchors.leftMargin: (app.global_FULLFEATURES === true) ? (AppTheme.margin ) : (parent.width - AppTheme.rowHeightMin ) / 2
 
                     onSigButtonClicked: stage = AppDefs.AppInit_CreateUser
                 }
@@ -165,9 +165,9 @@ Item
                 {
                     id: buttonImport
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.right: parent.right
-                    anchors.rightMargin: AppTheme.margin * app.scale
+                    anchors.rightMargin: AppTheme.margin
                     image: "qrc:/resources/img/icon_import.png"
                     visible: (app.global_FULLFEATURES === true)
 
@@ -184,9 +184,9 @@ Item
                 id: rectCreateAccount
                 anchors.top: rectNoAccount.bottom
                 anchors.left: parent.left
-                anchors.leftMargin: AppTheme.margin * app.scale
+                anchors.leftMargin: AppTheme.margin
                 anchors.right: parent.right
-                anchors.rightMargin: AppTheme.margin * app.scale
+                anchors.rightMargin: AppTheme.margin
                 height: app.height
                 color: "#00000000"
 
@@ -194,20 +194,20 @@ Item
                 {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: 60 * app.scale
-                    height: 300 * app.scale
+                    anchors.verticalCenterOffset: 60
+                    height: 300
                     width: parent.width
-                    spacing: AppTheme.padding * app.scale
+                    spacing: AppTheme.padding
 
                     Text
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: parent.width - AppTheme.padding * 2 * app.scale
+                        height: AppTheme.compHeight
+                        width: parent.width - AppTheme.padding * 2
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontBigSize * app.scale
+                        font.pixelSize: AppTheme.fontBigSize
                         color: AppTheme.blueColor
                         text: qsTr("Creating account")
                         wrapMode: Text.WordWrap
@@ -259,7 +259,7 @@ Item
                     {
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.blueFontColor
                         text: qsTr("User photo")
                     }
@@ -277,7 +277,7 @@ Item
                     id: buttonCancel
                     anchors.left: parent.left
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     image: "qrc:/resources/img/icon_cancel.png"
                     KeyNavigation.tab: buttonCreate
 
@@ -289,7 +289,7 @@ Item
                     id: buttonCreate
                     anchors.right: parent.right
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     KeyNavigation.tab: textUserName
 
                     onSigButtonClicked:
@@ -323,20 +323,20 @@ Item
                 {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: 100 * app.scale
-                    height: 300 * app.scale
+                    anchors.verticalCenterOffset: 100
+                    height: 300
                     width: parent.width
-                    spacing: AppTheme.padding * app.scale
+                    spacing: AppTheme.padding
 
                     Text
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: parent.width - AppTheme.padding * 2 * app.scale
+                        height: AppTheme.compHeight
+                        width: parent.width - AppTheme.padding * 2
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontBigSize * app.scale
+                        font.pixelSize: AppTheme.fontBigSize
                         color: AppTheme.blueColor
                         text: qsTr("Hello") + ", \n" + currentUName
                         wrapMode: Text.WordWrap
@@ -347,12 +347,12 @@ Item
                     Text
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: parent.width - AppTheme.padding * 2 * app.scale
+                        height: AppTheme.compHeight
+                        width: parent.width - AppTheme.padding * 2
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.greyColor
                         text: qsTr("There is no active aquarium found")
                         wrapMode: Text.WordWrap
@@ -363,7 +363,7 @@ Item
                 {
                     id: buttonGoToTank
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     anchors.horizontalCenter: parent.horizontalCenter
 
                     onSigButtonClicked:
@@ -379,9 +379,9 @@ Item
                 id: rectCreateTank
                 anchors.top: rectNoTanc.bottom
                 anchors.left: parent.left
-                anchors.leftMargin: AppTheme.margin * app.scale
+                anchors.leftMargin: AppTheme.margin
                 anchors.right: parent.right
-                anchors.rightMargin: AppTheme.margin * app.scale
+                anchors.rightMargin: AppTheme.margin
                 height: app.height
                 color: "#00000000"
 
@@ -389,20 +389,20 @@ Item
                 {
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
-                    anchors.verticalCenterOffset: 32 * app.scale
-                    height: 300 * app.scale
+                    anchors.verticalCenterOffset: 32
+                    height: 300
                     width: parent.width
-                    spacing: AppTheme.padding * app.scale
+                    spacing: AppTheme.padding
 
                     Text
                     {
                         anchors.horizontalCenter: parent.horizontalCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: parent.width// - AppTheme.padding * 2 * app.scale
+                        height: AppTheme.compHeight
+                        width: parent.width// - AppTheme.padding * 2
                         verticalAlignment: Text.AlignVCenter
                         horizontalAlignment: Text.AlignHCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontBigSize * app.scale
+                        font.pixelSize: AppTheme.fontBigSize
                         color: AppTheme.blueColor
                         text: qsTr("Creating aquarium profile")
                         wrapMode: Text.WordWrap
@@ -426,10 +426,10 @@ Item
                     {
                         id: rectRow
                         width: parent.width
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                         color: "#00000000"
 
-                        property int unitWidth: 20 * app.scale
+                        property int unitWidth: 20
 
                         TextInput
                         {
@@ -449,7 +449,7 @@ Item
                                 anchors.right: parent.right
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.blueFontColor
                                 text: app.currentDimensionUnits()
                             }
@@ -473,7 +473,7 @@ Item
                                 anchors.right: parent.right
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.blueFontColor
                                 text: app.currentDimensionUnits()
                             }
@@ -497,7 +497,7 @@ Item
                                 anchors.right: parent.right
                                 verticalAlignment: Text.AlignVCenter
                                 font.family: AppTheme.fontFamily
-                                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                font.pixelSize: AppTheme.fontNormalSize
                                 color: AppTheme.blueFontColor
                                 text: app.currentDimensionUnits()
                             }
@@ -521,7 +521,7 @@ Item
                     {
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.blueFontColor
                         text: qsTr("Aquarium image")
                     }
@@ -539,7 +539,7 @@ Item
                     id: buttonCancel2
                     anchors.left: parent.left
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     image: "qrc:/resources/img/icon_cancel.png"
                     KeyNavigation.tab: buttonCreate2
 
@@ -551,7 +551,7 @@ Item
                     id: buttonCreate2
                     anchors.right: parent.right
                     anchors.bottom: parent.bottom
-                    anchors.bottomMargin: AppTheme.margin * app.scale
+                    anchors.bottomMargin: AppTheme.margin
                     KeyNavigation.tab: textTankName
 
                     onSigButtonClicked:

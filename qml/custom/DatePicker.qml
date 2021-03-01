@@ -10,15 +10,15 @@ import AppDefs 1.0
 Item
 {
     id: datePicker
-    width: 150 * app.scale
-    height: AppTheme.compHeight * app.scale
+    width: 150
+    height: AppTheme.compHeight
     opacity: enabled ? AppTheme.opacityEnabled : AppTheme.opacityDisabled
 
     property alias title: textHeader.text
-    property double cellSize: AppTheme.compHeight * app.scale
-    property int fontSizePx: AppTheme.fontSmallSize * app.scale
+    property double cellSize: AppTheme.compHeight
+    property int fontSizePx: AppTheme.fontSmallSize
     property var date: new Date(calendar.currentYear, calendar.currentMonth, calendar.currentDay)
-    property int yOffset: 200 * app.scale
+    property int yOffset: 200
     property bool isOpened: (rectCalendar.visible === true)
 
     signal sigOk()
@@ -80,9 +80,9 @@ Item
         id: textDateTime
         text: "JAN 10 2002"
         width: datePicker.width
-        height: AppTheme.compHeight * app.scale
+        height: AppTheme.compHeight
         font.family: AppTheme.fontFamily
-        font.pixelSize: AppTheme.fontNormalSize * app.scale
+        font.pixelSize: AppTheme.fontNormalSize
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignVCenter
         color: enabled ? AppTheme.blueFontColor : AppTheme.hideColor
@@ -101,7 +101,7 @@ Item
         anchors.top: textDateTime.bottom
         anchors.left: textDateTime.left
         anchors.right: textDateTime.right
-        height: 1 * app.scale
+        height: 1
         color: AppTheme.hideColor
         opacity: datePicker.opacity
     }
@@ -111,8 +111,8 @@ Item
         id: img
         anchors.right: parent.right
         anchors.top: parent.top
-        width: 27 * app.scale
-        height: 27 * app.scale
+        width: 27
+        height: 27
         source: "qrc:/resources/img/icon_listdown.png"
         mipmap: true
 
@@ -182,9 +182,9 @@ Item
                 {
                     anchors.fill: rectHeaderShadow
                     horizontalOffset: 0
-                    verticalOffset: -AppTheme.shadowOffset * app.scale
-                    radius: AppTheme.shadowSize * app.scale
-                    samples: AppTheme.shadowSamples * app.scale
+                    verticalOffset: -AppTheme.shadowOffset
+                    radius: AppTheme.shadowSize
+                    samples: AppTheme.shadowSamples
                     color: AppTheme.shadowColor
                     source: rectHeaderShadow
                 }
@@ -192,9 +192,9 @@ Item
                 Rectangle
                 {
                     anchors.fill: rectHeaderShadow
-                    anchors.leftMargin: AppTheme.margin * app.scale
-                    anchors.rightMargin: AppTheme.margin * app.scale
-                    anchors.topMargin: AppTheme.margin * app.scale
+                    anchors.leftMargin: AppTheme.margin
+                    anchors.rightMargin: AppTheme.margin
+                    anchors.topMargin: AppTheme.margin
                     color: "#00000000"
 
                     Text
@@ -203,10 +203,10 @@ Item
                         anchors.top: parent.top
                         anchors.left: parent.left
                         verticalAlignment: Text.AlignVCenter
-                        height: AppTheme.compHeight * app.scale
-                        width: 100 * app.scale
+                        height: AppTheme.compHeight
+                        width: 100
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.greyColor
                         text: qsTr("Select a date") + ":"
                     }
@@ -215,10 +215,10 @@ Item
                     {
                         id: calendar
                         anchors.top: textHeader.bottom
-                        anchors.topMargin: AppTheme.padding * app.scale
+                        anchors.topMargin: AppTheme.padding
                         anchors.left: parent.left
                         anchors.right: parent.right
-                        height: AppTheme.compHeight * app.scale * 8
+                        height: AppTheme.compHeight  * 8
                         visible: true
 
                         snapMode: ListView.SnapToItem
@@ -256,21 +256,21 @@ Item
 
                         delegate: Rectangle
                         {
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             width: calendar.width
 
                             Rectangle
                             {
                                 id: monthYearTitle
                                 anchors.top: parent.top
-                                height: AppTheme.compHeight * app.scale
+                                height: AppTheme.compHeight
                                 width: parent.width
 
                                 Text
                                 {
                                     anchors.centerIn: parent
                                     font.family: AppTheme.fontFamily
-                                    font.pixelSize: AppTheme.fontBigSize * app.scale
+                                    font.pixelSize: AppTheme.fontBigSize
                                     color: AppTheme.blueColor
                                     text: (new DateTimeUtils.DateTimeUtil()).getMonthString(model.month) + " " + model.year;
                                 }
@@ -280,7 +280,7 @@ Item
                             {
                                 id: weekTitles
                                 anchors.top: monthYearTitle.bottom
-                                height: AppTheme.compHeight * app.scale
+                                height: AppTheme.compHeight
                                 width: parent.width
                                 locale: getLocale()
 
@@ -290,7 +290,7 @@ Item
                                     horizontalAlignment: Text.AlignHCenter
                                     verticalAlignment: Text.AlignVCenter
                                     font.family: AppTheme.fontFamily
-                                    font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                    font.pixelSize: AppTheme.fontNormalSize
                                     color: AppTheme.greyColor
                                 }
                             }
@@ -321,7 +321,7 @@ Item
                                         anchors.centerIn: parent
                                         text: model.day
                                         font.family: AppTheme.fontFamily
-                                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                                        font.pixelSize: AppTheme.fontNormalSize
                                         scale: highlighted ? 1.25 : 1
                                         visible: parent.enabled
                                         color: parent.highlighted ? AppTheme.whiteColor : AppTheme.blueColor
@@ -360,7 +360,7 @@ Item
                     {
                         id: buttonCancel
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         anchors.left: parent.left
                         image: "qrc:/resources/img/icon_cancel.png"
 
@@ -375,7 +375,7 @@ Item
                     {
                         id: buttonOk
                         anchors.bottom: parent.bottom
-                        anchors.bottomMargin: AppTheme.margin * app.scale
+                        anchors.bottomMargin: AppTheme.margin
                         anchors.right: parent.right
                         image: "qrc:/resources/img/icon_ok.png"
 

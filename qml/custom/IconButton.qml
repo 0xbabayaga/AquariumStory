@@ -5,8 +5,8 @@ import "../"
 Item
 {
     id: iconButton
-    width: AppTheme.rowHeightMin * app.scale
-    height: AppTheme.rowHeightMin * app.scale
+    width: AppTheme.rowHeightMin
+    height: AppTheme.rowHeightMin
 
     signal sigButtonClicked()
 
@@ -28,8 +28,8 @@ Item
         {
             anchors.fill: rectContainerShadow
             horizontalOffset: 0
-            verticalOffset: 2 * app.scale
-            radius: 8.0 * app.scale
+            verticalOffset: 2
+            radius: 8.0
             samples: 20
             color: "#40000000"
             source: rectContainerShadow
@@ -45,7 +45,7 @@ Item
             {
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                width: AppTheme.rowHeight / 2 * app.scale
+                width: AppTheme.rowHeight / 2
                 height: width
                 source: "qrc:/resources/img/icon_plus.png"
                 mipmap: true

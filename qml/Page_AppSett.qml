@@ -65,9 +65,9 @@ Item
     {
         anchors.fill: rectContainerShadow
         horizontalOffset: 0
-        verticalOffset: -AppTheme.shadowOffset * app.scale
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        verticalOffset: -AppTheme.shadowOffset
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectContainerShadow
     }
@@ -82,7 +82,7 @@ Item
         {
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.topMargin: AppTheme.padding * app.scale
+            anchors.topMargin: AppTheme.padding
             width: parent.width
             height: width * 0.75
             source: "qrc:/resources/img/back_waves.png"
@@ -93,8 +93,8 @@ Item
         {
             id: rectTankInfo
             anchors.fill: parent
-            anchors.leftMargin: AppTheme.padding * app.scale
-            anchors.rightMargin: AppTheme.padding * app.scale
+            anchors.leftMargin: AppTheme.padding
+            anchors.rightMargin: AppTheme.padding
             color: "#00000000"
 
             IconSimpleButton
@@ -102,7 +102,7 @@ Item
                 id: imgArrowBack
                 anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.padding * app.scale
+                anchors.topMargin: AppTheme.padding
                 image: "qrc:/resources/img/icon_arrow_left.png"
 
                 onSigButtonClicked:
@@ -119,7 +119,7 @@ Item
                 anchors.horizontalCenter: parent.horizontalCenter
                 verticalAlignment: Text.AlignBottom
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontBigSize * app.scale
+                font.pixelSize: AppTheme.fontBigSize
                 color: AppTheme.blueColor
                 text: qsTr("SETTINGS")
             }
@@ -129,12 +129,12 @@ Item
             {
                 id: flickView
                 anchors.top: parent.top
-                anchors.topMargin: AppTheme.margin * 3 * app.scale
+                anchors.topMargin: AppTheme.margin * 3
                 anchors.bottom: parent.bottom
                 anchors.left: parent.left
                 anchors.right: parent.right
-                anchors.leftMargin: AppTheme.padding * app.scale
-                anchors.rightMargin: AppTheme.padding * app.scale
+                anchors.leftMargin: AppTheme.padding
+                anchors.rightMargin: AppTheme.padding
                 contentWidth: width
                 contentHeight: height * 2
                 flickableDirection: Flickable.VerticalFlick
@@ -165,14 +165,14 @@ Item
                         id: columnContainer
                         width: parent.width
                         anchors.top: parent.top
-                        anchors.topMargin: AppTheme.padding * app.scale
+                        anchors.topMargin: AppTheme.padding
 
                         Text
                         {
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             verticalAlignment: Text.AlignVCenter
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontSmallSize * app.scale
+                            font.pixelSize: AppTheme.fontSmallSize
                             color: AppTheme.greyColor
                             text: qsTr("Language")
                         }
@@ -198,14 +198,14 @@ Item
                             onCurrentIndexChanged: app.sigLanguageChanged(currentIndex)
                         }
 
-                        Item { height: AppTheme.padding * app.scale; width: 1;}
+                        Item { height: AppTheme.padding ; width: 1;}
 
                         Text
                         {
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             verticalAlignment: Text.AlignVCenter
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontSmallSize * app.scale
+                            font.pixelSize: AppTheme.fontSmallSize
                             color: AppTheme.greyColor
                             text: qsTr("Dimension units")
                         }
@@ -230,14 +230,14 @@ Item
                             onCurrentIndexChanged: app.sigDimensionUnitsChanged(currentIndex)
                         }
 
-                        Item { height: AppTheme.padding * app.scale; width: 1;}
+                        Item { height: AppTheme.padding ; width: 1;}
 
                         Text
                         {
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             verticalAlignment: Text.AlignVCenter
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontSmallSize * app.scale
+                            font.pixelSize: AppTheme.fontSmallSize
                             color: AppTheme.greyColor
                             text: qsTr("Volume units")
                         }
@@ -263,14 +263,14 @@ Item
                             onCurrentIndexChanged: app.sigVolumeUnitsChanged(currentIndex)
                         }
 
-                        Item { height: AppTheme.padding * app.scale; width: 1;}
+                        Item { height: AppTheme.padding ; width: 1;}
 
                         Text
                         {
-                            height: AppTheme.compHeight * app.scale
+                            height: AppTheme.compHeight
                             verticalAlignment: Text.AlignVCenter
                             font.family: AppTheme.fontFamily
-                            font.pixelSize: AppTheme.fontSmallSize * app.scale
+                            font.pixelSize: AppTheme.fontSmallSize
                             color: AppTheme.greyColor
                             text: qsTr("Date format")
                         }

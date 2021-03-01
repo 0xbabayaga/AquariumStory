@@ -11,7 +11,7 @@ Item
     id: tab_Graph
     objectName: "tab_Graph"
 
-    property int graphHeight: 100 * app.scale
+    property int graphHeight: 100
 
     function clearDiagrams()
     {
@@ -53,8 +53,8 @@ Item
     {
         id: flickableContainer
         anchors.fill: parent
-        anchors.topMargin: pointList.height + AppTheme.padding * app.scale
-        anchors.bottomMargin: AppTheme.margin * app.scale
+        anchors.topMargin: pointList.height + AppTheme.padding
+        anchors.bottomMargin: AppTheme.margin
         contentHeight: height * 2
         contentWidth: width
         clip: true
@@ -73,13 +73,13 @@ Item
             parent: flickableContainer.parent
             anchors.top: flickableContainer.top
             anchors.left: flickableContainer.right
-            anchors.leftMargin: -AppTheme.padding * app.scale
+            anchors.leftMargin: -AppTheme.padding
             anchors.bottom: flickableContainer.bottom
 
             contentItem: Rectangle
             {
-                implicitWidth: 2 * app.scale
-                implicitHeight: 100 * app.scale
+                implicitWidth: 2
+                implicitHeight: 100
                 radius: width / 2
                 color: AppTheme.hideColor
             }
@@ -96,11 +96,11 @@ Item
         {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            anchors.verticalCenterOffset: -AppTheme.padding * 5 * app.scale
+            anchors.verticalCenterOffset: -AppTheme.padding * 5
             horizontalAlignment: Text.AlignHCenter
-            width: 250 * app.scale
+            width: 250
             font.family: AppTheme.fontFamily
-            font.pixelSize: AppTheme.fontNormalSize * app.scale
+            font.pixelSize: AppTheme.fontNormalSize
             wrapMode: Text.WordWrap
             color: AppTheme.greyColor
             text: qsTr("No record found for this aquarium")

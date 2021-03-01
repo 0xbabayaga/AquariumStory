@@ -66,8 +66,8 @@ Item
         {
             target: rectShadow
             property: "anchors.leftMargin"
-            from: -AppTheme.rowHeightMin * app.scale
-            to: -AppTheme.rightWidth * app.scale
+            from: -AppTheme.rowHeightMin
+            to: -AppTheme.rightWidth
             duration: 200
             easing.type: Easing.OutCubic
         }
@@ -87,8 +87,8 @@ Item
         {
             target: rectShadow
             property: "anchors.leftMargin"
-            from: -AppTheme.rightWidth * app.scale
-            to: -AppTheme.rowHeightMin * app.scale
+            from: -AppTheme.rightWidth
+            to: -AppTheme.rowHeightMin
             duration: 200
             easing.type: Easing.InQuad
         }
@@ -126,8 +126,8 @@ Item
         id: rectShadow
         anchors.top: parent.top
         anchors.left: parent.right
-        anchors.leftMargin: -AppTheme.rowHeightMin * app.scale
-        width: AppTheme.rightWidth * app.scale
+        anchors.leftMargin: -AppTheme.rowHeightMin
+        width: AppTheme.rightWidth
         height: parent.height
         color: AppTheme.whiteColor
         visible: false
@@ -137,10 +137,10 @@ Item
     {
         id: shadowEffect
         anchors.fill: rectShadow
-        horizontalOffset: -4 * app.scale
+        horizontalOffset: -4
         verticalOffset: 0
-        radius: AppTheme.shadowSize * app.scale
-        samples: AppTheme.shadowSamples * app.scale
+        radius: AppTheme.shadowSize
+        samples: AppTheme.shadowSamples
         color: AppTheme.shadowColor
         source: rectShadow
         opacity: rectShadow.opacity
@@ -167,11 +167,11 @@ Item
                 id: rectAccountPhoto
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.verticalCenter: parent.verticalCenter
-                anchors.verticalCenterOffset: -AppTheme.padding * app.scale
-                width: AppTheme.margin * 3 * app.scale
+                anchors.verticalCenterOffset: -AppTheme.padding
+                width: AppTheme.margin * 3
                 height: width
                 radius: width / 2
-                border.width: 2 * app.scale
+                border.width: 2
                 border.color: AppTheme.blueColor
                 color: AppTheme.backLightBlueColor
 
@@ -179,7 +179,7 @@ Item
                 {
                     id: imgAccount
                     anchors.fill: parent
-                    anchors.margins: 2 * app.scale
+                    anchors.margins: 2
                     source: ""
                     mipmap: true
                     layer.enabled: true
@@ -203,11 +203,11 @@ Item
                 id: textAccountName
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.top: rectAccountPhoto.bottom
-                anchors.topMargin: AppTheme.padding / 2 * app.scale
-                height: AppTheme.compHeight * app.scale
+                anchors.topMargin: AppTheme.padding / 2
+                height: AppTheme.compHeight
                 verticalAlignment: Text.AlignBottom
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontNormalSize * app.scale
+                font.pixelSize: AppTheme.fontNormalSize
                 color: AppTheme.blueFontColor
                 text: ""
             }
@@ -216,13 +216,13 @@ Item
             {
                 id: textLocation
                 anchors.horizontalCenter: parent.horizontalCenter
-                anchors.horizontalCenterOffset: (AppTheme.padding + AppTheme.padding / 4) * app.scale / 2
+                anchors.horizontalCenterOffset: (AppTheme.padding + AppTheme.padding / 4)  / 2
                 anchors.top: textAccountName.bottom
-                anchors.topMargin: AppTheme.padding/2 * app.scale
-                height: AppTheme.compHeight / 2 * app.scale
+                anchors.topMargin: AppTheme.padding/2
+                height: AppTheme.compHeight / 2
                 verticalAlignment: Text.AlignVCenter
                 font.family: AppTheme.fontFamily
-                font.pixelSize: AppTheme.fontSmallSize * app.scale
+                font.pixelSize: AppTheme.fontSmallSize
                 color: AppTheme.greyColor
                 text: app.global_USERCOUNTRY + ", " + app.global_USERCITY
             }
@@ -231,9 +231,9 @@ Item
             {
                 id: imgLoc
                 anchors.right: textLocation.left
-                anchors.rightMargin: AppTheme.padding / 4 * app.scale
+                anchors.rightMargin: AppTheme.padding / 4
                 anchors.verticalCenter: textLocation.verticalCenter
-                width: AppTheme.padding * app.scale
+                width: AppTheme.padding
                 height: width
                 source: "qrc:/resources/img/icon_loc.png"
                 mipmap: true
@@ -251,7 +251,7 @@ Item
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
                 width: parent.width
-                height: 2 * app.scale
+                height: 2
                 color: AppTheme.backLightBlueColor
             }
         }
@@ -259,10 +259,10 @@ Item
         Rectangle
         {
             anchors.top: rectHeader.bottom
-            anchors.topMargin: AppTheme.margin * app.scale
+            anchors.topMargin: AppTheme.margin
             anchors.bottom: parent.bottom
             width: parent.width
-            height: menuListModel.count * AppTheme.rowHeightMin * app.scale
+            height: menuListModel.count * AppTheme.rowHeightMin
 
             ListView
             {
@@ -275,7 +275,7 @@ Item
                 {
                     id: rectCeil
                     width: parent.width
-                    height: AppTheme.rowHeightMin * app.scale
+                    height: AppTheme.rowHeightMin
                     color: AppTheme.whiteColor
 
                     Behavior on color { ColorAnimation { duration: 200 }    }
@@ -285,12 +285,12 @@ Item
                         id: textMenu
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.left: parent.left
-                        anchors.leftMargin: AppTheme.padding * 5 * app.scale
+                        anchors.leftMargin: AppTheme.padding * 5
                         anchors.right: parent.right
-                        height: AppTheme.rowHeightMin * app.scale
+                        height: AppTheme.rowHeightMin
                         verticalAlignment: Text.AlignVCenter
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontNormalSize * app.scale
+                        font.pixelSize: AppTheme.fontNormalSize
                         color: AppTheme.blueFontColor
                         text: name
                     }
@@ -300,8 +300,8 @@ Item
                         id: buttonImage
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.right: textMenu.left
-                        anchors.rightMargin: AppTheme.padding / 2 * app.scale
-                        width: AppTheme.compHeight / 2 * app.scale
+                        anchors.rightMargin: AppTheme.padding / 2
+                        width: AppTheme.compHeight / 2
                         height: width
                         source: "qrc:/resources/img/icon_menu.png"
                         mipmap: true
@@ -361,12 +361,12 @@ Item
     {
         id: imgAppIcon
         anchors.left: rectShadow.left
-        anchors.leftMargin: 12 * app.scale
+        anchors.leftMargin: 12
         anchors.top: parent.top
-        anchors.topMargin: 12 * app.scale
+        anchors.topMargin: 12
         fillMode: Image.PreserveAspectFit
-        width: 24 * app.scale
-        height: 24 * app.scale
+        width: 24
+        height: 24
         source: "qrc:/resources/img/icon_app.png"
         mipmap: true
 

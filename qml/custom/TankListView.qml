@@ -28,16 +28,16 @@ Item
         {
             id: view
             anchors.fill: parent
-            anchors.bottomMargin: AppTheme.padding * app.scale
+            anchors.bottomMargin: AppTheme.padding
             orientation: ListView.Vertical
-            spacing: AppTheme.margin * app.scale
+            spacing: AppTheme.margin
             cacheBuffer: 6000
 
 
             delegate: Rectangle
             {
                 width: parent.width
-                height: (index === view.currentIndex) ? (((currParamTable.realModelLength() * AppTheme.compHeight + AppTheme.rowHeightMin + AppTheme.padding/2) * app.scale) + imgPhoto.height) : imgPhoto.height
+                height: (index === view.currentIndex) ? (((currParamTable.realModelLength() * AppTheme.compHeight + AppTheme.rowHeightMin + AppTheme.padding/2) ) + imgPhoto.height) : imgPhoto.height
                 color: "#00000000"
 
                 Behavior on height
@@ -54,8 +54,8 @@ Item
                     id: rect
                     anchors.left: parent.left
                     anchors.right: parent.right
-                    anchors.leftMargin: AppTheme.padding * app.scale
-                    anchors.rightMargin: AppTheme.padding * app.scale
+                    anchors.leftMargin: AppTheme.padding
+                    anchors.rightMargin: AppTheme.padding
                     anchors.top: parent.top
                     color: AppTheme.whiteColor
                     height: parent.height
@@ -66,7 +66,7 @@ Item
                     anchors.fill: rect
                     horizontalOffset: 0
                     verticalOffset: 0
-                    radius: AppTheme.shadowSize * app.scale
+                    radius: AppTheme.shadowSize
                     samples: AppTheme.shadowSamples
                     color: AppTheme.shadowColor
                     source: rect
@@ -103,31 +103,31 @@ Item
                     Text
                     {
                         anchors.right: parent.right
-                        anchors.rightMargin: AppTheme.padding * app.scale
+                        anchors.rightMargin: AppTheme.padding
                         anchors.bottom: imgPhoto.bottom
-                        anchors.bottomMargin: AppTheme.padding * app.scale
+                        anchors.bottomMargin: AppTheme.padding
                         text: app.convertVolume(volume) + app.currentVolumeUnitsShort()
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontSuperBigSize * app.scale
+                        font.pixelSize: AppTheme.fontSuperBigSize
                         color: AppTheme.whiteColor
                         horizontalAlignment: Text.AlignRight
                         verticalAlignment: Text.AlignTop
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                     }
 
                     Text
                     {
                         anchors.left: parent.left
-                        anchors.leftMargin: AppTheme.padding * app.scale
+                        anchors.leftMargin: AppTheme.padding
                         anchors.bottom: imgPhoto.bottom
-                        anchors.bottomMargin: AppTheme.padding/2 * app.scale
+                        anchors.bottomMargin: AppTheme.padding/2
                         text: name
                         font.family: AppTheme.fontFamily
-                        font.pixelSize: AppTheme.fontBigSize * app.scale
+                        font.pixelSize: AppTheme.fontBigSize
                         color: AppTheme.whiteColor
                         horizontalAlignment: Text.AlignRight
                         verticalAlignment: Text.AlignVCenter
-                        height: AppTheme.compHeight * app.scale
+                        height: AppTheme.compHeight
                     }
 
                     CurrentParamsMainTable
@@ -163,9 +163,9 @@ Item
                     IconSimpleButton
                     {
                         anchors.right: parent.right
-                        anchors.rightMargin: AppTheme.padding * app.scale
+                        anchors.rightMargin: AppTheme.padding
                         anchors.top: parent.top
-                        anchors.topMargin: AppTheme.padding * app.scale
+                        anchors.topMargin: AppTheme.padding
                         image: "qrc:/resources/img/icon_arrow_right.png"
                         inverted: true
 
@@ -180,9 +180,9 @@ Item
                     IconSimpleButton
                     {
                         anchors.left: parent.left
-                        anchors.leftMargin: AppTheme.padding * app.scale
+                        anchors.leftMargin: AppTheme.padding
                         anchors.top: parent.top
-                        anchors.topMargin: AppTheme.padding * app.scale
+                        anchors.topMargin: AppTheme.padding
                         image: "qrc:/resources/img/icon_app.png"
                         inverted: true
 
@@ -202,7 +202,7 @@ Item
                 parent: view.parent
                 anchors.top: view.top
                 anchors.left: view.right
-                anchors.leftMargin: -AppTheme.margin / 3 * app.scale
+                anchors.leftMargin: -AppTheme.margin / 3
                 anchors.bottom: view.bottom
 
                 contentItem: Rectangle
