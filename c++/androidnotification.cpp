@@ -41,6 +41,7 @@ void AndroidNotification::updateAndroidNotification()
     QAndroidJniObject javaMessage = QAndroidJniObject::fromString(_message);
     QAndroidJniObject javaDetails = QAndroidJniObject::fromString(_details);
 
+#ifdef FULL_FEATURES_ENABLED
     QAndroidJniObject::callStaticMethod<void>(
         "org/tikava/AquariumStory/AquariumStoryNotification",
         "notify",
@@ -48,4 +49,13 @@ void AndroidNotification::updateAndroidNotification()
         QtAndroid::androidContext().object(),
         javaTitle.object<jstring>(),
         javaMessage.object<jstring>());
+#else
+    QAndroidJniObject::callStaticMethod<void>(
+        "org/tikava/AquariumStoryLimited/AquariumStoryNotification",
+        "notify",
+        "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V",
+        QtAndroid::androidContext().object(),
+        javaTitle.object<jstring>(),
+        javaMessage.object<jstring>());
+#endif
 }

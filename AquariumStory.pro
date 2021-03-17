@@ -8,12 +8,22 @@ android: QT += androidextras
 
 CONFIG += c++11
 
+#DEFINES = QT_NO_DEBUG_OUTPUT
 #DEFINES += APP_FILE_LOG_EN
-DEFINES += QT_NO_DEBUG_OUTPUT
-DEFINES += FULL_FEATURES_ENABLED
+#DEFINES += FULL_FEATURES_ENABLED
 
-version_p.commands = ..\AquariumStory\version_inc.bat
-version_p.depends = FORCE
+contains(DEFINES, FULL_FEATURES_ENABLED){
+    version_p.commands = ..\AquariumStory\version_inc.bat
+    version_p.depends = FORCE
+    message("FULL_FEATURES_ENABLED")
+}
+
+!contains(DEFINES, FULL_FEATURES_ENABLED){
+    version_p.commands = ..\AquariumStory\version_inc_limited.bat
+    version_p.depends = FORCE
+    message("LIMITED")
+}
+
 QMAKE_EXTRA_TARGETS += version_p
 PRE_TARGETDEPS += version_p
 
@@ -49,10 +59,21 @@ DISTFILES += \
     android/gradlew \
     android/gradlew.bat \
     android/res/values/libs.xml \
+    qml/qmldir \
+
+contains(DEFINES, FULL_FEATURES_ENABLED){
+DISTFILES += \
     android/src/org/tikava/AquariumStory/AquariumStory.java \
     android/src/org/tikava/AquariumStory/AquariumStoryNotification.java \
     android/src/org/tikava/AquariumStory/Background.java
-    qml/qmldir \
+}
+
+!contains(DEFINES, FULL_FEATURES_ENABLED){
+DISTFILES += \
+    android/src/org/tikava/AquariumStoryLimited/AquariumStory.java \
+    android/src/org/tikava/AquariumStoryLimited/AquariumStoryNotification.java \
+    android/src/org/tikava/AquariumStoryLimited/Background.java
+}
 
 HEADERS += \
     c++/AppDefs.h \
@@ -67,9 +88,6 @@ HEADERS += \
     c++/security/md7.h \
     c++/security/security.h \
     c++/version.h
-
-#ANDROID_ABIS = armeabi-v7a
-#ANDROID_ABIS = arm64-v8a
 
 android {
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android

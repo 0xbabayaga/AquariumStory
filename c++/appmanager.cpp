@@ -83,8 +83,13 @@ AppManager::AppManager(QQmlApplicationEngine *engine, QObject *parent) : DBManag
     connect(position, SIGNAL(positionDetected()), this, SLOT(onPositionDetected()));
 
 #ifdef  Q_OS_ANDROID
+#ifdef FULL_FEATURES_ENABLED
     QAndroidIntent serviceIntent(QtAndroid::androidActivity().object(),
                                         "org/tikava/AquariumStory/Background");
+#else
+    QAndroidIntent serviceIntent(QtAndroid::androidActivity().object(),
+                                        "org/tikava/AquariumStoryLimited/Background");
+#endif
     QAndroidJniObject result = QtAndroid::androidActivity().callObjectMethod(
                 "startService",
                 "(Landroid/content/Intent;)Landroid/content/ComponentName;",
@@ -1124,12 +1129,18 @@ QString selectedFileName;
 extern "C" {
 #endif
 JNIEXPORT void JNICALL
+#ifdef FULL_FEATURES_ENABLED
 Java_org_tikava_AquariumStory_AquariumStory_fileSelected(JNIEnv *, jobject , jstring results)
 {
-    qDebug() << "File selected = " << selectedFileName << "1234567890";
-
     selectedFileName = QAndroidJniObject(results).toString();
 }
+#else
+Java_org_tikava_AquariumStoryLimited_AquariumStory_fileSelected(JNIEnv *, jobject , jstring results)
+{
+    selectedFileName = QAndroidJniObject(results).toString();
+}
+#endif
+
 #ifdef __cplusplus
 }
 #endif
@@ -1140,9 +1151,15 @@ void AppManager::onGuiOpenGallery(QString objName)
 {
     selectedFileName = "#";
 
+#ifdef FULL_FEATURES_ENABLED
     QAndroidJniObject::callStaticMethod<void>("org/tikava/AquariumStory/AquariumStory",
                                               "openAnImage",
                                               "()V");
+#else
+    QAndroidJniObject::callStaticMethod<void>("org/tikava/AquariumStoryLimited/AquariumStory",
+                                              "openAnImage",
+                                              "()V");
+#endif
     while(selectedFileName == "#")
         qApp->processEvents();
 

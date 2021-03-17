@@ -20,7 +20,11 @@ extern "C" {
 #endif
 
 JNIEXPORT void JNICALL
+#ifdef FULL_FEATURES_ENABLED
 Java_org_tikava_AquariumStory_Background_callbackOnTimer(JNIEnv *env, jobject obj, jint cnt)
+#else
+Java_org_tikava_AquariumStoryLimited_Background_callbackOnTimer(JNIEnv *env, jobject obj, jint cnt)
+#endif
 {
     int i = 0;
     int n = 0;
