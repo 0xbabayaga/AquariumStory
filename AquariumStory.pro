@@ -8,7 +8,7 @@ android: QT += androidextras
 
 CONFIG += c++11
 
-#DEFINES = QT_NO_DEBUG_OUTPUT
+DEFINES = QT_NO_DEBUG_OUTPUT
 #DEFINES += APP_FILE_LOG_EN
 #DEFINES += FULL_FEATURES_ENABLED
 
@@ -95,7 +95,7 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 HEADERS += \
     c++/androidnotification.h \
 
-equals(ANDROID_ABIS, "armeabi-v7a") {
+contains(ANDROID_ABIS, "armeabi-v7a") {
     message("Building ARMEABI-V7A")
 
     DESTDIR=../build/release-armeabi-v7a
@@ -113,6 +113,7 @@ equals(ANDROID_ABIS, "armeabi-v7a") {
     }
 
 equals(ANDROID_ABIS, "arm64-v8a") {
+contains(ANDROID_ABIS, "arm64-v8a") {
     message("Building ARM64-V8A")
 
     DESTDIR=../build/release-arm64-v8a
