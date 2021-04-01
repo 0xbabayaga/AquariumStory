@@ -4,53 +4,53 @@
 <context>
     <name>AppManager</name>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="953"/>
+        <location filename="../../c++/appmanager.cpp" line="958"/>
         <source>Data exported to file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="954"/>
+        <location filename="../../c++/appmanager.cpp" line="959"/>
         <source>Now you can Import this data on another device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="956"/>
+        <location filename="../../c++/appmanager.cpp" line="961"/>
         <source>Error on data exporting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="969"/>
+        <location filename="../../c++/appmanager.cpp" line="974"/>
         <source>Data imported from file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="969"/>
+        <location filename="../../c++/appmanager.cpp" line="974"/>
         <source>successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="971"/>
+        <location filename="../../c++/appmanager.cpp" line="976"/>
         <source>Error on data importing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1089"/>
+        <location filename="../../c++/appmanager.cpp" line="1094"/>
         <source>Application is successfully registered!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1096"/>
         <location filename="../../c++/appmanager.cpp" line="1101"/>
-        <location filename="../../c++/appmanager.cpp" line="1110"/>
+        <location filename="../../c++/appmanager.cpp" line="1106"/>
         <location filename="../../c++/appmanager.cpp" line="1115"/>
+        <location filename="../../c++/appmanager.cpp" line="1120"/>
         <source>Application is not registered!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1097"/>
         <location filename="../../c++/appmanager.cpp" line="1102"/>
-        <location filename="../../c++/appmanager.cpp" line="1111"/>
+        <location filename="../../c++/appmanager.cpp" line="1107"/>
         <location filename="../../c++/appmanager.cpp" line="1116"/>
+        <location filename="../../c++/appmanager.cpp" line="1121"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -370,37 +370,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="206"/>
+        <location filename="../../qml/Page_About.qml" line="212"/>
         <source>Application version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="219"/>
+        <location filename="../../qml/Page_About.qml" line="225"/>
         <source>Application type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="239"/>
-        <source>Visit our website</source>
+        <location filename="../../qml/Page_About.qml" line="225"/>
+        <source>see limitations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="275"/>
-        <source>This is a limited version of application.&lt;br&gt; To get a full version of application please buy &lt;b&gt;Aquarium Story Pro&lt;/b&gt; or register (by pressing button below).</source>
+        <location filename="../../qml/Page_About.qml" line="244"/>
+        <source>Follow us in Telegram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="292"/>
-        <source>See limitations</source>
+        <location filename="../../qml/Page_About.qml" line="279"/>
+        <source>This is a limited version of application.&lt;br&gt; To get a full version please install</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="311"/>
+        <location filename="../../qml/Page_About.qml" line="300"/>
+        <source>register</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="300"/>
+        <source>Also you can</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="300"/>
+        <source>this application to remove limitations (available registration count is limited)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="308"/>
         <source>Communicating with cloud</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="312"/>
+        <location filename="../../qml/Page_About.qml" line="309"/>
         <source>Please wait ... </source>
         <translation type="unfinished"></translation>
     </message>
@@ -931,27 +946,27 @@ You can create a new one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="56"/>
+        <location filename="../../c++/backmanager.cpp" line="60"/>
         <source>Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="58"/>
+        <location filename="../../c++/backmanager.cpp" line="62"/>
         <source>Aquarium</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="59"/>
+        <location filename="../../c++/backmanager.cpp" line="63"/>
         <source>Time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="60"/>
+        <location filename="../../c++/backmanager.cpp" line="64"/>
         <source>Action</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="61"/>
+        <location filename="../../c++/backmanager.cpp" line="65"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1207,49 +1222,49 @@ You can create a new one.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../main.qml" line="154"/>
+        <location filename="../../main.qml" line="168"/>
         <source>cm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="156"/>
+        <location filename="../../main.qml" line="170"/>
         <source>inch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="162"/>
-        <location filename="../../main.qml" line="172"/>
+        <location filename="../../main.qml" line="176"/>
+        <location filename="../../main.qml" line="186"/>
         <source>L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="164"/>
+        <location filename="../../main.qml" line="178"/>
         <source>Gal(UK)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="166"/>
+        <location filename="../../main.qml" line="180"/>
         <source>Gal(US)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="174"/>
-        <location filename="../../main.qml" line="176"/>
+        <location filename="../../main.qml" line="188"/>
+        <location filename="../../main.qml" line="190"/>
         <source>G</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="305"/>
+        <location filename="../../main.qml" line="320"/>
         <source>Loading data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="393"/>
+        <location filename="../../main.qml" line="407"/>
         <source>Cannot create or read database!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="393"/>
+        <location filename="../../main.qml" line="407"/>
         <source>Please grant &quot;Write external storage&quot; permission to the application.</source>
         <translation type="unfinished"></translation>
     </message>

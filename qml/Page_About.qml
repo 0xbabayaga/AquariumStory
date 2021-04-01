@@ -190,7 +190,13 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.blueColor
                     wrapMode: Text.WordWrap
-                    text: app.global_APP_DOMAIN
+                    text: "www.aquariumstory.tikava.by"
+
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: Qt.openUrlExternally("https://aquariumstory.tikava.by")
+                    }
                 }
 
                 Text
@@ -216,13 +222,13 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Application type") + ":" + " " + getAppType()
-                }
+                    text: qsTr("Application type") + ":" + " " + getAppType() + " (<font color='"+AppTheme.blueFontColor+"'>" + qsTr("see limitations") + "</font>)"
 
-                Rectangle
-                {
-                    width: 1
-                    height: AppTheme.rowSpacing
+                    MouseArea
+                    {
+                        anchors.fill: parent
+                        onClicked: limitationDialog.showDialog(true)
+                    }
                 }
 
                 Text
@@ -233,15 +239,14 @@ Item
                     height: AppTheme.rowHeightMin/2 * app.scale
                     font.family: AppTheme.fontFamily
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
-                    font.underline: true
-                    color: AppTheme.blueFontColor
+                    color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Visit our website")
+                    text: qsTr("Follow us in Telegram") + ":" + " (<font color='"+AppTheme.blueFontColor+"'>t.me/aquariumstory</font>)"
 
                     MouseArea
                     {
                         anchors.fill: parent
-                        onClicked: Qt.openUrlExternally("https://aquariumstory.tikava.by")
+                        onClicked: Qt.openUrlExternally("http://t.me/aquariumstory")
                     }
                 }
             }
@@ -261,56 +266,49 @@ Item
 
                 Text
                 {
-                    id: textWarning
-                    anchors.horizontalCenter: parent.horizontalCenter
+                    id: textWarning1
                     anchors.verticalCenter: parent.verticalCenter
+                    anchors.horizontalCenter: parent.horizontalCenter
                     width: parent.width
-                    height: AppTheme.compHeight / 2 * app.scale
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                     font.family: AppTheme.fontFamily
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("This is a limited version of application.<br> To get a full version of application please buy <b>Aquarium Story Pro</b> or register (by pressing button below).")
-                }
-
-                Text
-                {
-                    anchors.top: textWarning.bottom
-                    anchors.topMargin: AppTheme.rowHeightMin * app.scale
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: parent.width
-                    height: AppTheme.compHeight / 2 * app.scale
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignHCenter
-                    font.family: AppTheme.fontFamily
-                    font.pixelSize: AppTheme.fontSmallSize * app.scale
-                    font.underline: true
-                    color: AppTheme.blueColor
-                    wrapMode: Text.WordWrap
-                    text: qsTr("See limitations")
+                    text: qsTr("This is a limited version of application.<br> To get a full version please install") + "<br>" + "<font color='"+AppTheme.blueFontColor+"'><u>" + "Aquarium Story PRO" + "</u></font><br><br>"
 
                     MouseArea
                     {
                         anchors.fill: parent
-                        onClicked: limitationDialog.showDialog(true)
+                        onClicked: Qt.openUrlExternally("https://play.google.com/store/apps/details?id=org.tikava.AquariumStory")
                     }
                 }
 
-                IconSimpleButton
+                Text
                 {
-                    id: registerApp
+                    id: textWarning2
+                    anchors.top: textWarning1.bottom
                     anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.bottom: parent.bottom
-                    image: "qrc:/resources/img/icon_app_reg.png"
+                    width: parent.width
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    font.family: AppTheme.fontFamily
+                    font.pixelSize: AppTheme.fontSmallSize * app.scale
+                    color: AppTheme.greyColor
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Also you can") + "<font color='" + AppTheme.blueFontColor + "'> <u>" + qsTr("register") + "</u></font> " + qsTr("this application to remove limitations (available registration count is limited)") +"."
 
-                    onSigButtonClicked:
+                    MouseArea
                     {
-                        cloudCommWaitDialog.showDialog(true,
+                        anchors.fill: parent
+                        onClicked:
+                        {
+                            cloudCommWaitDialog.showDialog(true,
                                               qsTr("Communicating with cloud"),
                                               qsTr("Please wait ... "))
-                        app.sigRegisterApp()
+                            app.sigRegisterApp()
+                        }
                     }
                 }
             }

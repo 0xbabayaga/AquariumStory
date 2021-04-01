@@ -4,53 +4,53 @@
 <context>
     <name>AppManager</name>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="953"/>
+        <location filename="../../c++/appmanager.cpp" line="958"/>
         <source>Data exported to file</source>
         <translation>Дадзеныя экспартаваны ў файл</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="954"/>
+        <location filename="../../c++/appmanager.cpp" line="959"/>
         <source>Now you can Import this data on another device</source>
         <translation>Цяпер вы можаце iмпартаваць гэтыя дадзеныя на iншым устройстве</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="956"/>
+        <location filename="../../c++/appmanager.cpp" line="961"/>
         <source>Error on data exporting</source>
         <translation>Памылка экспарту дадзеных</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="969"/>
+        <location filename="../../c++/appmanager.cpp" line="974"/>
         <source>Data imported from file</source>
         <translation>Дадзеныя iмпартаваныя з файла</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="969"/>
+        <location filename="../../c++/appmanager.cpp" line="974"/>
         <source>successfully</source>
         <translation>паспяхова</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="971"/>
+        <location filename="../../c++/appmanager.cpp" line="976"/>
         <source>Error on data importing</source>
         <translation>Памылка iмпарту дадзеных</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1089"/>
+        <location filename="../../c++/appmanager.cpp" line="1094"/>
         <source>Application is successfully registered!</source>
         <translation>Праграма паспяхова зарэгiстравана!</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1096"/>
         <location filename="../../c++/appmanager.cpp" line="1101"/>
-        <location filename="../../c++/appmanager.cpp" line="1110"/>
+        <location filename="../../c++/appmanager.cpp" line="1106"/>
         <location filename="../../c++/appmanager.cpp" line="1115"/>
+        <location filename="../../c++/appmanager.cpp" line="1120"/>
         <source>Application is not registered!</source>
         <translation>Праграма не зарэгiстравана!</translation>
     </message>
     <message>
-        <location filename="../../c++/appmanager.cpp" line="1097"/>
         <location filename="../../c++/appmanager.cpp" line="1102"/>
-        <location filename="../../c++/appmanager.cpp" line="1111"/>
+        <location filename="../../c++/appmanager.cpp" line="1107"/>
         <location filename="../../c++/appmanager.cpp" line="1116"/>
+        <location filename="../../c++/appmanager.cpp" line="1121"/>
         <source>Error</source>
         <translation>Памылка</translation>
     </message>
@@ -403,37 +403,64 @@
         <translation>АБ ПРАГРАМЕ</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="206"/>
+        <location filename="../../qml/Page_About.qml" line="212"/>
         <source>Application version</source>
         <translation>Версія праграмы</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="219"/>
+        <location filename="../../qml/Page_About.qml" line="225"/>
         <source>Application type</source>
-        <translation>Тып праграмы</translation>
+        <translation>Тып</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="239"/>
+        <location filename="../../qml/Page_About.qml" line="225"/>
+        <source>see limitations</source>
+        <translation>гл. абмежаваннi</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="244"/>
+        <source>Follow us in Telegram</source>
+        <translation>Группа ў Тэлеграме</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="279"/>
+        <source>This is a limited version of application.&lt;br&gt; To get a full version please install</source>
+        <translation>Гэта абмежаваная версія праграмы. &lt;br&gt; Каб атрымаць паўнавартасную версію праграмы, калі ласка, устанавіце</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="300"/>
+        <source>Also you can</source>
+        <translation>Таксама вы можаце</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="300"/>
+        <source>register</source>
+        <translation>зарэгістраваць</translation>
+    </message>
+    <message>
+        <location filename="../../qml/Page_About.qml" line="300"/>
+        <source>this application to remove limitations (available registration count is limited)</source>
+        <translation>гэтую праграму для выдалення абмежаванняў (колькасць даступных рэгістрацый абмежаваная)</translation>
+    </message>
+    <message>
         <source>Visit our website</source>
-        <translation>Наведайце наш сайт</translation>
+        <translation type="vanished">Наведайце наш сайт</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="275"/>
         <source>This is a limited version of application.&lt;br&gt; To get a full version of application please buy &lt;b&gt;Aquarium Story Pro&lt;/b&gt; or register (by pressing button below).</source>
-        <translation>Гэта абмежаваная версія праграмы. &lt;br&gt; Каб атрымаць паўнавартасную версію праграмы, калі ласка, купіце &lt;b&gt; Aquarium Story PRO &lt;/ b&gt; або зарэгіструйцеся (націскам кнопкі ўнізе).</translation>
+        <translation type="vanished">Гэта абмежаваная версія праграмы. &lt;br&gt; Каб атрымаць паўнавартасную версію праграмы, калі ласка, купіце &lt;b&gt; Aquarium Story PRO &lt;/ b&gt; або зарэгіструйцеся (націскам кнопкі ўнізе).</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="292"/>
         <source>See limitations</source>
-        <translation>Глядзець абмежаваннi</translation>
+        <translation type="vanished">Глядзець абмежаваннi</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="311"/>
+        <location filename="../../qml/Page_About.qml" line="308"/>
         <source>Communicating with cloud</source>
         <translation>Сувязь з воблакам</translation>
     </message>
     <message>
-        <location filename="../../qml/Page_About.qml" line="312"/>
+        <location filename="../../qml/Page_About.qml" line="309"/>
         <source>Please wait ... </source>
         <translation>Кали ласка чакайце ...</translation>
     </message>
@@ -1100,27 +1127,27 @@ You can create a new one.</source>
         <translation>АВП</translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="56"/>
+        <location filename="../../c++/backmanager.cpp" line="60"/>
         <source>Reminder</source>
         <translation>Напамiнак</translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="58"/>
+        <location filename="../../c++/backmanager.cpp" line="62"/>
         <source>Aquarium</source>
         <translation>Акварыўм</translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="59"/>
+        <location filename="../../c++/backmanager.cpp" line="63"/>
         <source>Time</source>
         <translation>Час</translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="60"/>
+        <location filename="../../c++/backmanager.cpp" line="64"/>
         <source>Action</source>
         <translation>Дзеянне</translation>
     </message>
     <message>
-        <location filename="../../c++/backmanager.cpp" line="61"/>
+        <location filename="../../c++/backmanager.cpp" line="65"/>
         <source>Description</source>
         <translation>Апiсанне</translation>
     </message>
@@ -1380,49 +1407,49 @@ You can create a new one.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../main.qml" line="154"/>
+        <location filename="../../main.qml" line="168"/>
         <source>cm</source>
         <translation>см</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="156"/>
+        <location filename="../../main.qml" line="170"/>
         <source>inch</source>
         <translation>дзм</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="162"/>
-        <location filename="../../main.qml" line="172"/>
+        <location filename="../../main.qml" line="176"/>
+        <location filename="../../main.qml" line="186"/>
         <source>L</source>
         <translation>Л</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="164"/>
+        <location filename="../../main.qml" line="178"/>
         <source>Gal(UK)</source>
         <translation>Гал(АНГ)</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="166"/>
+        <location filename="../../main.qml" line="180"/>
         <source>Gal(US)</source>
         <translation>Гал(США)</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="174"/>
-        <location filename="../../main.qml" line="176"/>
+        <location filename="../../main.qml" line="188"/>
+        <location filename="../../main.qml" line="190"/>
         <source>G</source>
         <translation>Г</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="305"/>
+        <location filename="../../main.qml" line="320"/>
         <source>Loading data</source>
         <translation>Загрузка дадзеных</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="393"/>
+        <location filename="../../main.qml" line="407"/>
         <source>Cannot create or read database!</source>
         <translation>Немагчыма стварыць альбо прачытаць базу дадзеных!</translation>
     </message>
     <message>
-        <location filename="../../main.qml" line="393"/>
+        <location filename="../../main.qml" line="407"/>
         <source>Please grant &quot;Write external storage&quot; permission to the application.</source>
         <translation>Калi ласка, дайце дазвол на захаванне дадзеных ў памяцi смартфона</translation>
     </message>
