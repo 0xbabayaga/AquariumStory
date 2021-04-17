@@ -112,7 +112,6 @@ contains(ANDROID_ABIS, "armeabi-v7a") {
         $$PWD/../../../Dev/android_openssl-master/latest/arm/libssl_1_1.so
     }
 
-equals(ANDROID_ABIS, "arm64-v8a") {
 contains(ANDROID_ABIS, "arm64-v8a") {
     message("Building ARM64-V8A")
 

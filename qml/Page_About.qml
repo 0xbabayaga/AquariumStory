@@ -222,7 +222,7 @@ Item
                     font.pixelSize: AppTheme.fontSmallSize * app.scale
                     color: AppTheme.greyColor
                     wrapMode: Text.WordWrap
-                    text: qsTr("Application type") + ":" + " " + getAppType() + " (<font color='"+AppTheme.blueFontColor+"'>" + qsTr("see limitations") + "</font>)"
+                    text: (app.global_APP_TYPE === AppDefs.UStatus_Enabled) ? (qsTr("Application type") + ":" + " " + getAppType() + " (<font color='"+AppTheme.blueFontColor+"'>" + qsTr("see limitations") + "</font>)") : (qsTr("Application type") + ":" + " " + getAppType())
 
                     MouseArea
                     {
