@@ -106,8 +106,6 @@ contains(ANDROID_ABIS, "armeabi-v7a") {
 
 
     ANDROID_EXTRA_LIBS = \
-        #$$PWD/../../../Dev/android_openssl-master/Qt-5.12.4_5.13.0/arm/libcrypto.so \
-        #$$PWD/../../../Dev/android_openssl-master/Qt-5.12.4_5.13.0/arm/libssl.so
         $$PWD/../../../Dev/android_openssl-master/latest/arm/libcrypto_1_1.so \
         $$PWD/../../../Dev/android_openssl-master/latest/arm/libssl_1_1.so
     }
@@ -116,10 +114,12 @@ contains(ANDROID_ABIS, "arm64-v8a") {
     message("Building ARM64-V8A")
 
     DESTDIR=../build/release-arm64-v8a
+    OBJECTS_DIR = ../build/release-arm64-v8a.obj
+    MOC_DIR = ../build/release-arm64-v8a.moc
+    RCC_DIR = ../build/release-arm64-v8a.rcc
+    UI_DIR = ../build/release-arm64-v8a.ui
 
     ANDROID_EXTRA_LIBS = \
-        #$$PWD/../../../Dev/android_openssl-master/Qt-5.15.2/arm64/libcrypto.so \
-        #$$PWD/../../../Dev/android_openssl-master/Qt-5.15.2/arm64/libssl.so
         $$PWD/../../../Dev/android_openssl-master/latest/arm64/libcrypto_1_1.so \
         $$PWD/../../../Dev/android_openssl-master/latest/arm64/libssl_1_1.so
     }
@@ -129,3 +129,6 @@ TRANSLATIONS += \
     resources/langs/lang_en.ts \
     resources/langs/lang_ru.ts \
     resources/langs/lang_be.ts
+android: include(F:/Dev/android_openssl-master/openssl.pri)
+
+ANDROID_EXTRA_LIBS = F:/Work/TIKAVA/AquariumStory/../../../Dev/android_openssl-master/latest/arm64/libcrypto_1_1.so F:/Work/TIKAVA/AquariumStory/../../../Dev/android_openssl-master/latest/arm64/libssl_1_1.so F:/Dev/android_openssl-master/latest/arm/libcrypto_1_1.so F:/Dev/android_openssl-master/latest/arm/libssl_1_1.so
